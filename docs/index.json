@@ -1,0 +1,4155 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/app-settings.js",
+    "content": "const AWS = require('aws-sdk');\n\n/**\n * Get the region for initialize the SSM from AWS SDK\n */\nconst region = process.env.REGION || 'us-east-1';\n/**\n * Initializes the ssm based on the current region\n */\nconst ssm = new AWS.SSM({ region });\n\n/**\n * @private\n */\nfunction getKeysFromParameterStore(store, key) {\n  return store.getParametersByPath({ Path: key }).promise();\n}\n\n/**\n * @private\n */\nfunction ensureEnv(key) {\n  if (!Object.prototype.hasOwnProperty.call(process.env, key)) {\n    throw new Error(`Expected environment variable ${key} to be defined`);\n  }\n\n  return process.env[key];\n}\n\n/**\n * @private\n */\nfunction parseKeyName(key) {\n  return key.substr(key.lastIndexOf('/') + 1);\n}\n\n/**\n * @private\n */\nfunction setProcessEnvKeys(params) {\n  params.forEach((param) => {\n    process.env[parseKeyName(param.Name)] = param.Value;\n  });\n}\n\n/**\n * AppSettings offers a way to initialize your app environment variables from AWS SSM\n */\n\nclass AppSettings {\n  /**\n   * Init app environment variables setting process.env based on Parameter Store variables\n   * @param {Object} [store=ssm] - optional param of the Parameter Store, the default is AWS SSM\n   * @return {undefined}\n   */\n  static async init(store = ssm) {\n    const key = `/${AppSettings.application()}/${AppSettings.environment()}/`;\n\n    const appKeys = await getKeysFromParameterStore(store, key);\n\n    setProcessEnvKeys(appKeys.Parameters);\n  }\n\n  /**\n   * Get the variable value from process.env\n   * @param {string} key - The variable key\n   * @return {string} - The variable value\n   * @throws {Error} When the variable doesn't exist\n   */\n  static get(key) {\n    return ensureEnv(key);\n  }\n\n  /**\n   * Get the variable value from process.env or the default value passed,\n   * then value is not found in process.env\n   * @param {string} key - The variable key\n   * @param {string} defaultValue - The variable default value\n   * @return {string} - the variable value\n   */\n  static getOrDefault(key, defaultValue) {\n    return process.env[key] || defaultValue;\n  }\n\n  /**\n  * Get the APP_NAME from process.env\n  * @return {string} - The APP_NAME value\n  * @throws {Error} When the variable doesn't exist\n  */\n  static application() {\n    return ensureEnv('APP_NAME');\n  }\n\n  /**\n   * Get the NODE_ENV from process.env\n   * @return {string} - The NODE_ENV value\n   * @throws {Error} When the variable doesn't exist\n   */\n  static environment() {\n    return ensureEnv('NODE_ENV');\n  }\n}\n\nmodule.exports = AppSettings;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/app-settings.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "region",
+    "memberof": "src/app-settings.js",
+    "static": true,
+    "longname": "src/app-settings.js~region",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/app-settings.js",
+    "importStyle": null,
+    "description": "Get the region for initialize the SSM from AWS SDK",
+    "lineNumber": 6,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "ssm",
+    "memberof": "src/app-settings.js",
+    "static": true,
+    "longname": "src/app-settings.js~ssm",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/app-settings.js",
+    "importStyle": null,
+    "description": "Initializes the ssm based on the current region",
+    "lineNumber": 10,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "getKeysFromParameterStore",
+    "memberof": "src/app-settings.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~getKeysFromParameterStore",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/app-settings.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 15,
+    "params": [
+      {
+        "name": "store",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "function",
+    "name": "ensureEnv",
+    "memberof": "src/app-settings.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~ensureEnv",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/app-settings.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 22,
+    "params": [
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "parseKeyName",
+    "memberof": "src/app-settings.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~parseKeyName",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/app-settings.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 33,
+    "params": [
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "setProcessEnvKeys",
+    "memberof": "src/app-settings.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~setProcessEnvKeys",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/app-settings.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 40,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "class",
+    "name": "AppSettings",
+    "memberof": "src/app-settings.js",
+    "static": true,
+    "longname": "src/app-settings.js~AppSettings",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/app-settings.js",
+    "importStyle": "AppSettings",
+    "description": "AppSettings offers a way to initialize your app environment variables from AWS SSM",
+    "lineNumber": 50,
+    "interface": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "init",
+    "memberof": "src/app-settings.js~AppSettings",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/app-settings.js~AppSettings.init",
+    "access": "public",
+    "description": "Init app environment variables setting process.env based on Parameter Store variables",
+    "lineNumber": 56,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "ssm",
+        "defaultRaw": "ssm",
+        "name": "store",
+        "description": "optional param of the Parameter Store, the default is AWS SSM"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "undefined"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "get",
+    "memberof": "src/app-settings.js~AppSettings",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~AppSettings.get",
+    "access": "public",
+    "description": "Get the variable value from process.env",
+    "lineNumber": 70,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": "The variable key"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "The variable value"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "When the variable doesn't exist"
+      }
+    ]
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "getOrDefault",
+    "memberof": "src/app-settings.js~AppSettings",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~AppSettings.getOrDefault",
+    "access": "public",
+    "description": "Get the variable value from process.env or the default value passed,\nthen value is not found in process.env",
+    "lineNumber": 81,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": "The variable key"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "defaultValue",
+        "description": "The variable default value"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "the variable value"
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "application",
+    "memberof": "src/app-settings.js~AppSettings",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~AppSettings.application",
+    "access": "public",
+    "description": "Get the APP_NAME from process.env",
+    "lineNumber": 90,
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "The APP_NAME value"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "When the variable doesn't exist"
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "name": "environment",
+    "memberof": "src/app-settings.js~AppSettings",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-settings.js~AppSettings.environment",
+    "access": "public",
+    "description": "Get the NODE_ENV from process.env",
+    "lineNumber": 99,
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "The NODE_ENV value"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "When the variable doesn't exist"
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "name": "src/config.js",
+    "content": "const appTokenAttribute = 'x-app-token';\n\nmodule.exports = {\n  appTokenAttribute,\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/config.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "variable",
+    "name": "appTokenAttribute",
+    "memberof": "src/config.js",
+    "static": true,
+    "longname": "src/config.js~appTokenAttribute",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/config.js",
+    "importStyle": "{appTokenAttribute}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "file",
+    "name": "src/express/app-builder.js",
+    "content": "const bodyParser = require('body-parser');\nconst express = require('express');\nconst helmet = require('helmet');\nconst { createServer, proxy } = require('aws-serverless-express');\nconst { eventContext } = require('aws-serverless-express/middleware');\nconst expressContextMiddleware = require('../express/context-middleware');\nconst expressLoggingMiddleware = require('../express/logging-middleware');\nconst expressCorsMiddleware = require('./cors-middleware');\n\nconst NodeInspector = require('../development/node-inspector');\n\n/**\n * The Express HTTP port for development mode\n */\nconst EXPRESS_PORT = process.env.EXPRESS_PORT || 3000;\n\n/**\n * @private\n */\nfunction expressToLambdaHandler(app) {\n  const server = createServer(app);\n\n  /* istanbul ignore next */\n  return (event, context) => proxy(server, event, context);\n}\n\n/**\n * @private\n */\nfunction expressToBodyParser() {\n  const bodyParserOptions = {\n    limit: '10mb',\n  };\n\n  return bodyParser.json(bodyParserOptions);\n}\n\n/**\n * @private\n */\nfunction setupAppMiddlewares(app, options) {\n  app.use(expressToBodyParser());\n  app.use(expressContextMiddleware);\n  app.use(expressLoggingMiddleware);\n  app.use(expressCorsMiddleware());\n  app.use(helmet({ dnsPrefetchControl: false }));\n\n  /* istanbul ignore if */\n  if (options.mode === 'lambda') app.use(eventContext());\n}\n\n/**\n * @private\n */\n/* istanbul ignore next */\nfunction startApp(app) {\n  const httpServer = app.listen(EXPRESS_PORT);\n\n  console.log(`Application listening on port ${EXPRESS_PORT}`); // eslint-disable-line no-console\n\n  return httpServer;\n}\n\n/**\n * Function to initializes and configures an Express app\n * @param {object} options - accepts mode and developmentMode params\n * @return {object} a object with the expressApp,\n * start method to start the express and the handler function\n * to be the Lambda entrypoint\n */\nmodule.exports = function expressAppBuilder(options = {}) {\n  const app = express();\n\n  setupAppMiddlewares(app, options);\n\n  /* istanbul ignore if */\n  if (options.developmentMode) new NodeInspector().start();\n\n  return {\n    expressApp: app,\n    handler: expressToLambdaHandler(app),\n    start() {\n      /* istanbul ignore next */\n      return startApp(app);\n    },\n  };\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/app-builder.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 64,
+    "kind": "variable",
+    "name": "EXPRESS_PORT",
+    "memberof": "src/express/app-builder.js",
+    "static": true,
+    "longname": "src/express/app-builder.js~EXPRESS_PORT",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/app-builder.js",
+    "importStyle": null,
+    "description": "The Express HTTP port for development mode",
+    "lineNumber": 15,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "expressToLambdaHandler",
+    "memberof": "src/express/app-builder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/app-builder.js~expressToLambdaHandler",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/app-builder.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 20,
+    "params": [
+      {
+        "name": "app",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "name": "expressToBodyParser",
+    "memberof": "src/express/app-builder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/app-builder.js~expressToBodyParser",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/app-builder.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 30,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "name": "setupAppMiddlewares",
+    "memberof": "src/express/app-builder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/app-builder.js~setupAppMiddlewares",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/app-builder.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 41,
+    "params": [
+      {
+        "name": "app",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "function",
+    "name": "startApp",
+    "memberof": "src/express/app-builder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/app-builder.js~startApp",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/app-builder.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 56,
+    "params": [
+      {
+        "name": "app",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "function",
+    "name": "expressAppBuilder",
+    "memberof": "src/express/app-builder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/app-builder.js~expressAppBuilder",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/express/app-builder.js",
+    "importStyle": "expressAppBuilder",
+    "description": "Function to initializes and configures an Express app",
+    "lineNumber": 71,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "accepts mode and developmentMode params"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "a object with the expressApp,\nstart method to start the express and the handler function\nto be the Lambda entrypoint"
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "name": "src/express/context-middleware.js",
+    "content": "const uuid = require('uuid/v4');\nconst domain = require('domain');\nconst Logger = require('@naturacosmeticos/clio-nodejs-logger');\n\nconst logAllPattern = '*';\n\n/** @private */\nfunction requestContext(req) {\n  return {\n    correlationId: req.headers['x-correlation-id'] || null,\n    customerId: req.headers['x-customer-id'] || null,\n    requestId: req.headers['request-id'] || uuid(),\n    sessionId: req.headers['x-session-id'] || null,\n  };\n}\n\n/** @private */\nfunction createLogger(req) {\n  const context = { context: requestContext(req) };\n\n  if ('x-debug-mode-on' in req.headers) {\n    return new Logger({\n      context,\n      logPatterns: logAllPattern,\n      namespace: '',\n    });\n  }\n\n  return new Logger({ context });\n}\n\n/**\n * Middleware for log the input and output from Express\n * @param {function} req - Express req function\n * @param {function} res - Express res function\n * @param {function} next - Express next function\n */\nfunction contextMiddleware(req, res, next) {\n  const currentDomain = domain.create();\n\n  currentDomain.context = requestContext(req);\n  currentDomain.logger = createLogger(req);\n  currentDomain.databaseLogger = currentDomain.logger.createChildLogger('db');\n  res.locals.logger = currentDomain.logger.createChildLogger('http');\n\n  currentDomain.run(next);\n}\n\nmodule.exports = contextMiddleware;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/context-middleware.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 71,
+    "kind": "variable",
+    "name": "logAllPattern",
+    "memberof": "src/express/context-middleware.js",
+    "static": true,
+    "longname": "src/express/context-middleware.js~logAllPattern",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/context-middleware.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "function",
+    "name": "requestContext",
+    "memberof": "src/express/context-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/context-middleware.js~requestContext",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/context-middleware.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "params": [
+      {
+        "name": "req",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"correlationId\": *, \"customerId\": *, \"requestId\": *, \"sessionId\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 73,
+    "kind": "function",
+    "name": "createLogger",
+    "memberof": "src/express/context-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/context-middleware.js~createLogger",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/context-middleware.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 18,
+    "params": [
+      {
+        "name": "req",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 74,
+    "kind": "function",
+    "name": "contextMiddleware",
+    "memberof": "src/express/context-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/context-middleware.js~contextMiddleware",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/express/context-middleware.js",
+    "importStyle": "contextMiddleware",
+    "description": "Middleware for log the input and output from Express",
+    "lineNumber": 38,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "Express req function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "res",
+        "description": "Express res function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "next",
+        "description": "Express next function"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "name": "src/express/cors-middleware.js",
+    "content": "const cors = require('cors');\n\n/**\n * Middleware to enable CORS for the application\n * @param {function} allowedOrigins - An array with the origins that will be allowed.\n * If no argument is passed all origins will be allowed\n * @returns {function} - The CORS middleware\n */\nmodule.exports = (allowedOrigins) => {\n  if (!allowedOrigins || !(allowedOrigins.length > 0)) {\n    return cors();\n  }\n\n  return cors({\n    origin(origin, callback) {\n      if (allowedOrigins.indexOf(origin) === -1) {\n        callback(new Error('Not allowed by CORS'));\n\n        return;\n      }\n      callback(null, true);\n    },\n  });\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/cors-middleware.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "function",
+    "name": "corsmiddleware",
+    "memberof": "src/express/cors-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/cors-middleware.js~corsmiddleware",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/express/cors-middleware.js",
+    "importStyle": "corsmiddleware",
+    "description": "Middleware to enable CORS for the application",
+    "lineNumber": 9,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{function} - The CORS middleware"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "allowedOrigins",
+        "description": "An array with the origins that will be allowed.\nIf no argument is passed all origins will be allowed"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "function"
+      ],
+      "spread": false,
+      "description": "The CORS middleware"
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "name": "src/express/handler-to-function-adapter.js",
+    "content": "/**\n * Function to initializes and configures an Express app\n * @param {Class} HandlerConstructor - The HTTP handler to handle the HTTP interface\n * @param {Class} CommandFactory - The Command Factory that will be injected in the Handler\n * @return {function} - a callback function to Express route\n */\nmodule.exports = (HandlerConstructor, CommandFactory) => (request, response) => {\n  const command = new CommandFactory().create();\n  const handler = new HandlerConstructor(request, response, command);\n\n  handler.handle();\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/handler-to-function-adapter.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 78,
+    "kind": "function",
+    "name": "handlertofunctionadapter",
+    "memberof": "src/express/handler-to-function-adapter.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/handler-to-function-adapter.js~handlertofunctionadapter",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/express/handler-to-function-adapter.js",
+    "importStyle": "handlertofunctionadapter",
+    "description": "Function to initializes and configures an Express app",
+    "lineNumber": 7,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Class"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "HandlerConstructor",
+        "description": "The HTTP handler to handle the HTTP interface"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Class"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "CommandFactory",
+        "description": "The Command Factory that will be injected in the Handler"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "function"
+      ],
+      "spread": false,
+      "description": "a callback function to Express route"
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/express/handler.js",
+    "content": "const { baseEvents } = require('architecture-code-structure');\nconst humps = require('humps');\nconst _ = require('lodash');\nconst httpStatusEnum = require('./http-status-enum');\nconst defaultHeadersWhitelist = require('./headers-whitelist-enum');\n/**\n * HTTP methods that can have body attribute\n */\nconst HTTP_METHODS_WITH_BODY = ['PATCH', 'POST', 'PUT'];\n\n/**\n * It's a bridge between the domain layer and the Express\n * @example\n * class MyHandler extends ExpressHandler {};\n */\nmodule.exports = class ExpressHandler {\n  /**\n    * Initialize a ExpressHandler instance with the an specific domain command\n    * @param {Object} request - The Express request https://expressjs.com/en/4x/api.html#req\n    * @param {Object} response - The Express response https://expressjs.com/en/4x/api.html#res\n    * @param {Object} command - an Command instance\n    */\n  constructor(request, response, command, headersWhitelist = defaultHeadersWhitelist) {\n    /**\n     * @param {Object} request - The Express request https://expressjs.com/en/4x/api.html#req\n     */\n    this.request = request;\n    /**\n     * @param {Object} response - The Express response https://expressjs.com/en/4x/api.html#res\n     */\n    this.response = response;\n    /**\n     * @param {Object} command - an Command instance\n     */\n    this.command = command;\n\n    /**\n     * @private {Array} headersWhitelist - Headers Whitelist\n     */\n    this.headersWhitelist = headersWhitelist;\n  }\n\n  /**\n   * A HTTP statuses getter\n   * @return {object} a dictionary with the common HTTP statuses\n   */\n  static get httpStatus() {\n    return httpStatusEnum;\n  }\n\n  /**\n   * Invoke the command execute method, setting up the default listeners and\n   * handling an exception if occurred\n   */\n  async handle() {\n    try {\n      this.setupListeners(this.command);\n      await this.command.execute(this.buildInput());\n    } catch (error) {\n      this.response.status(ExpressHandler.httpStatus.internalServerError);\n      this.response.json(error.toString());\n    }\n  }\n\n  /**\n   * @private\n   */\n  getHeadersInWhitelist(headers) {\n    const camelCaseHeaders = humps.camelizeKeys(headers);\n\n    const whitelisted = _.pick(camelCaseHeaders, this.headersWhitelist);\n\n    return Object.keys(whitelisted).length !== 0 ? whitelisted : undefined;\n  }\n\n  /**\n   * @private\n   */\n  getQueryParams(params) {\n    const queryParams = {};\n\n    Object.keys(params).forEach((queryParam) => {\n      try {\n        queryParams[queryParam] = JSON.parse(params[queryParam]);\n      } catch (error) {\n        queryParams[queryParam] = params[queryParam];\n      }\n    });\n\n    return queryParams;\n  }\n\n  /**\n   * @private\n   */\n  buildInput() {\n    const queryParams = this.getQueryParams(this.request.query);\n    const headers = this.getHeadersInWhitelist(this.request.headers);\n    const paramsSources = [queryParams, this.request.params];\n\n\n    if (HTTP_METHODS_WITH_BODY.includes(this.request.method)) {\n      paramsSources.unshift(this.request.body);\n    }\n\n    if (headers) {\n      paramsSources.push({ headers });\n    }\n\n    return Object.assign({}, ...paramsSources);\n  }\n\n  /**\n   * Handles the default events and can be overrided to handle additional events\n   * @param {Object} command - an Command instance\n   */\n  setupListeners(command) {\n    command.on(baseEvents.success, this.onSuccess.bind(this));\n    command.on(baseEvents.validationFailed, this.onValidationFailed.bind(this));\n    command.on(baseEvents.notFound, this.onNotFound.bind(this));\n    command.on(baseEvents.noContent, this.onNoContent.bind(this));\n  }\n\n  /**\n   * Default behavior when an event not found occurs\n   */\n\n  onNotFound() {\n    this.response.status(ExpressHandler.httpStatus.notFound);\n    this.response.json(null);\n  }\n\n\n  /**\n   * Default behavior when an event success occurs\n   * @param {Object} data - the data returned by the command instance\n   */\n  onSuccess(data) {\n    this.response.status(ExpressHandler.httpStatus.ok);\n    this.response.json(data);\n  }\n\n  /**\n   * Default behavior when an event validationFailed occurs\n   * @param {Object} errors - the errors returned by the command instance\n   */\n  onValidationFailed(errors) {\n    this.response.status(ExpressHandler.httpStatus.unprocessableEntity);\n    this.response.json(errors);\n  }\n\n  /**\n   * Default behavior when an event noContent occurs\n   */\n  onNoContent() {\n    this.response.status(ExpressHandler.httpStatus.noContent);\n    this.response.json(null);\n  }\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/handler.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "variable",
+    "name": "HTTP_METHODS_WITH_BODY",
+    "memberof": "src/express/handler.js",
+    "static": true,
+    "longname": "src/express/handler.js~HTTP_METHODS_WITH_BODY",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/handler.js",
+    "importStyle": null,
+    "description": "HTTP methods that can have body attribute",
+    "lineNumber": 9,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "class",
+    "name": "ExpressHandler",
+    "memberof": "src/express/handler.js",
+    "static": true,
+    "longname": "src/express/handler.js~ExpressHandler",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/express/handler.js",
+    "importStyle": "ExpressHandler",
+    "description": "It's a bridge between the domain layer and the Express",
+    "examples": [
+      "class MyHandler extends ExpressHandler {};"
+    ],
+    "lineNumber": 16,
+    "interface": false
+  },
+  {
+    "__docId__": 82,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#constructor",
+    "access": "public",
+    "description": "Initialize a ExpressHandler instance with the an specific domain command",
+    "lineNumber": 23,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "request",
+        "description": "The Express request https://expressjs.com/en/4x/api.html#req"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response",
+        "description": "The Express response https://expressjs.com/en/4x/api.html#res"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "command",
+        "description": "an Command instance"
+      }
+    ]
+  },
+  {
+    "__docId__": 83,
+    "kind": "member",
+    "name": "request",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#request",
+    "access": "public",
+    "description": "",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "request",
+        "description": "The Express request https://expressjs.com/en/4x/api.html#req"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "member",
+    "name": "response",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#response",
+    "access": "public",
+    "description": "",
+    "lineNumber": 31,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response",
+        "description": "The Express response https://expressjs.com/en/4x/api.html#res"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "member",
+    "name": "command",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#command",
+    "access": "public",
+    "description": "",
+    "lineNumber": 35,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "command",
+        "description": "an Command instance"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "member",
+    "name": "headersWhitelist",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#headersWhitelist",
+    "access": "private",
+    "description": "",
+    "lineNumber": 40,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "get",
+    "name": "httpStatus",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/handler.js~ExpressHandler.httpStatus",
+    "access": "public",
+    "description": "A HTTP statuses getter",
+    "lineNumber": 47,
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "a dictionary with the common HTTP statuses"
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "handle",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#handle",
+    "access": "public",
+    "description": "Invoke the command execute method, setting up the default listeners and\nhandling an exception if occurred",
+    "lineNumber": 55,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "getHeadersInWhitelist",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#getHeadersInWhitelist",
+    "access": "private",
+    "description": "",
+    "lineNumber": 68,
+    "params": [
+      {
+        "name": "headers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "method",
+    "name": "getQueryParams",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#getQueryParams",
+    "access": "private",
+    "description": "",
+    "lineNumber": 79,
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "buildInput",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#buildInput",
+    "access": "private",
+    "description": "",
+    "lineNumber": 96,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "method",
+    "name": "setupListeners",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#setupListeners",
+    "access": "public",
+    "description": "Handles the default events and can be overrided to handle additional events",
+    "lineNumber": 117,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "command",
+        "description": "an Command instance"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 93,
+    "kind": "method",
+    "name": "onNotFound",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#onNotFound",
+    "access": "public",
+    "description": "Default behavior when an event not found occurs",
+    "lineNumber": 128,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 94,
+    "kind": "method",
+    "name": "onSuccess",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#onSuccess",
+    "access": "public",
+    "description": "Default behavior when an event success occurs",
+    "lineNumber": 138,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the data returned by the command instance"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 95,
+    "kind": "method",
+    "name": "onValidationFailed",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#onValidationFailed",
+    "access": "public",
+    "description": "Default behavior when an event validationFailed occurs",
+    "lineNumber": 147,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "errors",
+        "description": "the errors returned by the command instance"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "onNoContent",
+    "memberof": "src/express/handler.js~ExpressHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/handler.js~ExpressHandler#onNoContent",
+    "access": "public",
+    "description": "Default behavior when an event noContent occurs",
+    "lineNumber": 155,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 97,
+    "kind": "file",
+    "name": "src/express/headers-whitelist-enum.js",
+    "content": "const xAppToken = 'xAppToken';\nconst correlationId = 'correlationId';\nconst sessionId = 'sessionId';\nconst userId = 'userId';\nconst customerId = 'custormerId';\nconst authorization = 'authorization';\n\nmodule.exports = [authorization, xAppToken, correlationId, sessionId, userId, customerId];\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/headers-whitelist-enum.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 98,
+    "kind": "variable",
+    "name": "xAppToken",
+    "memberof": "src/express/headers-whitelist-enum.js",
+    "static": true,
+    "longname": "src/express/headers-whitelist-enum.js~xAppToken",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/headers-whitelist-enum.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 99,
+    "kind": "variable",
+    "name": "correlationId",
+    "memberof": "src/express/headers-whitelist-enum.js",
+    "static": true,
+    "longname": "src/express/headers-whitelist-enum.js~correlationId",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/headers-whitelist-enum.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 100,
+    "kind": "variable",
+    "name": "sessionId",
+    "memberof": "src/express/headers-whitelist-enum.js",
+    "static": true,
+    "longname": "src/express/headers-whitelist-enum.js~sessionId",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/headers-whitelist-enum.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 101,
+    "kind": "variable",
+    "name": "userId",
+    "memberof": "src/express/headers-whitelist-enum.js",
+    "static": true,
+    "longname": "src/express/headers-whitelist-enum.js~userId",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/headers-whitelist-enum.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 102,
+    "kind": "variable",
+    "name": "customerId",
+    "memberof": "src/express/headers-whitelist-enum.js",
+    "static": true,
+    "longname": "src/express/headers-whitelist-enum.js~customerId",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/headers-whitelist-enum.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 103,
+    "kind": "variable",
+    "name": "authorization",
+    "memberof": "src/express/headers-whitelist-enum.js",
+    "static": true,
+    "longname": "src/express/headers-whitelist-enum.js~authorization",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/headers-whitelist-enum.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 104,
+    "kind": "file",
+    "name": "src/express/http-status-enum.js",
+    "content": "const _ = require('lodash');\nconst { STATUS_CODES } = require('http');\n\nmodule.exports = _(STATUS_CODES)\n  .invert()\n  .mapKeys((value, key) => _.camelCase(key))\n  .value();\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/http-status-enum.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 105,
+    "kind": "file",
+    "name": "src/express/logging-middleware.js",
+    "content": "const _ = require('lodash');\n\n/**\n * @private\n */\nconst logRequestAttributes = Object.freeze([\n  'baseUrl',\n  'body',\n  'method',\n  'params',\n  'protocol',\n  'query',\n  'upgrade',\n]);\n/**\n * @private\n */\nconst logResponseAttributes = Object.freeze(['statusCode']);\n\n/**\n * @private\n */\nfunction commonAttributes(req) {\n  return {\n    fullUrl: `${req.protocol}://${req.headers.host}${req.originalUrl}`,\n    headers: req.rawHeaders,\n    host: req.headers.host,\n    url: req.originalUrl,\n  };\n}\n\n/**\n * @private\n */\nfunction logRequest(req, res) {\n  res.locals.logger.log(`Starting ${req.method} on ${req.path}`, {\n    ..._.pick(req, logRequestAttributes),\n    ...commonAttributes(req),\n  });\n}\n\n/**\n * @private\n */\nfunction logResponse(rawBody, req, res) {\n  const contentType = res.get('content-type');\n\n  let body = rawBody;\n\n  /* istanbul ignore if */\n  if (contentType && contentType.includes('application/json')) {\n    body = JSON.parse(rawBody);\n  }\n  res.locals.logger.log(`End request ${req.method} on ${req.path}`, {\n    ..._.pick(req, logResponseAttributes),\n    ...commonAttributes(req),\n    body,\n  });\n}\n\n/**\n * @private\n */\nfunction responseEndInterceptor({ chunk, chunks }, end, req, res) {\n  /* istanbul ignore if */\n  if (chunk) {\n    chunks.push(Buffer.from(chunk));\n  }\n\n  const body = Buffer.concat(chunks).toString();\n\n  logResponse(body, req, res);\n  end.call(res, body);\n}\n\n/**\n * @private\n */\nfunction setupResponseInterceptors(req, res) {\n  const { end, write } = res;\n  const chunks = [];\n\n  /* istanbul ignore next */\n  res.write = (chunk) => {\n    chunks.push(chunk);\n    write.call(res, chunk);\n  };\n\n  res.end = (chunk) => {\n    const data = { chunk, chunks };\n\n    responseEndInterceptor(data, end, req, res);\n  };\n}\n\n/**\n * Middleware for log the input and output from Express\n * @param {function} req - Express req function\n * @param {function} res - Express res function\n * @param {function} next - Express next function\n */\nfunction loggingMiddleware(req, res, next) {\n  logRequest(req, res);\n  setupResponseInterceptors(req, res);\n  next();\n}\n\nmodule.exports = loggingMiddleware;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/logging-middleware.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 106,
+    "kind": "variable",
+    "name": "logRequestAttributes",
+    "memberof": "src/express/logging-middleware.js",
+    "static": true,
+    "longname": "src/express/logging-middleware.js~logRequestAttributes",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 6,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "variable",
+    "name": "logResponseAttributes",
+    "memberof": "src/express/logging-middleware.js",
+    "static": true,
+    "longname": "src/express/logging-middleware.js~logResponseAttributes",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 18,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 108,
+    "kind": "function",
+    "name": "commonAttributes",
+    "memberof": "src/express/logging-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/logging-middleware.js~commonAttributes",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 23,
+    "params": [
+      {
+        "name": "req",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"fullUrl\": *, \"headers\": *, \"host\": *, \"url\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 109,
+    "kind": "function",
+    "name": "logRequest",
+    "memberof": "src/express/logging-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/logging-middleware.js~logRequest",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 35,
+    "params": [
+      {
+        "name": "req",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "res",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "function",
+    "name": "logResponse",
+    "memberof": "src/express/logging-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/logging-middleware.js~logResponse",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 45,
+    "params": [
+      {
+        "name": "rawBody",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "req",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "res",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 111,
+    "kind": "function",
+    "name": "responseEndInterceptor",
+    "memberof": "src/express/logging-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/logging-middleware.js~responseEndInterceptor",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 64,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"chunk\": *, \"chunks\": *}"
+        ],
+        "defaultRaw": {
+          "chunk": null,
+          "chunks": null
+        },
+        "defaultValue": "{\"chunk\":null,\"chunks\":null}"
+      },
+      {
+        "name": "end",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "req",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "res",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "function",
+    "name": "setupResponseInterceptors",
+    "memberof": "src/express/logging-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/logging-middleware.js~setupResponseInterceptors",
+    "access": "private",
+    "export": false,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 79,
+    "params": [
+      {
+        "name": "req",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "res",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 113,
+    "kind": "function",
+    "name": "loggingMiddleware",
+    "memberof": "src/express/logging-middleware.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/express/logging-middleware.js~loggingMiddleware",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/express/logging-middleware.js",
+    "importStyle": "loggingMiddleware",
+    "description": "Middleware for log the input and output from Express",
+    "lineNumber": 102,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "Express req function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "res",
+        "description": "Express res function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "next",
+        "description": "Express next function"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 114,
+    "kind": "file",
+    "name": "src/express/user-authenticated-handler.js",
+    "content": "const AuthenticatedHandler = require('./authenticated-handler');\nconst { appTokenAttribute } = require('../config');\n\nmodule.exports = class UserAuthenticatedHandler extends AuthenticatedHandler {\n  constructor(request, response, command) {\n    const headerAttributes = ['authorization', appTokenAttribute];\n\n    super(request, response, command, headerAttributes);\n  }\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/express/user-authenticated-handler.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 115,
+    "kind": "class",
+    "name": "UserAuthenticatedHandler",
+    "memberof": "src/express/user-authenticated-handler.js",
+    "static": true,
+    "longname": "src/express/user-authenticated-handler.js~UserAuthenticatedHandler",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/express/user-authenticated-handler.js",
+    "importStyle": "UserAuthenticatedHandler",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/express/authenticated-handler.js~AuthenticatedHandler"
+    ]
+  },
+  {
+    "__docId__": 116,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/express/user-authenticated-handler.js~UserAuthenticatedHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/express/user-authenticated-handler.js~UserAuthenticatedHandler#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true
+  },
+  {
+    "__docId__": 117,
+    "kind": "file",
+    "name": "src/graphql/app-builder.js",
+    "content": "const ApolloExpress = require('apollo-server-express');\nconst ApolloLambda = require('apollo-server-lambda');\n\n\n/**\n * GraphQL GraphQLAppBuilder Factory\n * @class\n * @constructor\n * @param {Object} executableSchema schema built with makeExecutableSchema()\n * @param {Object} rawSchema GraphQL rawSchema\n * @param {String} rawSchema.typeDefs GraphQL Schema typeDefs\n * @param {[Function]} rawSchema.resolvers GraphQL Schema resolvers\n * @param {Boolean} authentication If GraphQL Server needs authentication\n */\nclass GraphQLAppBuilder {\n  constructor({\n    executableSchema = null, rawSchema = null,\n    authentication = { attributtes: null, headers: null, Provider: null },\n  }) {\n    this.rawSchema = rawSchema;\n    this.executableSchema = executableSchema;\n    this.authentication = authentication;\n  }\n\n  /**\n   * @private\n   */\n  getAuthenticated(headers) {\n    const { Provider } = this.authentication;\n    const dynamicProvider = new Provider({ headers });\n\n    dynamicProvider.setHeadersToBeDecrypted(this.authentication.attributtes);\n\n    return dynamicProvider.getAuthorization();\n  }\n\n  /**\n  * @private\n  */\n  getAuthenticatedLambdaSchema(schema) {\n    return Object.assign(schema, {\n      context: ({ event, context }) => ({\n        context,\n        event,\n        functionName: context.functionName,\n        headers: event.headers,\n        ...this.getAuthenticated(event.headers),\n      }),\n    });\n  }\n\n  /**\n  * @private\n  *\n  */\n  getAuthenticatedExpressSchema(schema) {\n    return Object.assign(schema, {\n      context: ({ req }) => ({\n        headers: req.headers,\n        ...this.getAuthenticated(req.headers),\n      }),\n    });\n  }\n\n  /**\n  * @private\n  */\n  async buildSchema() {\n    return this.executableSchema !== null\n      ? { playground: false, schema: await this.executableSchema }\n      : this.rawSchema;\n  }\n\n  /**\n   * Returns ApolloServer Lambda Server running with async schema defined in class constructor\n   * @function Promise\n   * @returns {ApolloLambda.ApolloServer}\n   */\n  async createLambdaHandler() {\n    const builtSchema = await this.buildSchema();\n    const schema = this.authentication.Provider !== null\n      ? this.getAuthenticatedLambdaSchema(builtSchema)\n      : builtSchema;\n\n    return new ApolloLambda.ApolloServer(schema).createHandler();\n  }\n\n  /**\n   * Returns Express Server running with async schema defined in class constructor as middleware\n   * @function Promise\n   */\n  async createExpressHandler(app) {\n    const builtSchema = await this.buildSchema();\n    const schema = this.authentication.Provider !== null\n      ? this.getAuthenticatedExpressSchema(builtSchema)\n      : builtSchema;\n\n    new ApolloExpress.ApolloServer(schema).applyMiddleware({ app });\n\n    return app;\n  }\n}\n\nmodule.exports = GraphQLAppBuilder;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/graphql/app-builder.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 118,
+    "kind": "class",
+    "name": "GraphQLAppBuilder",
+    "memberof": "src/graphql/app-builder.js",
+    "static": true,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/graphql/app-builder.js",
+    "importStyle": "GraphQLAppBuilder",
+    "description": "GraphQL GraphQLAppBuilder Factory",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "executableSchema",
+        "description": "schema built with makeExecutableSchema()"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rawSchema",
+        "description": "GraphQL rawSchema"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rawSchema.typeDefs",
+        "description": "GraphQL Schema typeDefs"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "[Function]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rawSchema.resolvers",
+        "description": "GraphQL Schema resolvers"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "authentication",
+        "description": "If GraphQL Server needs authentication"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 119,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "member",
+    "name": "rawSchema",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#rawSchema",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 121,
+    "kind": "member",
+    "name": "executableSchema",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#executableSchema",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 122,
+    "kind": "member",
+    "name": "authentication",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#authentication",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 123,
+    "kind": "method",
+    "name": "getAuthenticated",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#getAuthenticated",
+    "access": "private",
+    "description": "",
+    "lineNumber": 28,
+    "params": [
+      {
+        "name": "headers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "method",
+    "name": "getAuthenticatedLambdaSchema",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#getAuthenticatedLambdaSchema",
+    "access": "private",
+    "description": "",
+    "lineNumber": 40,
+    "params": [
+      {
+        "name": "schema",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "method",
+    "name": "getAuthenticatedExpressSchema",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#getAuthenticatedExpressSchema",
+    "access": "private",
+    "description": "",
+    "lineNumber": 56,
+    "params": [
+      {
+        "name": "schema",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "method",
+    "name": "buildSchema",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#buildSchema",
+    "access": "private",
+    "description": "",
+    "lineNumber": 68,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "method",
+    "name": "createLambdaHandler",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#createLambdaHandler",
+    "access": "public",
+    "description": "Returns ApolloServer Lambda Server running with async schema defined in class constructor",
+    "lineNumber": 79,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "Promise"
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{ApolloLambda.ApolloServer}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "ApolloLambda.ApolloServer"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 128,
+    "kind": "method",
+    "name": "createExpressHandler",
+    "memberof": "src/graphql/app-builder.js~GraphQLAppBuilder",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/graphql/app-builder.js~GraphQLAppBuilder#createExpressHandler",
+    "access": "public",
+    "description": "Returns Express Server running with async schema defined in class constructor as middleware",
+    "lineNumber": 92,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "Promise"
+      }
+    ],
+    "params": [
+      {
+        "name": "app",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 129,
+    "kind": "file",
+    "name": "src/message-queue/lambda-handler-adapter.js",
+    "content": "/**\n * Create and execute a handler for an AWS Lambda request\n * @param {Class} HandlerConstructor - The HTTP handler to handle the HTTP interface\n * @param {Class} CommandFactory - The Command Factory that will be injected in the Handler\n * @return {function} - An AWS Lambda compatible handler function\n */\nconst lambdaAdapter = (HandlerConstructor, CommandFactory) => async (event, context) => {\n  const command = new CommandFactory().create();\n  const handler = new HandlerConstructor(event, context, command);\n\n  await handler.handle();\n};\n\nmodule.exports = lambdaAdapter;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/message-queue/lambda-handler-adapter.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 130,
+    "kind": "function",
+    "name": "lambdaAdapter",
+    "memberof": "src/message-queue/lambda-handler-adapter.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/message-queue/lambda-handler-adapter.js~lambdaAdapter",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/message-queue/lambda-handler-adapter.js",
+    "importStyle": "lambdaAdapter",
+    "description": "Create and execute a handler for an AWS Lambda request",
+    "lineNumber": 7,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Class"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "HandlerConstructor",
+        "description": "The HTTP handler to handle the HTTP interface"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Class"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "CommandFactory",
+        "description": "The Command Factory that will be injected in the Handler"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "function"
+      ],
+      "spread": false,
+      "description": "An AWS Lambda compatible handler function"
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "file",
+    "name": "src/message-queue/lambda-handler.js",
+    "content": "/**\n * Base handler to implement AWS Lambda listeners\n */\nclass LambdaHandler {\n  /**\n    * Initialize a ExpressHandler instance with the an specific domain command\n    * For more information about the arguments see https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html\n    * @param {Object} event - The AWS Lambda event arguments\n    * @param {Object} context - The AWS Lambda context object\n    * @param {Object} command - A Command instance\n    */\n  constructor(event, context, command) {\n    /**\n     * @param {Object} request - The AWS Lambda event arguments\n     */\n    this.event = event;\n    /**\n     * @param {Object} request - The AWS Lambda context object\n     */\n    this.context = context;\n    /**\n     * @param {Object} request - A Command Instance\n     */\n    this.command = command;\n  }\n\n  /**\n   * Invoke the command execute method, setting up the default listeners and\n   * handling an exception if occurred\n   */\n  async handle() { // eslint-disable-line require-await\n    throw new Error('Not implemented');\n  }\n}\n\nmodule.exports = LambdaHandler;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/message-queue/lambda-handler.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 132,
+    "kind": "class",
+    "name": "LambdaHandler",
+    "memberof": "src/message-queue/lambda-handler.js",
+    "static": true,
+    "longname": "src/message-queue/lambda-handler.js~LambdaHandler",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/message-queue/lambda-handler.js",
+    "importStyle": "LambdaHandler",
+    "description": "Base handler to implement AWS Lambda listeners",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 133,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/message-queue/lambda-handler.js~LambdaHandler",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/message-queue/lambda-handler.js~LambdaHandler#constructor",
+    "access": "public",
+    "description": "Initialize a ExpressHandler instance with the an specific domain command\nFor more information about the arguments see https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": "The AWS Lambda event arguments"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "context",
+        "description": "The AWS Lambda context object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "command",
+        "description": "A Command instance"
+      }
+    ]
+  },
+  {
+    "__docId__": 134,
+    "kind": "member",
+    "name": "event",
+    "memberof": "src/message-queue/lambda-handler.js~LambdaHandler",
+    "static": false,
+    "longname": "src/message-queue/lambda-handler.js~LambdaHandler#event",
+    "access": "public",
+    "description": "",
+    "lineNumber": 16,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "request",
+        "description": "The AWS Lambda event arguments"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "member",
+    "name": "context",
+    "memberof": "src/message-queue/lambda-handler.js~LambdaHandler",
+    "static": false,
+    "longname": "src/message-queue/lambda-handler.js~LambdaHandler#context",
+    "access": "public",
+    "description": "",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "request",
+        "description": "The AWS Lambda context object"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "member",
+    "name": "command",
+    "memberof": "src/message-queue/lambda-handler.js~LambdaHandler",
+    "static": false,
+    "longname": "src/message-queue/lambda-handler.js~LambdaHandler#command",
+    "access": "public",
+    "description": "",
+    "lineNumber": 24,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "request",
+        "description": "A Command Instance"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 137,
+    "kind": "method",
+    "name": "handle",
+    "memberof": "src/message-queue/lambda-handler.js~LambdaHandler",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/message-queue/lambda-handler.js~LambdaHandler#handle",
+    "access": "public",
+    "description": "Invoke the command execute method, setting up the default listeners and\nhandling an exception if occurred",
+    "lineNumber": 31,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 138,
+    "kind": "file",
+    "name": "src/orm/typeorm/naming-strategy.js",
+    "content": "const { snakeCase } = require('typeorm/util/StringUtils');\nconst { DefaultNamingStrategy } = require('typeorm/naming-strategy/DefaultNamingStrategy');\n\nmodule.exports = class NamingStrategy extends DefaultNamingStrategy {\n  tableName(targetName, userSpecifiedName) {\n    return userSpecifiedName || snakeCase(targetName);\n  }\n\n  columnName(propertyName, customName, embeddedPrefixes) {\n    return snakeCase(embeddedPrefixes.concat(customName || propertyName).join('_'));\n  }\n\n  columnNameCustomized(customName) {\n    return customName;\n  }\n\n  relationName(propertyName) {\n    return snakeCase(propertyName);\n  }\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/orm/typeorm/naming-strategy.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 139,
+    "kind": "class",
+    "name": "NamingStrategy",
+    "memberof": "src/orm/typeorm/naming-strategy.js",
+    "static": true,
+    "longname": "src/orm/typeorm/naming-strategy.js~NamingStrategy",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/orm/typeorm/naming-strategy.js",
+    "importStyle": "NamingStrategy",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "typeorm/naming-strategy/DefaultNamingStrategy~DefaultNamingStrategy"
+    ]
+  },
+  {
+    "__docId__": 140,
+    "kind": "method",
+    "name": "tableName",
+    "memberof": "src/orm/typeorm/naming-strategy.js~NamingStrategy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/orm/typeorm/naming-strategy.js~NamingStrategy#tableName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "targetName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "userSpecifiedName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "method",
+    "name": "columnName",
+    "memberof": "src/orm/typeorm/naming-strategy.js~NamingStrategy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/orm/typeorm/naming-strategy.js~NamingStrategy#columnName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "params": [
+      {
+        "name": "propertyName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "customName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "embeddedPrefixes",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "method",
+    "name": "columnNameCustomized",
+    "memberof": "src/orm/typeorm/naming-strategy.js~NamingStrategy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/orm/typeorm/naming-strategy.js~NamingStrategy#columnNameCustomized",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [
+      {
+        "name": "customName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 143,
+    "kind": "method",
+    "name": "relationName",
+    "memberof": "src/orm/typeorm/naming-strategy.js~NamingStrategy",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/orm/typeorm/naming-strategy.js~NamingStrategy#relationName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [
+      {
+        "name": "propertyName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "file",
+    "name": "src/orm/typeorm/typeorm-config-factory.js",
+    "content": "const NamingStrategy = require('./naming-strategy');\nconst typeOrmLogger = require('./logger');\n\nmodule.exports = class TypeOrmConfigFactory {\n  constructor(config) {\n    this.config = config;\n  }\n\n  create() {\n    return Object.assign(this.config, {\n      logger: typeOrmLogger,\n      namingStrategy: new NamingStrategy(),\n    });\n  }\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/orm/typeorm/typeorm-config-factory.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 145,
+    "kind": "class",
+    "name": "TypeOrmConfigFactory",
+    "memberof": "src/orm/typeorm/typeorm-config-factory.js",
+    "static": true,
+    "longname": "src/orm/typeorm/typeorm-config-factory.js~TypeOrmConfigFactory",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/orm/typeorm/typeorm-config-factory.js",
+    "importStyle": "TypeOrmConfigFactory",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 146,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/orm/typeorm/typeorm-config-factory.js~TypeOrmConfigFactory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/orm/typeorm/typeorm-config-factory.js~TypeOrmConfigFactory#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "name": "config",
+    "memberof": "src/orm/typeorm/typeorm-config-factory.js~TypeOrmConfigFactory",
+    "static": false,
+    "longname": "src/orm/typeorm/typeorm-config-factory.js~TypeOrmConfigFactory#config",
+    "access": "public",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "method",
+    "name": "create",
+    "memberof": "src/orm/typeorm/typeorm-config-factory.js~TypeOrmConfigFactory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/orm/typeorm/typeorm-config-factory.js~TypeOrmConfigFactory#create",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "file",
+    "name": "src/providers/authorization.js",
+    "content": "const { JWT } = require('../security');\n\nconst SECRET_KEY = process.env.JWT_SECRET_KEY || '{000-1-00232-111-931313-13142-12129-24-3333}'; // TEMP\nconst jwt = new JWT(SECRET_KEY);\n\nconst { appTokenAttribute } = require('../config');\n\nconst attributesDict = {\n  [appTokenAttribute]: 'userInfo',\n  authorization: 'authorizationInfo',\n};\n\nmodule.exports = class AuthenticationProvider {\n  constructor(authData, authenticationAttributes) {\n    this.authData = authData;\n    this.authenticationAttributes = authenticationAttributes;\n  }\n\n  isValid() {\n    try {\n      this.authenticationAttributes.forEach((attribute) => {\n        const jwtToken = this.authData && this.authData[attribute];\n\n        jwt.verify(jwtToken, SECRET_KEY);\n      });\n\n      return true;\n    } catch (error) {\n      return false;\n    }\n  }\n\n  getAuthorization() {\n    const authorization = {};\n\n    Object.keys(attributesDict).forEach((attribute) => {\n      if (this.authData[attribute]) {\n        const tokenData = jwt.decode(this.authData[attribute]);\n\n        delete tokenData.iat;\n        authorization[attributesDict[attribute]] = tokenData;\n      }\n    });\n\n    return authorization;\n  }\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/providers/authorization.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 150,
+    "kind": "variable",
+    "name": "SECRET_KEY",
+    "memberof": "src/providers/authorization.js",
+    "static": true,
+    "longname": "src/providers/authorization.js~SECRET_KEY",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/providers/authorization.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 151,
+    "kind": "variable",
+    "name": "jwt",
+    "memberof": "src/providers/authorization.js",
+    "static": true,
+    "longname": "src/providers/authorization.js~jwt",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/providers/authorization.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "src/security/index.js~JWT"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 152,
+    "kind": "variable",
+    "name": "attributesDict",
+    "memberof": "src/providers/authorization.js",
+    "static": true,
+    "longname": "src/providers/authorization.js~attributesDict",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/providers/authorization.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"appTokenAttribute\": string, \"authorization\": string}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 153,
+    "kind": "class",
+    "name": "AuthenticationProvider",
+    "memberof": "src/providers/authorization.js",
+    "static": true,
+    "longname": "src/providers/authorization.js~AuthenticationProvider",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/providers/authorization.js",
+    "importStyle": "AuthenticationProvider",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 154,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/providers/authorization.js~AuthenticationProvider",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/authorization.js~AuthenticationProvider#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true
+  },
+  {
+    "__docId__": 155,
+    "kind": "member",
+    "name": "authData",
+    "memberof": "src/providers/authorization.js~AuthenticationProvider",
+    "static": false,
+    "longname": "src/providers/authorization.js~AuthenticationProvider#authData",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "member",
+    "name": "authenticationAttributes",
+    "memberof": "src/providers/authorization.js~AuthenticationProvider",
+    "static": false,
+    "longname": "src/providers/authorization.js~AuthenticationProvider#authenticationAttributes",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "method",
+    "name": "isValid",
+    "memberof": "src/providers/authorization.js~AuthenticationProvider",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/authorization.js~AuthenticationProvider#isValid",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 158,
+    "kind": "method",
+    "name": "getAuthorization",
+    "memberof": "src/providers/authorization.js~AuthenticationProvider",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/authorization.js~AuthenticationProvider#getAuthorization",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "file",
+    "name": "src/providers/dynamic-authorization.js",
+    "content": "const humps = require('humps');\nconst { JWT } = require('../security');\nconst { error } = require('./authorization-enum');\n\n\nconst SECRET_KEY = process.env.JWT_SECRET_KEY || '{000-1-00232-111-931313-13142-12129-24-3333}';\n\n\nconst jsonwebtoken = new JWT(SECRET_KEY);\n\n/**\n *  @constructor\n *  @param {Object} headers Headers received in the application, which contains token's\n *  @param {jsonwebtoken} auth Authentication Method instantiated object, default's to JWT.\n */\nclass DynamicAuthenticationProdiver {\n  constructor({ headers = {}, auth = jsonwebtoken }) {\n    this.headers = this.setHeadersToCamelCase(headers);\n    this.attributtes = [];\n    this.auth = auth;\n  }\n\n  /**\n   * @private\n   */\n  setHeadersToCamelCase(headers) {\n    return humps.camelizeKeys(headers);\n  }\n\n  setHeadersToBeDecrypted(/* istanbul ignore next */ headerAttributes = []) {\n    headerAttributes.forEach(({ header, requestProp }) => {\n      this.attributtes.push({ header: humps.camelize(header), requestProp });\n    });\n  }\n\n  /**\n   * @private\n   * @param {String} token\n   */\n  decryptToken(token) {\n    try {\n      this.auth.verify(token);\n      const decoded = this.auth.decode(token);\n\n      delete decoded.iat;\n\n      return decoded;\n    } catch (exception) {\n      throw new Error(exception);\n    }\n  }\n\n  /**\n   * @private\n   */\n  assignAuthenticatedToRequestProp(headers, attributtes) {\n    const validatedTokens = {};\n\n    Object.keys(headers).forEach((header) => {\n      attributtes.forEach((attribute) => {\n        if (header === attribute.header) {\n          validatedTokens[[attribute.requestProp]] = this.decryptToken(headers[header]);\n        }\n      });\n    });\n\n    return validatedTokens;\n  }\n\n  /**\n   * @private\n   */\n  getAuthorization() {\n    const validatedTokens = this.assignAuthenticatedToRequestProp(this.headers, this.attributtes);\n\n    if (Object.keys(validatedTokens).length === 0) {\n      throw new Error(error.noAuthProduced);\n    }\n\n    return validatedTokens;\n  }\n}\n\nmodule.exports = DynamicAuthenticationProdiver;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/providers/dynamic-authorization.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 160,
+    "kind": "variable",
+    "name": "SECRET_KEY",
+    "memberof": "src/providers/dynamic-authorization.js",
+    "static": true,
+    "longname": "src/providers/dynamic-authorization.js~SECRET_KEY",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/providers/dynamic-authorization.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 161,
+    "kind": "variable",
+    "name": "jsonwebtoken",
+    "memberof": "src/providers/dynamic-authorization.js",
+    "static": true,
+    "longname": "src/providers/dynamic-authorization.js~jsonwebtoken",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/providers/dynamic-authorization.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "src/security/index.js~JWT"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 162,
+    "kind": "class",
+    "name": "DynamicAuthenticationProdiver",
+    "memberof": "src/providers/dynamic-authorization.js",
+    "static": true,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/providers/dynamic-authorization.js",
+    "importStyle": "DynamicAuthenticationProdiver",
+    "description": "",
+    "lineNumber": 16,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "headers",
+        "description": "Headers received in the application, which contains token's"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "jsonwebtoken"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "auth",
+        "description": "Authentication Method instantiated object, default's to JWT."
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 163,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true
+  },
+  {
+    "__docId__": 164,
+    "kind": "member",
+    "name": "headers",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#headers",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "member",
+    "name": "attributtes",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#attributtes",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "member",
+    "name": "auth",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#auth",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 167,
+    "kind": "method",
+    "name": "setHeadersToCamelCase",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#setHeadersToCamelCase",
+    "access": "private",
+    "description": "",
+    "lineNumber": 26,
+    "params": [
+      {
+        "name": "headers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 168,
+    "kind": "method",
+    "name": "setHeadersToBeDecrypted",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#setHeadersToBeDecrypted",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "params": [
+      {
+        "name": "headerAttributes",
+        "optional": true,
+        "types": [
+          "*[]"
+        ],
+        "defaultRaw": [],
+        "defaultValue": "[]"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 169,
+    "kind": "method",
+    "name": "decryptToken",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#decryptToken",
+    "access": "private",
+    "description": "",
+    "lineNumber": 40,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 170,
+    "kind": "method",
+    "name": "assignAuthenticatedToRequestProp",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#assignAuthenticatedToRequestProp",
+    "access": "private",
+    "description": "",
+    "lineNumber": 56,
+    "params": [
+      {
+        "name": "headers",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "attributtes",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 171,
+    "kind": "method",
+    "name": "getAuthorization",
+    "memberof": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/dynamic-authorization.js~DynamicAuthenticationProdiver#getAuthorization",
+    "access": "private",
+    "description": "",
+    "lineNumber": 73,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 172,
+    "kind": "file",
+    "name": "src/security/index.js",
+    "content": "const jwt = require('jsonwebtoken');\n\nconst defaultOptions = Object.freeze({\n  expiresIn: '1d',\n});\n\nclass JWT {\n  constructor(secretKey) {\n    this.secretKey = secretKey;\n  }\n\n  decode(token) {\n    return jwt.decode(token);\n  }\n\n  verify(token) {\n    return jwt.verify(token, this.secretKey);\n  }\n\n  sign(payload, options = {}) {\n    return jwt.sign(payload, this.secretKey, { ...defaultOptions, ...options });\n  }\n}\n\nmodule.exports = {\n  JWT,\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/security/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 173,
+    "kind": "variable",
+    "name": "defaultOptions",
+    "memberof": "src/security/index.js",
+    "static": true,
+    "longname": "src/security/index.js~defaultOptions",
+    "access": "public",
+    "export": false,
+    "importPath": "architecture-node-base/src/security/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 174,
+    "kind": "class",
+    "name": "JWT",
+    "memberof": "src/security/index.js",
+    "static": true,
+    "longname": "src/security/index.js~JWT",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/security/index.js",
+    "importStyle": "{JWT}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 175,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/security/index.js~JWT",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/security/index.js~JWT#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true
+  },
+  {
+    "__docId__": 176,
+    "kind": "member",
+    "name": "secretKey",
+    "memberof": "src/security/index.js~JWT",
+    "static": false,
+    "longname": "src/security/index.js~JWT#secretKey",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 177,
+    "kind": "method",
+    "name": "decode",
+    "memberof": "src/security/index.js~JWT",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/security/index.js~JWT#decode",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "token",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 178,
+    "kind": "method",
+    "name": "verify",
+    "memberof": "src/security/index.js~JWT",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/security/index.js~JWT#verify",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "params": [
+      {
+        "name": "token",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 179,
+    "kind": "method",
+    "name": "sign",
+    "memberof": "src/security/index.js~JWT",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/security/index.js~JWT#sign",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "params": [
+      {
+        "name": "payload",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 180,
+    "kind": "file",
+    "name": "src/tests/helpers.js",
+    "content": "const { BaseCommand } = require('architecture-code-structure');\n\n/**\n * A command to use in your tests to fake an event and the data within the event\n * @extends {BaseCommand}\n */\nclass FakeCommand extends BaseCommand {\n  /**\n  * @param {string} eventName - the event name that will be fired\n  * @param {object} args - the object that will be returned when the event is fired\n  */\n  constructor(eventName, args) {\n    super();\n    /**\n    * @type {object}\n    */\n    this.args = args;\n    /**\n    * @type {string}\n    */\n    this.eventName = eventName;\n  }\n\n  /**\n   * emits the event\n   */\n  execute() {\n    this.emit(this.eventName, this.args);\n  }\n}\n\n/**\n * Creates a factory using the factory pattern with the create method returning the command passed\n * @param {object} - the command object\n * @return {Class} a Class with an create function\n */\nfunction factory(command) {\n  return class FakeFactory {\n    create() {\n      return command;\n    }\n  };\n}\n\nmodule.exports = {\n  factory,\n  FakeCommand,\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/tests/helpers.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 181,
+    "kind": "function",
+    "name": "factory",
+    "memberof": "src/tests/helpers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/tests/helpers.js~factory",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/tests/helpers.js",
+    "importStyle": "{factory}",
+    "description": "Creates a factory using the factory pattern with the create method returning the command passed",
+    "lineNumber": 37,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "-",
+        "description": "the command object"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Class"
+      ],
+      "spread": false,
+      "description": "a Class with an create function"
+    }
+  },
+  {
+    "__docId__": 182,
+    "kind": "class",
+    "name": "FakeCommand",
+    "memberof": "src/tests/helpers.js",
+    "static": true,
+    "longname": "src/tests/helpers.js~FakeCommand",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/tests/helpers.js",
+    "importStyle": "{FakeCommand}",
+    "description": "A command to use in your tests to fake an event and the data within the event",
+    "lineNumber": 7,
+    "interface": false,
+    "extends": [
+      "BaseCommand"
+    ]
+  },
+  {
+    "__docId__": 183,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/tests/helpers.js~FakeCommand",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/tests/helpers.js~FakeCommand#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "eventName",
+        "description": "the event name that will be fired"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args",
+        "description": "the object that will be returned when the event is fired"
+      }
+    ]
+  },
+  {
+    "__docId__": 184,
+    "kind": "member",
+    "name": "args",
+    "memberof": "src/tests/helpers.js~FakeCommand",
+    "static": false,
+    "longname": "src/tests/helpers.js~FakeCommand#args",
+    "access": "public",
+    "description": "",
+    "lineNumber": 17,
+    "type": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 185,
+    "kind": "member",
+    "name": "eventName",
+    "memberof": "src/tests/helpers.js~FakeCommand",
+    "static": false,
+    "longname": "src/tests/helpers.js~FakeCommand#eventName",
+    "access": "public",
+    "description": "",
+    "lineNumber": 21,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 186,
+    "kind": "method",
+    "name": "execute",
+    "memberof": "src/tests/helpers.js~FakeCommand",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/tests/helpers.js~FakeCommand#execute",
+    "access": "public",
+    "description": "emits the event",
+    "lineNumber": 27,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 187,
+    "kind": "file",
+    "name": "src/tests/mocha-helpers.js",
+    "content": "/**\n * Enables the mocha done parameter using async/await\n * @param {function(done: function): undefined} - your test function\n * @return {function} a new function receiving the done and passing it to your function\n * @throws {Error} when your function has not argument or your function is not an async one.\n */\nfunction asyncDone(fn) {\n  if (fn.length !== 1) {\n    throw new Error('The function must receive a single done argument');\n  }\n\n  return (done) => {\n    const promise = fn(done);\n\n    if (!promise || !promise.then) {\n      throw new Error('The function must return a promise');\n    }\n  };\n}\n\nmodule.exports = {\n  asyncDone,\n};\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/tests/mocha-helpers.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 188,
+    "kind": "function",
+    "name": "asyncDone",
+    "memberof": "src/tests/mocha-helpers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/tests/mocha-helpers.js~asyncDone",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/tests/mocha-helpers.js",
+    "importStyle": "{asyncDone}",
+    "description": "Enables the mocha done parameter using async/await",
+    "lineNumber": 7,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function(done: function): undefined"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "-",
+        "description": "your test function"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "function"
+      ],
+      "spread": false,
+      "description": "a new function receiving the done and passing it to your function"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "when your function has not argument or your function is not an async one."
+      }
+    ]
+  },
+  {
+    "__docId__": 189,
+    "kind": "file",
+    "name": "src/utils/array.js",
+    "content": "const Promise = require('bluebird');\n\nclass ArrayUtils {\n  constructor(limit = 10) {\n    this.limit = limit;\n  }\n\n  /* istanbul ignore next */\n  prepareArguments(dataset, context, {\n    down, up, limit = null, concurrent,\n  }, iteree) {\n    return {\n      concurrent,\n      context,\n      dataset,\n      down,\n      iteree,\n      limit,\n      up,\n    };\n  }\n\n  verifyLimitAndProp(iteree, item, limit) {\n    return (item[[iteree]] !== undefined && (limit !== null && limit > 0));\n  }\n\n  /**\n    * Recursively iterates over array on a specific iteree and executes a\n    * function when the object is being mapped (down) and other when the map is over (up).\n    * @param {Object} args - DeepMap function arguments.\n    * @param {Array} args.dataset - Dataset to be iterated over.\n    * @param {string} args.iteree - Attribute which the recursion occurs.\n    * @param {function|Promise} args.down - Function that will be executed when the object is mapped\n    * @param {function|Promise} args.up - Function that will be executed when\n    * the mapping (down function) is executed\n    * @param {object} args.context - Context from previous iteration.\n  */\n\n  /* eslint-disable max-lines-per-function */\n  /* istanbul ignore next */\n  async deepMap({\n    dataset, iteree, down = (item, context) => ({ context, item }), up = item => item,\n    context, limit = this.limit, concurrent = true,\n  }) {\n    const promisifiedDataset = await Promise.map(dataset, async (iterated) => {\n      const { item, context: newContext } = await down(iterated, context);\n\n      if (this.verifyLimitAndProp(iteree, item, limit)) {\n        item[[iteree]] = await this.deepMap(\n          this.prepareArguments(item[iteree], newContext, {\n            concurrent,\n            down,\n            limit: limit !== null && limit > 0 ? limit - 1 : null,\n            up,\n          }, iteree),\n        );\n      }\n\n      return up(item);\n    }, { concurrency: concurrent ? Infinity : 1 });\n\n    return promisifiedDataset;\n  }\n}\nmodule.exports = ArrayUtils;\n",
+    "static": true,
+    "longname": "/data/projects/architecture-node-base/src/utils/array.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 190,
+    "kind": "class",
+    "name": "ArrayUtils",
+    "memberof": "src/utils/array.js",
+    "static": true,
+    "longname": "src/utils/array.js~ArrayUtils",
+    "access": "public",
+    "export": true,
+    "importPath": "architecture-node-base/src/utils/array.js",
+    "importStyle": "ArrayUtils",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 191,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/utils/array.js~ArrayUtils",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/utils/array.js~ArrayUtils#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true
+  },
+  {
+    "__docId__": 192,
+    "kind": "member",
+    "name": "limit",
+    "memberof": "src/utils/array.js~ArrayUtils",
+    "static": false,
+    "longname": "src/utils/array.js~ArrayUtils#limit",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 193,
+    "kind": "method",
+    "name": "prepareArguments",
+    "memberof": "src/utils/array.js~ArrayUtils",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/utils/array.js~ArrayUtils#prepareArguments",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "params": [
+      {
+        "name": "dataset",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "context",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern2",
+        "types": [
+          "{\"down\": *, \"up\": *, \"limit\": *, \"concurrent\": *}"
+        ],
+        "defaultRaw": {
+          "down": null,
+          "up": null,
+          "limit": null,
+          "concurrent": null
+        },
+        "defaultValue": "{\"down\":null,\"up\":null,\"limit\":null,\"concurrent\":null}"
+      },
+      {
+        "name": "iteree",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"concurrent\": *, \"context\": *, \"dataset\": *, \"down\": *, \"iteree\": *, \"limit\": *, \"up\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 194,
+    "kind": "method",
+    "name": "verifyLimitAndProp",
+    "memberof": "src/utils/array.js~ArrayUtils",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/utils/array.js~ArrayUtils#verifyLimitAndProp",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [
+      {
+        "name": "iteree",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "item",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "limit",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 195,
+    "kind": "method",
+    "name": "deepMap",
+    "memberof": "src/utils/array.js~ArrayUtils",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/utils/array.js~ArrayUtils#deepMap",
+    "access": "public",
+    "description": "Recursively iterates over array on a specific iteree and executes a\nfunction when the object is being mapped (down) and other when the map is over (up).",
+    "lineNumber": 41,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args",
+        "description": "DeepMap function arguments."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args.dataset",
+        "description": "Dataset to be iterated over."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args.iteree",
+        "description": "Attribute which the recursion occurs."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function",
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args.down",
+        "description": "Function that will be executed when the object is mapped"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function",
+          "Promise"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args.up",
+        "description": "Function that will be executed when\nthe mapping (down function) is executed"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args.context",
+        "description": "Context from previous iteration."
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# Architecture Node Base\n\n## For What\n\nThe Node Base offers an easier way to implement the coding practices recommended to the Global Sales Platform.\n\n## What it's included\n\n* Docker environment\n* Isomorphic code, capable to run in local environment, lambda and kubernetes\n* Logging using the structure recommended\n  * Logger module supporting with correlation id, session id, etc\n  * Logging middleware to log input and output data\n  * TypeORM logger module using the logger module\n* Tests helpers to improve productivity\n* Abstraction to use code practices recommended\n  * Base Command to create events based commands\n  * Express Handler to create the interface between your domain and the Express\n  * Environment variables from AWS SSM\n* Debug mode for development and tests\n\n### For what architecture need\n\nThis project helps achieve the `good maintainability` need, providing a common base for all Node projects that share some common features.\n\nAlso this project helps the `ease troubleshooting` need, in two different moments:\n\n* In the local development providing a debug mode\n* In different running stages (ex: production) providing a Logger, that is based on the monitoring and logging need documented in the [Confluence](https://natura.atlassian.net/wiki/spaces/AD3/pages/357204432/11+-+Monitoramento+e+Logging)\n\n## How to use\n\nAdd in your project `package.json` in the `dependencies` section:\n```\n  \"architecture-node-base\": \"https://s3.amazonaws.com/natura-globalsales-artifacts/libs/architecture-node-base-latest.tar.gz\",\n```\n\nMore details of how use this lib can be found in following references:\n\n* This project documentation, found in the `docs` folder. You can clone this project and run the task: `npm run docs`\n* There is a [cookbook](https://natura.atlassian.net/wiki/spaces/AD3/pages/535363846/Cookbook) with recipes of how create a new tower using the `node-base`\n* The samples towers:\n    * https://bitbucket.org/naturacode/architecture-order-tower/src/master/\n    * https://bitbucket.org/naturacode/architecture-inventory-tower/src/master/\n\n## How to contribute\n\nYou can contribute submitting pull requests.\n\n### Setup\n\nRun `npm install`.\n\n### Testing\n\nJust run `npm test`.\n\n\n### Lint\n\nTo verify if any lint rule was broken run: `npm run lint`.\n\n### Update docs\n\nRun `npm run docs` to generate a new documentation version.\n\n### Deploy\n\nA new artifact is generated via a [Jenkins Job](http://jenkins-gsp.naturacloud.com/view/99.%20Architecture/job/libraries/job/architecture-node-base/).\n\n## External links\n\n* [Cookbook](https://natura.atlassian.net/wiki/spaces/AD3/pages/535363846/Cookbook)\n* [CI Job](http://jenkins-gsp.naturacloud.com/view/99.%20Architecture/job/libraries/job/architecture-node-base/), in case you need to check or modify the CI process\n* The lib and it's versions is hosted in AWS S3:\n    * The latest: https://s3.amazonaws.com/natura-globalsales-artifacts/libs/architecture-node-base-latest.tar.gz\n    * A specific tag (ex: 1.0.8): https://s3.amazonaws.com/natura-globalsales-artifacts/libs/architecture-node-base-1.0.8.tar.gz\n",
+    "longname": "/data/projects/architecture-node-base/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"license\": \"UNLICENSED\",\n  \"main\": \"index.js\",\n  \"name\": \"architecture-node-base\",\n  \"private\": true,\n  \"version\": \"1.1.2\",\n  \"repository\": \"https://bitbucket.org/naturacode/architecture-node-base\",\n  \"author\": {\n    \"name\": \"Vizir Software Studio\",\n    \"email\": \"\",\n    \"url\": \"https://vizir.com.br\"\n  },\n  \"engines\": {\n    \"node\": \">= 8.1.0\"\n  },\n  \"contributors\": [\n    \"Bruno Cartolari <cartola@vizir.com.br>\",\n    \"Edison Cury Neto <edison.cury.neto@accenture.com>\",\n    \"Fabrício Campos <fabricio@vizir.com.br>\",\n    \"João Paulo Nobrega <joao.paulo.nobrega@avanade.com>\"\n  ],\n  \"devDependencies\": {\n    \"@naturacosmeticos/eslint-config-natura\": \"^1.0.0\",\n    \"chai\": \"^4.1.2\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-node\": \"^1.0.3\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.3.0\",\n    \"eslint-plugin-import\": \"^2.14.0\",\n    \"faker\": \"^4.1.0\",\n    \"graphql-tag\": \"^2.10.0\",\n    \"husky\": \"^1.0.0-rc.13\",\n    \"mocha\": \"^5.2.0\",\n    \"nyc\": \"^11.9.0\",\n    \"sinon\": \"^5.1.1\",\n    \"supertest\": \"^3.1.0\"\n  },\n  \"scripts\": {\n    \"docs\": \"./node_modules/.bin/esdoc -c .esdoc.json\",\n    \"lint\": \"eslint src/ test/\",\n    \"lint:fix\": \"eslint --fix src/ test/\",\n    \"test\": \"NODE_ENV=test mocha --recursive --require test/helpers/start.js --exit\",\n    \"test:unit\": \"NODE_ENV=test mocha --recursive --require test/helpers/start.js\",\n    \"test:coverage\": \"NODE_ENV=test nyc mocha --recursive --require test/helpers/start.js\",\n    \"test:watch\": \"NODE_ENV=test mocha -w\",\n    \"transpile\": \"echo ok\",\n    \"package\": \"bash package.sh\"\n  },\n  \"nyc\": {\n    \"all\": true,\n    \"check-coverage\": true,\n    \"per-file\": false,\n    \"lines\": 90,\n    \"statements\": 90,\n    \"functions\": 90,\n    \"branches\": 90,\n    \"include\": [\n      \"src/**/*.js\"\n    ],\n    \"exclude\": [\n      \"src/development/*inspector*.js\",\n      \"src/message-queue/**/*.js\",\n      \"src/module.js\",\n      \"src/orm/**/*.js\",\n      \"src/tests/mocha-helpers.js\",\n      \"test/**/*.js\"\n    ],\n    \"reporter\": [\n      \"lcov\",\n      \"text-summary\"\n    ],\n    \"report-dir\": \"./coverage\"\n  },\n  \"husky\": {\n    \"hooks\": {\n      \"pre-commit\": \"npm run lint && npm test\",\n      \"pre-push\": \"npm run lint && npm test\"\n    }\n  },\n  \"dependencies\": {\n    \"@apollographql/apollo-upload-server\": \"^5.0.3\",\n    \"@naturacosmeticos/clio-nodejs-logger\": \"^1.2.1\",\n    \"acorn-jsx\": \"^5.0.1\",\n    \"apollo-server-express\": \"^2.0.6\",\n    \"apollo-server-lambda\": \"^2.0.6\",\n    \"architecture-code-structure\": \"https://s3.amazonaws.com/natura-globalsales-artifacts/libs/architecture-code-structure-latest.tar.gz\",\n    \"aws-sdk\": \"^2.294.0\",\n    \"aws-serverless-express\": \"^3.2.0\",\n    \"bluebird\": \"^3.5.2\",\n    \"body-parser\": \"^1.18.3\",\n    \"commander\": \"^2.17.1\",\n    \"cors\": \"^2.8.4\",\n    \"express\": \"^4.16.3\",\n    \"graphql\": \"^14.0.0\",\n    \"graphql-subscriptions\": \"^1.0.0\",\n    \"graphql-tools\": \"^3.1.1\",\n    \"helmet\": \"^3.13.0\",\n    \"humps\": \"^2.0.1\",\n    \"inspector-proxy\": \"^1.2.1\",\n    \"jsonwebtoken\": \"^8.3.0\",\n    \"lodash\": \"^4.17.10\",\n    \"typeorm\": \"^0.2.6\",\n    \"uuid\": \"^3.3.2\"\n  }\n}\n",
+    "longname": "/data/projects/architecture-node-base/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "name": "architecture-node-base",
+  "private": true,
+  "version": "1.1.2",
+  "repository": "https://bitbucket.org/naturacode/architecture-node-base",
+  "author": {
+    "name": "Vizir Software Studio",
+    "email": "",
+    "url": "https://vizir.com.br"
+  },
+  "engines": {
+    "node": ">= 8.1.0"
+  },
+  "contributors": [
+    "Bruno Cartolari <cartola@vizir.com.br>",
+    "Edison Cury Neto <edison.cury.neto@accenture.com>",
+    "Fabrício Campos <fabricio@vizir.com.br>",
+    "João Paulo Nobrega <joao.paulo.nobrega@avanade.com>"
+  ],
+  "devDependencies": {
+    "@naturacosmeticos/eslint-config-natura": "^1.0.0",
+    "chai": "^4.1.2",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-node": "^1.0.3",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^5.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "faker": "^4.1.0",
+    "graphql-tag": "^2.10.0",
+    "husky": "^1.0.0-rc.13",
+    "mocha": "^5.2.0",
+    "nyc": "^11.9.0",
+    "sinon": "^5.1.1",
+    "supertest": "^3.1.0"
+  },
+  "scripts": {
+    "docs": "./node_modules/.bin/esdoc -c .esdoc.json",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint --fix src/ test/",
+    "test": "NODE_ENV=test mocha --recursive --require test/helpers/start.js --exit",
+    "test:unit": "NODE_ENV=test mocha --recursive --require test/helpers/start.js",
+    "test:coverage": "NODE_ENV=test nyc mocha --recursive --require test/helpers/start.js",
+    "test:watch": "NODE_ENV=test mocha -w",
+    "transpile": "echo ok",
+    "package": "bash package.sh"
+  },
+  "nyc": {
+    "all": true,
+    "check-coverage": true,
+    "per-file": false,
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 90,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "src/development/*inspector*.js",
+      "src/message-queue/**/*.js",
+      "src/module.js",
+      "src/orm/**/*.js",
+      "src/tests/mocha-helpers.js",
+      "test/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "report-dir": "./coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
+    }
+  },
+  "dependencies": {
+    "@apollographql/apollo-upload-server": "^5.0.3",
+    "@naturacosmeticos/clio-nodejs-logger": "^1.2.1",
+    "acorn-jsx": "^5.0.1",
+    "apollo-server-express": "^2.0.6",
+    "apollo-server-lambda": "^2.0.6",
+    "architecture-code-structure": "https://s3.amazonaws.com/natura-globalsales-artifacts/libs/architecture-code-structure-latest.tar.gz",
+    "aws-sdk": "^2.294.0",
+    "aws-serverless-express": "^3.2.0",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "commander": "^2.17.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "graphql": "^14.0.0",
+    "graphql-subscriptions": "^1.0.0",
+    "graphql-tools": "^3.1.1",
+    "helmet": "^3.13.0",
+    "humps": "^2.0.1",
+    "inspector-proxy": "^1.2.1",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "typeorm": "^0.2.6",
+    "uuid": "^3.3.2"
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">test/app-settings.test.js | architecture-node-base</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a href="https://bitbucket.org/naturacode/architecture-node-base">Repository</a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/app-settings.js~AppSettings.html">AppSettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/base-command.js~BaseCommand.html">BaseCommand</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#express">express</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/express/handler.js~ExpressHandler.html">ExpressHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-expressAppBuilder">expressAppBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-corsmiddleware">corsmiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-handlertofunctionadapter">handlertofunctionadapter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loggingMiddleware">loggingMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#logger">logger</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/logger/index.js~Logger.html">Logger</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#tests">tests</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/tests/helpers.js~FakeCommand.html">FakeCommand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-factory">factory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-asyncDone">asyncDone</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">test/app-settings.test.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const { assert } = require(&apos;chai&apos;);
+const AppSettings = require(&apos;../src/app-settings&apos;);
+
+const parametersStore = require(&apos;./helpers/parameters-store-mock&apos;);
+
+describe(&apos;AppSettings&apos;, () =&gt; {
+  afterEach(() =&gt; {
+    delete process.env.DATABASE_USERNAME;
+    delete process.env.NODE_ENV;
+    delete process.env.APP_NAME;
+  });
+
+  describe(&apos;.init&apos;, () =&gt; {
+    it(&apos;should set the variables from parameters store in the process.env&apos;, async () =&gt; {
+      // given
+      process.env.APP_NAME = &apos;testingApp&apos;;
+      process.env.NODE_ENV = &apos;test&apos;;
+      // when
+      await AppSettings.init(parametersStore);
+      // then
+      assert.equal(process.env[parametersStore.variableName], parametersStore.variableValue);
+    });
+
+    it(&apos;should throws an error when variable APP_NAME is not defined&apos;, async () =&gt; {
+      // given
+      process.env.NODE_ENV = &apos;test&apos;;
+      // when
+      try {
+        await AppSettings.init(parametersStore);
+      } catch (error) {
+        // then
+        assert.equal(error.message, &apos;Expected environment variable APP_NAME to be defined&apos;);
+      }
+    });
+
+    it(&apos;should throws an error when variable NODE_ENV is not defined&apos;, async () =&gt; {
+      // given
+      process.env.APP_NAME = &apos;testingApp&apos;;
+      // when
+      try {
+        await AppSettings.init(parametersStore);
+      } catch (error) {
+        // then
+        assert.equal(error.message, &apos;Expected environment variable NODE_ENV to be defined&apos;);
+      }
+    });
+  });
+
+  describe(&apos;.get&apos;, () =&gt; {
+    it(&apos;should returned the variable when its defined&apos;, async () =&gt; {
+      // given
+      const variableName = &apos;DATABASE_USERNAME&apos;;
+      process.env[variableName] = &apos;someDbUser&apos;;
+      // when
+      const result = AppSettings.get(variableName);
+      // then
+      assert.equal(result, process.env[variableName]);
+    });
+
+    it(&apos;should throw an error when call variable is not defined&apos;, async () =&gt; {
+      // given
+      const variableName = &apos;DATABASE_USERNAME&apos;;
+      const functionCall = () =&gt; {
+        AppSettings.get(variableName);
+      };
+      // then
+      assert.throws(functionCall, Error, /Expected environment variable DATABASE_USERNAME to be defined/);
+    });
+  });
+
+  describe(&apos;.getOrDefault&apos;, () =&gt; {
+    it(&apos;should returned the variable when its defined&apos;, async () =&gt; {
+      // given
+      const variableName = &apos;DATABASE_USERNAME&apos;;
+      process.env[variableName] = &apos;someNewDbUser&apos;;
+      // when
+      const result = AppSettings.getOrDefault(variableName);
+      // then
+      assert.equal(result, process.env[variableName]);
+    });
+
+    it(&apos;should the default value when variable is not defined&apos;, async () =&gt; {
+      // given
+      const variableName = &apos;DATABASE_USERNAME&apos;;
+      const defaultValue = &apos;the default value&apos;;
+      // when
+      const result = AppSettings.getOrDefault(variableName, defaultValue);
+      // then
+      assert.equal(result, defaultValue);
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

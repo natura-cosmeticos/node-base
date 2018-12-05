@@ -1,0 +1,78 @@
+[
+  {
+    "name": "factory",
+    "filePath": "src/tests/helpers.js",
+    "lines": [
+      {
+        "lineNumber": 31,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 32,
+        "line": " * Creates a factory using the factory pattern with the create method returning the command passed"
+      },
+      {
+        "lineNumber": 33,
+        "line": " * @param {object} - the command object"
+      },
+      {
+        "lineNumber": 34,
+        "line": " * @return {Class} a Class with an create function"
+      },
+      {
+        "lineNumber": 35,
+        "line": " */"
+      },
+      {
+        "lineNumber": 36,
+        "line": "function factory(command) {"
+      }
+    ],
+    "codeParams": [
+      "command"
+    ],
+    "docParams": [
+      "-"
+    ]
+  },
+  {
+    "name": "asyncDone",
+    "filePath": "src/tests/mocha-helpers.js",
+    "lines": [
+      {
+        "lineNumber": 0,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 1,
+        "line": " * Enables the mocha done parameter using async/await"
+      },
+      {
+        "lineNumber": 2,
+        "line": " * @param {function(done: function): undefined} - your test function"
+      },
+      {
+        "lineNumber": 3,
+        "line": " * @return {function} a new function receiving the done and passing it to your function"
+      },
+      {
+        "lineNumber": 4,
+        "line": " * @throws {Error} when your function has not argument or your function is not an async one."
+      },
+      {
+        "lineNumber": 5,
+        "line": " */"
+      },
+      {
+        "lineNumber": 6,
+        "line": "function asyncDone(fn) {"
+      }
+    ],
+    "codeParams": [
+      "fn"
+    ],
+    "docParams": [
+      "-"
+    ]
+  }
+]
