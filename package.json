@@ -1,15 +1,8 @@
 {
-  "license": "UNLICENSED",
   "main": "index.js",
-  "name": "architecture-node-base",
-  "private": true,
+  "name": "@naturacosmeticos/node-base",
+  "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
   "version": "1.1.2",
-  "repository": "https://bitbucket.org/naturacode/architecture-node-base",
-  "author": {
-    "name": "Vizir Software Studio",
-    "email": "",
-    "url": "https://vizir.com.br"
-  },
   "engines": {
     "node": ">= 8.1.0"
   },
@@ -102,5 +95,8 @@
     "lodash": "^4.17.10",
     "typeorm": "^0.2.6",
     "uuid": "^3.3.2"
-  }
+  },
+  "homepage": "https://github.com/natura-cosmeticos/node-base#readme",
+  "bugs": "https://github.com/natura-cosmeticos/node-base/issues",
+  "license": "MIT"
 }
