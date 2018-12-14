@@ -3,6 +3,8 @@ const domain = require('domain');
 const Logger = require('@naturacosmeticos/clio-nodejs-logger');
 
 const logAllPattern = '*';
+const logLevelDebug = 'debug';
+const grayLogFormat = 'graylog';
 
 /** @private */
 function requestContext(req) {
@@ -16,17 +18,18 @@ function requestContext(req) {
 
 /** @private */
 function createLogger(req) {
-  const context = { context: requestContext(req) };
+  const context = requestContext(req);
 
   if ('x-debug-mode-on' in req.headers) {
     return new Logger({
       context,
+      logLevel: 'logLevelDebug',
       logPatterns: logAllPattern,
       namespace: '',
     });
   }
 
-  return new Logger({ context });
+  return new Logger({ context, logFormat: grayLogFormat });
 }
 
 /**
