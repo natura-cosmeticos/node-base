@@ -23,7 +23,7 @@ function createLogger(req) {
   if ('x-debug-mode-on' in req.headers) {
     return new Logger({
       context,
-      logLevel: 'logLevelDebug',
+      logLevel: logLevelDebug,
       logPatterns: logAllPattern,
       namespace: '',
     });
