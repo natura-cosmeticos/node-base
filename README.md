@@ -1,8 +1,11 @@
-# Architecture Node Base
+# node-base
+[![Known Vulnerabilities](https://snyk.io/test/github/natura-cosmeticos/node-base/badge.svg)](https://snyk.io/test/github/natura-cosmeticos/node-base)
+[![Build Status](https://api.travis-ci.org/natura-cosmeticos/node-base.svg?branch=master)](https://travis-ci.org/natura-cosmeticos/node-base)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9ee01fcbab76443393f4e01d9711cf6f)](https://www.codacy.com/app/fabricioffc/node-base?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=natura-cosmeticos/node-base&amp;utm_campaign=Badge_Grade)
 
-## For What
+## What for
 
-The Node Base offers an easier way to implement the coding practices recommended to the Global Sales Platform.
+The Node Base offers an easier way to implement the coding practices recommended by Natura Architecture Team.
 
 ## What it's included
 
@@ -19,18 +22,10 @@ The Node Base offers an easier way to implement the coding practices recommended
   * Environment variables from AWS SSM
 * Debug mode for development and tests
 
-### For what architecture need
-
-This project helps achieve the `good maintainability` need, providing a common base for all Node projects that share some common features.
-
-Also this project helps the `ease troubleshooting` need, in two different moments:
-
-* In the local development providing a debug mode
-* In different running stages (ex: production) providing a Logger
-
 ## How to contribute
 
-You can contribute submitting pull requests.
+You can contribute submitting [pull requests](https://github.com/natura-cosmeticos/node-base/pulls).
+
 
 ### Setup
 
