@@ -18,7 +18,6 @@ const testsHelpers = require('./src/tests/helpers');
 const TypeOrmConfigFactory = require('./src/orm/typeorm/typeorm-config-factory');
 const typeOrmLogger = require('./src/orm/typeorm/logger');
 const ArrayUtils = require('./src/utils/array');
-const GraphQLAppBuilder = require('./src/graphql/app-builder');
 
 module.exports = {
   App: {
@@ -40,9 +39,6 @@ module.exports = {
   External: {
     TypeOrmConfigFactory,
     typeOrmLogger,
-  },
-  GraphQL: {
-    appBuilder: GraphQLAppBuilder,
   },
   MessageQueue: {
     lambdaAdapter,
