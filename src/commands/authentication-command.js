@@ -1,5 +1,7 @@
-const { BaseCommand, baseEvents: { unauthorized } } = require('architecture-code-structure');
 const { EventEmitter } = require('events');
+
+const BaseCommand = require('./base-command');
+const { unauthorized } = require('../base-events');
 
 const invalidAuthorizationError = {
   message: 'authorization.invalid',

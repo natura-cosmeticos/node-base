@@ -1,6 +1,7 @@
-const { BaseCommand, baseEvents } = require('architecture-code-structure');
 const Logger = require('@naturacosmeticos/clio-nodejs-logger');
 const AppSettings = require('./src/app-settings');
+const BaseCommand = require('./src/commands/base-command');
+const baseEvents = require('./src/base-events');
 const expressAdapter = require('./src/express/handler-to-function-adapter');
 const expressAppBuilder = require('./src/express/app-builder');
 const ExpressAuthenticatedHandler = require('./src/express/authenticated-handler');

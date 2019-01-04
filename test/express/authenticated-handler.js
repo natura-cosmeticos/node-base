@@ -1,5 +1,4 @@
 const { assert } = require('chai');
-const { baseEvents } = require('architecture-code-structure');
 const express = require('express');
 const request = require('supertest');
 const sinon = require('sinon');
@@ -10,6 +9,7 @@ const adapt = require('../../src/express/handler-to-function-adapter');
 const jwtGenerator = require('../helpers/jwt-generator');
 const { factory, FakeCommand } = require('../../index').Tests.helpers;
 const authorizationTokenData = require('../fixtures/authentication-token-data');
+const { App: { baseEvents } } = require('../../index');
 
 describe('AuthenticatedHandler', () => {
   describe('enrich command input', () => {

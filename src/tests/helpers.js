@@ -1,4 +1,4 @@
-const { BaseCommand } = require('architecture-code-structure');
+const BaseCommand = require('../commands/base-command');
 
 /**
  * A command to use in your tests to fake an event and the data within the event

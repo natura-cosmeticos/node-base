@@ -1,8 +1,8 @@
-const { baseEvents } = require('architecture-code-structure');
 const humps = require('humps');
 const _ = require('lodash');
 const httpStatusEnum = require('./http-status-enum');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
+const baseEvents = require('../base-events');
 /**
  * HTTP methods that can have body attribute
  */

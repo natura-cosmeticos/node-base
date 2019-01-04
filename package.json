@@ -72,7 +72,6 @@
   },
   "dependencies": {
     "@naturacosmeticos/clio-nodejs-logger": "^1.2.5",
-    "architecture-code-structure": "https://s3.amazonaws.com/natura-globalsales-artifacts/libs/architecture-code-structure-latest.tar.gz",
     "aws-sdk": "^2.294.0",
     "aws-serverless-express": "^3.2.0",
     "bluebird": "^3.5.2",

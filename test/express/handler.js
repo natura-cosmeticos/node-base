@@ -1,11 +1,11 @@
 const { assert } = require('chai');
-const { baseEvents } = require('architecture-code-structure');
 const express = require('express');
 const request = require('supertest');
 const uuid = require('uuid/v4');
 
 const HttpHandler = require('../../src/express/handler');
 const adapt = require('../../src/express/handler-to-function-adapter');
+const { App: { baseEvents } } = require('../../index');
 const { factory, FakeCommand } = require('../../index').Tests.helpers;
 
 describe('HttpHandler', () => {
