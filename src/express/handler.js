@@ -119,6 +119,7 @@ module.exports = class ExpressHandler {
     command.on(baseEvents.validationFailed, this.onValidationFailed.bind(this));
     command.on(baseEvents.notFound, this.onNotFound.bind(this));
     command.on(baseEvents.noContent, this.onNoContent.bind(this));
+    command.on(baseEvents.error, this.onError.bind(this));
   }
 
   /**
@@ -155,5 +156,13 @@ module.exports = class ExpressHandler {
   onNoContent() {
     this.response.status(ExpressHandler.httpStatus.noContent);
     this.response.json(null);
+  }
+
+  /**
+   * Default behavior when an event error occurs
+   */
+  onError(errors) {
+    this.response.status(ExpressHandler.httpStatus.internalServerError);
+    this.response.json(errors);
   }
 };

@@ -88,6 +88,24 @@ describe('HttpHandler', () => {
       // then
       assert.equal(response.statusCode, httpStatus.noContent);
     });
+
+    it('return a 500 when the command emit error', async () => {
+      // given
+      class FakeHandler extends HttpHandler {}
+
+      const { httpStatus } = HttpHandler;
+
+      // when
+      const app = express();
+
+      app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.error))));
+
+      // when
+      const response = await request(app).post('/hello');
+
+      // then
+      assert.equal(response.statusCode, httpStatus.internalServerError);
+    });
   });
 
   describe('edge cases', () => {
