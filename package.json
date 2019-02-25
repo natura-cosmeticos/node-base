@@ -2,7 +2,7 @@
   "main": "index.js",
   "name": "@naturacosmeticos/node-base",
   "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "engines": {
     "node": ">= 8.1.0"
   },
@@ -10,7 +10,8 @@
     "Bruno Cartolari <cartola@vizir.com.br>",
     "Edison Cury Neto <edison.cury.neto@accenture.com>",
     "Fabrício Campos <fabricio@vizir.com.br>",
-    "João Paulo Nobrega <joao.paulo.nobrega@avanade.com>"
+    "João Paulo Nobrega <joao.paulo.nobrega@avanade.com>",
+    "Handrus Stephan Nogueira <handrus@gmail.com>"
   ],
   "devDependencies": {
     "@naturacosmeticos/eslint-config-natura": "^1.0.0",
