@@ -71,6 +71,7 @@
     }
   },
   "dependencies": {
+    "highlight.js": "9.14.2",
     "@naturacosmeticos/clio-nodejs-logger": "^1.2.5",
     "aws-sdk": "^2.294.0",
     "aws-serverless-express": "^3.2.0",
