@@ -62,32 +62,4 @@ describe('AuthenticatedHandler', () => {
       assert.equal(response.statusCode, httpStatus.ok);
     });
   });
-  describe('should return 401', () => {
-    it('when request has not authorization', async () => {
-      // given
-      const app = express();
-
-      app.get('/hello', adapt(AuthenticatedHandler, factory(new FakeCommand('success'))));
-      // when
-      const response = await request(app).get('/hello');
-
-      // then
-      assert.equal(response.statusCode, httpStatus.unauthorized);
-    });
-
-    it('when authorization is invalid', async () => {
-      // given
-      const app = express();
-
-      app.get('/hello', adapt(AuthenticatedHandler, factory(new FakeCommand('success'))));
-      // when
-      const authorizationJwt = jwtGenerator
-        .generate(authorizationTokenData, `${process.env.JWT_SECRET_KEY}Z`);
-      const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt);
-      // then
-
-      assert.equal(response.statusCode, httpStatus.unauthorized);
-    });
-  });
 });
