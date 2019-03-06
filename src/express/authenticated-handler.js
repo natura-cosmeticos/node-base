@@ -4,7 +4,7 @@ const AuthenticationCommand = require('../commands/authentication-command');
 const { unauthorized } = require('../base-events');
 
 module.exports = class AuthenticatedHandler extends Handler {
-  constructor(request, response, command, headerAttributes = ['authorization']) {
+  constructor(request, response, command, headerAttributes = []) {
     const authorizationProvider = new AuthorizationProvider(request.headers, headerAttributes);
     const authenticationCommand = new AuthenticationCommand(command, authorizationProvider);
 
