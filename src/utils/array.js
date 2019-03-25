@@ -43,7 +43,7 @@ class ArrayUtils {
     context, limit = this.limit, concurrent = true,
   }) {
     const promisifiedDataset = await Promise.map(dataset, async (iterated) => {
-      const { item, context: newContext } = await down(iterated, context);
+      const { item, context: newContext } = await down(iterated, context, limit);
 
       if (this.verifyLimitAndProp(iteree, item, limit)) {
         item[[iteree]] = await this.deepMap(
@@ -56,7 +56,7 @@ class ArrayUtils {
         );
       }
 
-      return up(item);
+      return up(item, limit);
     }, { concurrency: concurrent ? Infinity : 1 });
 
     return promisifiedDataset;
