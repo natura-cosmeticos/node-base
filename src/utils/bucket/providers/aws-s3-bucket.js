@@ -1,6 +1,6 @@
 const BaseProviderBucket = require('./base');
 
-class BucketAwsS3 extends BaseProviderBucket {
+class AwsS3Bucket extends BaseProviderBucket {
   getObject(bucketName, key) {
     return this.provider.getObject({
       Bucket: bucketName,
@@ -16,4 +16,4 @@ class BucketAwsS3 extends BaseProviderBucket {
   }
 }
 
-module.export = BucketAwsS3;
+module.exports = AwsS3Bucket;

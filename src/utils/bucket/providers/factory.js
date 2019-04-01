@@ -7,6 +7,5 @@ const createAwsS3Bucket = options => new AwsS3Bucket(
 );
 
 module.exports = {
-  BLOB: createAwsS3Bucket,
   S3: createAwsS3Bucket,
 };
