@@ -86,7 +86,7 @@
     "inspector-proxy": "^1.2.1",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.10",
-    "typeorm": "^0.2.6",
+    "typeorm": "^0.2.15",
     "uuid": "^3.3.2",
     "yargs": "^13.0.0-candidate.0"
   },
