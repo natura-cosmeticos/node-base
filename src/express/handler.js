@@ -1,8 +1,11 @@
 const humps = require('humps');
 const _ = require('lodash');
+const uuidv4 = require('uuid/v4');
+const { createNamespace } = require('continuation-local-storage');
 const httpStatusEnum = require('./http-status-enum');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
+
 /**
  * HTTP methods that can have body attribute
  */
@@ -54,12 +57,51 @@ module.exports = class ExpressHandler {
    */
   async handle() {
     try {
-      this.setupListeners(this.command);
-      await this.command.execute(this.buildInput());
+      await this.createTransactionalContext();
     } catch (error) {
       this.response.status(ExpressHandler.httpStatus.internalServerError);
       this.response.json(error.toString());
     }
+  }
+
+  /**
+   * Sets value to a transactional context variable
+   */
+  setTransactionalContext(variableName, value) {
+    this.tContext.set(variableName, value);
+  }
+
+  /**
+   * Gets value to a transactional context variable
+   */
+  getTransactionalContext(variableName) {
+    return this.tContext.get(variableName);
+  }
+
+  /**
+   * Sets value to a transactional context variable
+   */
+  setLogArguments(value) {
+    this.tContext.set('logArguments', value);
+  }
+
+
+  /**
+   * @private
+   */
+  createTransactionalContext() {
+    this.tContext = createNamespace('transactional-context');
+
+    return new Promise((resolve, reject) => {
+      this.tContext.run(() => {
+        this.tContext.set('correlationId', this.request.headers['correlation-id'] || uuidv4());
+        try {
+          this.setupListeners(this.command);
+
+          this.command.execute(this.buildInput()).then(result => resolve(result));
+        } catch (error) { reject(error); }
+      });
+    });
   }
 
   /**
@@ -77,17 +119,15 @@ module.exports = class ExpressHandler {
    * @private
    */
   getQueryParams(params) {
-    const queryParams = {};
-
-    Object.keys(params).forEach((queryParam) => {
+    return Object.keys(params).reduce((acc, queryParam) => {
       try {
-        queryParams[queryParam] = JSON.parse(params[queryParam]);
+        acc[queryParam] = JSON.parse(params[queryParam]);
       } catch (error) {
-        queryParams[queryParam] = params[queryParam];
+        acc[queryParam] = params[queryParam];
       }
-    });
 
-    return queryParams;
+      return acc;
+    }, {});
   }
 
   /**
@@ -103,9 +143,8 @@ module.exports = class ExpressHandler {
       paramsSources.unshift(this.request.body);
     }
 
-    if (headers) {
-      paramsSources.push({ headers });
-    }
+
+    if (headers) paramsSources.push({ headers });
 
     return Object.assign({}, ...paramsSources);
   }
