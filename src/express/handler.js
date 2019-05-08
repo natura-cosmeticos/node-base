@@ -78,13 +78,6 @@ module.exports = class ExpressHandler {
     return this.tContext.get(variableName);
   }
 
-  /**
-   * Sets value to a transactional context variable
-   */
-  setLogArguments(value) {
-    this.tContext.set('logArguments', value);
-  }
-
 
   /**
    * @private
