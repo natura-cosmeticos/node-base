@@ -1,7 +1,7 @@
 const humps = require('humps');
 const _ = require('lodash');
 const uuidv4 = require('uuid/v4');
-const { createNamespace } = require('cls-hooked');
+const asyncLocalStorage = require('async-local-storage');
 const httpStatusEnum = require('./http-status-enum');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
@@ -41,6 +41,7 @@ module.exports = class ExpressHandler {
      * @private {Array} headersWhitelist - Headers Whitelist
      */
     this.headersWhitelist = headersWhitelist;
+    asyncLocalStorage.enable();
   }
 
   /**
@@ -57,7 +58,11 @@ module.exports = class ExpressHandler {
    */
   async handle() {
     try {
-      await this.createTransactionalContext();
+      asyncLocalStorage.scope();
+      asyncLocalStorage.set('correlationId', this.request.headers['correlation-id'] || uuidv4());
+      this.setupListeners(this.command);
+
+      await this.command.execute(this.buildInput());
     } catch (error) {
       this.response.status(ExpressHandler.httpStatus.internalServerError);
       this.response.json(error.toString());
@@ -68,34 +73,16 @@ module.exports = class ExpressHandler {
    * Sets value to a transactional context variable
    */
   setTransactionalContext(variableName, value) {
-    this.tContext.set(variableName, value);
+    asyncLocalStorage.set(variableName, value);
   }
 
   /**
    * Gets value to a transactional context variable
    */
   getTransactionalContext(variableName) {
-    return this.tContext.get(variableName);
+    return asyncLocalStorage.get(variableName);
   }
 
-
-  /**
-   * @private
-   */
-  createTransactionalContext() {
-    this.tContext = createNamespace('transactional-context');
-
-    return new Promise((resolve, reject) => {
-      this.tContext.run(() => {
-        this.tContext.set('correlationId', this.request.headers['correlation-id'] || uuidv4());
-        try {
-          this.setupListeners(this.command);
-
-          this.command.execute(this.buildInput()).then(result => resolve(result));
-        } catch (error) { reject(error); }
-      });
-    });
-  }
 
   /**
    * @private
