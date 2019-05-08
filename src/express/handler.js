@@ -1,7 +1,7 @@
 const humps = require('humps');
 const _ = require('lodash');
 const uuidv4 = require('uuid/v4');
-const { createNamespace } = require('continuation-local-storage');
+const { createNamespace } = require('cls-hooked');
 const httpStatusEnum = require('./http-status-enum');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
