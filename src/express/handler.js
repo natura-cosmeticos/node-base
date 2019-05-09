@@ -56,7 +56,7 @@ module.exports = class ExpressHandler {
     asyncLocalStorage.scope();
     const correlationId = this.request ? this.request.headers['correlation-id'] : uuidv4();
 
-    asyncLocalStorage.set('correlationId', correlationId);
+    asyncLocalStorage.set('correlationId', correlationId || uuidv4());
   }
 
   /**

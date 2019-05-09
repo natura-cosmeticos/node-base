@@ -1,6 +1,5 @@
 const { EventEmitter } = require('events');
-const uuidv4 = require('uuid/v4');
-const asyncLocalStorage = require('async-local-storage');
+
 const BaseCommand = require('./base-command');
 const { unauthorized } = require('../base-events');
 
@@ -33,8 +32,6 @@ module.exports = class AuthenticationCommand extends BaseCommand {
 
     const authenticationData = await this.authorizationProvider.getAuthorization();
 
-    asyncLocalStorage.scope();
-    asyncLocalStorage.set('correlationId', this.request.headers['correlation-id'] || uuidv4());
     await this.command.execute({ ...args, authenticationData });
   }
 };
