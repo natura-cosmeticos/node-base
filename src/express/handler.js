@@ -52,14 +52,20 @@ module.exports = class ExpressHandler {
     return httpStatusEnum;
   }
 
+  setScope() {
+    asyncLocalStorage.scope();
+    const correlationId = this.request ? this.request.headers['correlation-id'] : uuidv4();
+
+    asyncLocalStorage.set('correlationId', correlationId);
+  }
+
   /**
    * Invoke the command execute method, setting up the default listeners and
    * handling an exception if occurred
    */
   async handle() {
     try {
-      asyncLocalStorage.scope();
-      asyncLocalStorage.set('correlationId', this.request.headers['correlation-id'] || uuidv4());
+      this.setScope();
       this.setupListeners(this.command);
 
       await this.command.execute(this.buildInput());
