@@ -1,8 +1,7 @@
 const humps = require('humps');
 const _ = require('lodash');
-const uuidv4 = require('uuid/v4');
-const asyncLocalStorage = require('async-local-storage');
 const httpStatusEnum = require('./http-status-enum');
+const AsyncLocalStorage = require('../utils/async-local-storage');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
 
@@ -41,7 +40,7 @@ module.exports = class ExpressHandler {
      * @private {Array} headersWhitelist - Headers Whitelist
      */
     this.headersWhitelist = headersWhitelist;
-    asyncLocalStorage.enable();
+    AsyncLocalStorage.setActive();
   }
 
   /**
@@ -53,10 +52,10 @@ module.exports = class ExpressHandler {
   }
 
   setScope() {
-    asyncLocalStorage.scope();
-    const correlationId = this.request ? this.request.headers['correlation-id'] : uuidv4();
+    AsyncLocalStorage.startScope();
+    const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
 
-    asyncLocalStorage.set('correlationId', correlationId || uuidv4());
+    AsyncLocalStorage.setCorrelationId(correlationId);
   }
 
   /**
@@ -74,21 +73,6 @@ module.exports = class ExpressHandler {
       this.response.json(error.toString());
     }
   }
-
-  /**
-   * Sets value to a transactional context variable
-   */
-  setTransactionalContext(variableName, value) {
-    asyncLocalStorage.set(variableName, value);
-  }
-
-  /**
-   * Gets value to a transactional context variable
-   */
-  getTransactionalContext(variableName) {
-    return asyncLocalStorage.get(variableName);
-  }
-
 
   /**
    * @private
