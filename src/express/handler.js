@@ -51,9 +51,8 @@ module.exports = class ExpressHandler {
     return httpStatusEnum;
   }
 
-  setScope() {
+  setScope(correlationId) {
     AsyncLocalStorage.startScope();
-    const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
 
     AsyncLocalStorage.setCorrelationId(correlationId);
   }
@@ -64,7 +63,8 @@ module.exports = class ExpressHandler {
    */
   async handle() {
     try {
-      this.setScope();
+      const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
+      this.setScope(correlationId);
       this.setupListeners(this.command);
 
       await this.command.execute(this.buildInput());
