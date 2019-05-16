@@ -2,9 +2,9 @@ const asyncLocalStorage = require('async-local-storage');
 const uuidV4 = require('uuid/v4');
 
 module.exports = class AsyncLocalStorage {
-  static getValue(proportyName) { return asyncLocalStorage.get(proportyName); }
+  static getValue(propertyName) { return asyncLocalStorage.get(propertyName); }
 
-  static setValue(proportyName, value) { return asyncLocalStorage.get(proportyName, value); }
+  static setValue(propertyName, value) { return asyncLocalStorage.set(propertyName, value); }
 
   static getCorrelationId() { return asyncLocalStorage.get('correlationId'); }
 
