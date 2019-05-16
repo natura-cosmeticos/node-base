@@ -3,6 +3,7 @@ const request = require('supertest');
 const express = require('express');
 const sinon = require('sinon');
 
+const asyncLocalStorage = require('async-local-storage');
 const UserAuthenticatedHandler = require('../../src/express/user-authenticated-handler');
 const httpStatus = require('../../src/express/http-status-enum');
 const adapt = require('../../src/express/handler-to-function-adapter');
@@ -10,6 +11,8 @@ const jwtGenerator = require('../helpers/jwt-generator');
 const { factory, FakeCommand } = require('../../index').Tests.helpers;
 const authorizationTokenData = require('../fixtures/authentication-token-data');
 const { appTokenAttribute } = require('../../src/config');
+
+asyncLocalStorage.enable();
 
 describe('UserAuthenticatedHandler', () => {
   describe('enrich command input', () => {

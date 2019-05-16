@@ -35,7 +35,7 @@
     "lint:fix": "eslint --fix src/ test/",
     "test": "mocha --recursive --require test/helpers/start.js --exit",
     "test:unit": "mocha --recursive --require test/helpers/start.js",
-    "test:coverage": "nyc mocha --recursive --require test/helpers/start.js",
+    "test:coverage": "nyc --reporter=text mocha --recursive --require test/helpers/start.js",
     "test:watch": "mocha -w",
     "transpile": "echo ok",
     "package": "bash package.sh"
