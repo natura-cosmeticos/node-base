@@ -64,6 +64,7 @@ module.exports = class ExpressHandler {
   async handle() {
     try {
       const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
+
       this.setScope(correlationId);
       this.setupListeners(this.command);
 
