@@ -5,6 +5,11 @@ const AsyncLocalStorage = require('../utils/async-local-storage');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
 
+const setActiveScope = () => new Promise((resolve) => {
+  AsyncLocalStorage.setActive();
+  resolve();
+});
+
 /**
  * HTTP methods that can have body attribute
  */
@@ -40,7 +45,6 @@ module.exports = class ExpressHandler {
      * @private {Array} headersWhitelist - Headers Whitelist
      */
     this.headersWhitelist = headersWhitelist;
-    AsyncLocalStorage.setActive();
   }
 
   /**
@@ -65,6 +69,7 @@ module.exports = class ExpressHandler {
     try {
       const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
 
+      await setActiveScope();
       this.setScope(correlationId);
       this.setupListeners(this.command);
 
