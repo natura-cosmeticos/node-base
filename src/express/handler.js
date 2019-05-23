@@ -1,8 +1,15 @@
 const humps = require('humps');
 const _ = require('lodash');
 const httpStatusEnum = require('./http-status-enum');
+const AsyncLocalStorage = require('../utils/async-local-storage');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
+
+const setActiveScope = () => new Promise((resolve) => {
+  AsyncLocalStorage.setActive();
+  resolve();
+});
+
 /**
  * HTTP methods that can have body attribute
  */
@@ -48,13 +55,24 @@ module.exports = class ExpressHandler {
     return httpStatusEnum;
   }
 
+  setScope(correlationId) {
+    AsyncLocalStorage.startScope();
+
+    AsyncLocalStorage.setCorrelationId(correlationId);
+  }
+
   /**
    * Invoke the command execute method, setting up the default listeners and
    * handling an exception if occurred
    */
   async handle() {
     try {
+      const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
+
+      await setActiveScope();
+      this.setScope(correlationId);
       this.setupListeners(this.command);
+
       await this.command.execute(this.buildInput());
     } catch (error) {
       this.response.status(ExpressHandler.httpStatus.internalServerError);
@@ -77,17 +95,15 @@ module.exports = class ExpressHandler {
    * @private
    */
   getQueryParams(params) {
-    const queryParams = {};
-
-    Object.keys(params).forEach((queryParam) => {
+    return Object.keys(params).reduce((acc, queryParam) => {
       try {
-        queryParams[queryParam] = JSON.parse(params[queryParam]);
+        acc[queryParam] = JSON.parse(params[queryParam]);
       } catch (error) {
-        queryParams[queryParam] = params[queryParam];
+        acc[queryParam] = params[queryParam];
       }
-    });
 
-    return queryParams;
+      return acc;
+    }, {});
   }
 
   /**
@@ -103,9 +119,8 @@ module.exports = class ExpressHandler {
       paramsSources.unshift(this.request.body);
     }
 
-    if (headers) {
-      paramsSources.push({ headers });
-    }
+
+    if (headers) paramsSources.push({ headers });
 
     return Object.assign({}, ...paramsSources);
   }
