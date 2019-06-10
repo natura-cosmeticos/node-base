@@ -1,4 +1,5 @@
 module.exports = {
+  badRequest: 'badRequest',
   error: 'error',
   forbidden: 'forbidden',
   noContent: 'noContent',
@@ -6,5 +7,4 @@ module.exports = {
   success: 'success',
   unauthorized: 'unauthorized',
   validationFailed: 'validationFailed',
-  badRequest: 'badRequest',
 };

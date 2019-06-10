@@ -117,11 +117,10 @@ describe('HttpHandler', () => {
       // when
       const app = express();
 
-      app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.badRequest, {}))));
+      app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.badRequest))));
 
       // when
       const response = await request(app).post('/hello');
-      console.log('response', response);
 
       // then
       assert.equal(response.statusCode, httpStatus.badRequest);
