@@ -19,11 +19,12 @@ describe('HttpHandler', () => {
       assert.equal(httpStatus.notFound, 404);
       assert.equal(httpStatus.unprocessableEntity, 422);
       assert.equal(httpStatus.internalServerError, 500);
+      assert.equal(httpStatus.badRequest, 400);
     });
 
     it('return a 200 when the command emit success', async () => {
       // given
-      class FakeHandler extends HttpHandler {}
+      class FakeHandler extends HttpHandler { }
       const { httpStatus } = HttpHandler;
       const app = express();
 
@@ -37,7 +38,7 @@ describe('HttpHandler', () => {
 
     it('return a 404 when the command emit notfound', async () => {
       // given
-      class FakeHandler extends HttpHandler {}
+      class FakeHandler extends HttpHandler { }
 
       const { httpStatus } = HttpHandler;
 
@@ -55,7 +56,7 @@ describe('HttpHandler', () => {
 
     it('return a 422 when the command emit validationFailed', async () => {
       // given
-      class FakeHandler extends HttpHandler {}
+      class FakeHandler extends HttpHandler { }
 
       const { httpStatus } = HttpHandler;
 
@@ -73,7 +74,7 @@ describe('HttpHandler', () => {
 
     it('return a 204 when the command emit noContent', async () => {
       // given
-      class FakeHandler extends HttpHandler {}
+      class FakeHandler extends HttpHandler { }
 
       const { httpStatus } = HttpHandler;
 
@@ -91,7 +92,7 @@ describe('HttpHandler', () => {
 
     it('return a 500 when the command emit error', async () => {
       // given
-      class FakeHandler extends HttpHandler {}
+      class FakeHandler extends HttpHandler { }
 
       const { httpStatus } = HttpHandler;
 
@@ -105,6 +106,24 @@ describe('HttpHandler', () => {
 
       // then
       assert.equal(response.statusCode, httpStatus.internalServerError);
+    });
+
+    it('return a 400 when the command emit error', async () => {
+      // given
+      class FakeHandler extends HttpHandler { }
+
+      const { httpStatus } = HttpHandler;
+
+      // when
+      const app = express();
+
+      app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.badRequest))));
+
+      // when
+      const response = await request(app).post('/hello');
+
+      // then
+      assert.equal(response.statusCode, httpStatus.badRequest);
     });
   });
 

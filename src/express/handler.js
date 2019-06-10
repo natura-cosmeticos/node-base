@@ -135,6 +135,7 @@ module.exports = class ExpressHandler {
     command.on(baseEvents.notFound, this.onNotFound.bind(this));
     command.on(baseEvents.noContent, this.onNoContent.bind(this));
     command.on(baseEvents.error, this.onError.bind(this));
+    command.on(baseEvents.badRequest, this.onBadRequest.bind(this));
   }
 
   /**
@@ -178,6 +179,14 @@ module.exports = class ExpressHandler {
    */
   onError(errors) {
     this.response.status(ExpressHandler.httpStatus.internalServerError);
+    this.response.json(errors);
+  }
+
+  /**
+   * Default behavior when an event badRequest occurs
+   */
+  onBadRequest(errors) {
+    this.response.status(ExpressHandler.httpStatus.badRequest);
     this.response.json(errors);
   }
 };
