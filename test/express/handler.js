@@ -119,16 +119,12 @@ describe('HttpHandler', () => {
 
       app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.badRequest, {}))));
 
-      try {
-        // when
-        const response = await request(app).post('/hello');
-        console.log('response', response);
+      // when
+      const response = await request(app).post('/hello');
+      console.log('response', response);
 
-        // then
-        assert.equal(response.statusCode, httpStatus.badRequest);
-      } catch (error) {
-        console.log('\n\nexception', error)
-      }
+      // then
+      assert.equal(response.statusCode, httpStatus.badRequest);
     });
   });
 
