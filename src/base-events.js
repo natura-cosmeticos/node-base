@@ -6,4 +6,5 @@ module.exports = {
   success: 'success',
   unauthorized: 'unauthorized',
   validationFailed: 'validationFailed',
+  badRequest: 'badRequest',
 };
