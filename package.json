@@ -38,7 +38,9 @@
     "test:coverage": "nyc --reporter=text mocha --recursive --require test/helpers/start.js",
     "test:watch": "mocha -w",
     "transpile": "echo ok",
-    "package": "bash package.sh"
+    "package": "bash package.sh",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "nyc": {
     "all": true,
@@ -90,9 +92,11 @@
     "lodash": "^4.17.10",
     "typeorm": "^0.2.6",
     "uuid": "^3.3.2",
-    "yargs": "^13.0.0-candidate.0"
+    "yargs": "^13.0.0-candidate.0",
+    "snyk": "^1.189.0"
   },
   "homepage": "https://github.com/natura-cosmeticos/node-base#readme",
   "bugs": "https://github.com/natura-cosmeticos/node-base/issues",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
