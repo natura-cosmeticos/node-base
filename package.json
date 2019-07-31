@@ -93,7 +93,7 @@
     "typeorm": "^0.2.6",
     "uuid": "^3.3.2",
     "yargs": "^13.0.0-candidate.0",
-    "snyk": "^1.189.0"
+    "snyk": "^1.207.1"
   },
   "homepage": "https://github.com/natura-cosmeticos/node-base#readme",
   "bugs": "https://github.com/natura-cosmeticos/node-base/issues",
