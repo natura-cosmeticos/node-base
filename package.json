@@ -2,7 +2,7 @@
   "main": "index.js",
   "name": "@naturacosmeticos/node-base",
   "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "engines": {
     "node": ">= 8.1.0"
   },
@@ -89,11 +89,11 @@
     "humps": "^2.0.1",
     "inspector-proxy": "^1.2.1",
     "jsonwebtoken": "^8.3.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.15",
+    "snyk": "^1.207.1",
     "typeorm": "^0.2.6",
     "uuid": "^3.3.2",
-    "yargs": "^13.0.0-candidate.0",
-    "snyk": "^1.189.0"
+    "yargs": "^13.0.0-candidate.0"
   },
   "homepage": "https://github.com/natura-cosmeticos/node-base#readme",
   "bugs": "https://github.com/natura-cosmeticos/node-base/issues",
