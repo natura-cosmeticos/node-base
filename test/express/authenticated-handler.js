@@ -1,5 +1,6 @@
 const { assert } = require('chai');
 const express = require('express');
+const faker = require('faker');
 const request = require('supertest');
 const sinon = require('sinon');
 
@@ -56,6 +57,21 @@ describe('AuthenticatedHandler', () => {
       const authorizationJwt = jwtGenerator
         .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
       const response = await request(app).get('/hello')
+        .set('authorization', authorizationJwt);
+
+      // then
+      assert.equal(response.statusCode, httpStatus.ok);
+    });
+
+    it('when request has valid authorization and pass parameters queryString', async () => {
+      // given
+      const app = express();
+
+      app.get('/hello', adapt(AuthenticatedHandler, factory(new FakeCommand('success'))));
+      // when
+      const authorizationJwt = jwtGenerator
+        .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
+      const response = await request(app).get('/hello').query({ name: faker.name.firstName() })
         .set('authorization', authorizationJwt);
 
       // then
