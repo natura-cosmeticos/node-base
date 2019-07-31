@@ -55,10 +55,15 @@ module.exports = class ExpressHandler {
     return httpStatusEnum;
   }
 
-  setScope(correlationId) {
-    AsyncLocalStorage.startScope();
+  async setScope(correlationId) {
+    try {
+      await setActiveScope();
 
-    AsyncLocalStorage.setCorrelationId(correlationId);
+      AsyncLocalStorage.startScope();
+      AsyncLocalStorage.setCorrelationId(correlationId);
+    } catch (error) {
+      console.warn('CorrelationId not propagated - async-local-storage'); // eslint-disable-line no-console
+    }
   }
 
   /**
@@ -69,8 +74,7 @@ module.exports = class ExpressHandler {
     try {
       const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
 
-      await setActiveScope();
-      this.setScope(correlationId);
+      await this.setScope(correlationId);
       this.setupListeners(this.command);
 
       await this.command.execute(this.buildInput());
@@ -84,9 +88,7 @@ module.exports = class ExpressHandler {
    * @private
    */
   getHeadersInWhitelist(headers) {
-    const camelCaseHeaders = humps.camelizeKeys(headers);
-
-    const whitelisted = _.pick(camelCaseHeaders, this.headersWhitelist);
+    const whitelisted = _.pick(humps.camelizeKeys(headers), this.headersWhitelist);
 
     return Object.keys(whitelisted).length !== 0 ? whitelisted : undefined;
   }
@@ -114,11 +116,9 @@ module.exports = class ExpressHandler {
     const headers = this.getHeadersInWhitelist(this.request.headers);
     const paramsSources = [queryParams, this.request.params];
 
-
     if (HTTP_METHODS_WITH_BODY.includes(this.request.method)) {
       paramsSources.unshift(this.request.body);
     }
-
 
     if (headers) paramsSources.push({ headers });
 
