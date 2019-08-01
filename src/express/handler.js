@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 const humps = require('humps');
 const _ = require('lodash');
 const httpStatusEnum = require('./http-status-enum');
