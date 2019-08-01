@@ -2,7 +2,6 @@ const { assert } = require('chai');
 const express = require('express');
 const request = require('supertest');
 const uuid = require('uuid/v4');
-const sinon = require('sinon');
 
 const HttpHandler = require('../../src/express/handler');
 const adapt = require('../../src/express/handler-to-function-adapter');
