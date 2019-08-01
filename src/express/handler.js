@@ -72,7 +72,7 @@ module.exports = class ExpressHandler {
    */
   async handle() {
     try {
-      const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
+      const correlationId = this.getCorrelationId();
 
       await this.setScope(correlationId);
       this.setupListeners(this.command);
@@ -143,6 +143,7 @@ module.exports = class ExpressHandler {
    */
 
   onNotFound() {
+    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.notFound);
     this.response.json(null);
   }
@@ -153,6 +154,7 @@ module.exports = class ExpressHandler {
    * @param {Object} data - the data returned by the command instance
    */
   onSuccess(data) {
+    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.ok);
     this.response.json(data);
   }
@@ -162,6 +164,7 @@ module.exports = class ExpressHandler {
    * @param {Object} errors - the errors returned by the command instance
    */
   onValidationFailed(errors) {
+    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.unprocessableEntity);
     this.response.json(errors);
   }
@@ -170,6 +173,7 @@ module.exports = class ExpressHandler {
    * Default behavior when an event noContent occurs
    */
   onNoContent() {
+    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.noContent);
     this.response.json(null);
   }
@@ -178,6 +182,7 @@ module.exports = class ExpressHandler {
    * Default behavior when an event error occurs
    */
   onError(errors) {
+    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.internalServerError);
     this.response.json(errors);
   }
@@ -186,7 +191,24 @@ module.exports = class ExpressHandler {
    * Default behavior when an event badRequest occurs
    */
   onBadRequest(errors) {
+    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.badRequest);
     this.response.json(errors);
+  }
+
+  getCorrelationId() {
+    if (this.request && this.request.headers) {
+      return this.request.headers['correlation-id'];
+    }
+
+    return undefined;
+  }
+
+  sendCorrelationIdHeader(response) {
+    const correlationId = this.getCorrelationId();
+
+    if (correlationId) {
+      response.set('correlation-id', correlationId);
+    }
   }
 };
