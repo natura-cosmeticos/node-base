@@ -19,6 +19,7 @@ describe('API', () => {
     assert.typeOf(Express.AuthenticatedHandler, 'function');
     assert.typeOf(Express.corsMiddleware, 'function');
     assert.typeOf(Express.Handler, 'function');
+    assert.typeOf(Express.tracingMiddleware, 'function');
     assert.typeOf(Express.loggingMiddleware, 'function');
     assert.typeOf(Express.UserAuthenticatedHandler, 'function');
   });

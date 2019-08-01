@@ -9,6 +9,7 @@ const expressAppBuilder = require('./src/express/app-builder');
 const ExpressAuthenticatedHandler = require('./src/express/authenticated-handler');
 const expressCorsMiddleware = require('./src/express/cors-middleware');
 const ExpressHandler = require('./src/express/handler');
+const expressTracingMiddleware = require('./src/express/tracing-middleware');
 const expressLoggingMiddleware = require('./src/express/logging-middleware');
 const ExpressUserAuthenticatedHandler = require('./src/express/user-authenticated-handler');
 const lambdaAdapter = require('./src/message-queue/lambda-handler-adapter');
@@ -36,6 +37,7 @@ module.exports = {
     AuthenticatedHandler: ExpressAuthenticatedHandler,
     corsMiddleware: expressCorsMiddleware,
     Handler: ExpressHandler,
+    tracingMiddleware: expressTracingMiddleware,
     loggingMiddleware: expressLoggingMiddleware,
     UserAuthenticatedHandler: ExpressUserAuthenticatedHandler,
   },

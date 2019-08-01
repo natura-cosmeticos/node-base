@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const { createServer, proxy } = require('aws-serverless-express');
 const { eventContext } = require('aws-serverless-express/middleware');
 const expressContextMiddleware = require('../express/context-middleware');
+const expressTracingMiddleware = require('../express/tracing-middleware');
 const expressLoggingMiddleware = require('../express/logging-middleware');
 const expressCorsMiddleware = require('./cors-middleware');
 
@@ -41,6 +42,7 @@ function expressToBodyParser() {
 function setupAppMiddlewares(app, options) {
   app.use(expressToBodyParser());
   app.use(expressContextMiddleware);
+  if (options.enableTracing) app.use(expressTracingMiddleware(options));
   app.use(expressLoggingMiddleware);
   app.use(expressCorsMiddleware());
   app.use(helmet({ dnsPrefetchControl: false }));
