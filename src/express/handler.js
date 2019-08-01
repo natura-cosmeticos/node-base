@@ -80,6 +80,7 @@ module.exports = class ExpressHandler {
 
       await this.command.execute(this.buildInput());
     } catch (error) {
+      this.sendCorrelationIdHeader(this.response);
       this.response.status(ExpressHandler.httpStatus.internalServerError);
       this.response.json(error.toString());
     }
@@ -198,7 +199,7 @@ module.exports = class ExpressHandler {
   }
 
   getCorrelationId() {
-    if (this.request && this.request.headers) {
+    if (this.request && this.request.headers && this.request.headers['correlation-id']) {
       return this.request.headers['correlation-id'];
     }
 
