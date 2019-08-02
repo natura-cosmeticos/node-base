@@ -16,7 +16,7 @@ asyncLocalStorage.enable();
 
 describe('UserAuthenticatedHandler', () => {
   describe('enrich command input', () => {
-    it('should add authorization token data when token is valid', async () => {
+    it('should add authorization token data when token is valid', () => {
       // given
       const app = express();
       const fakeCommand = new FakeCommand('success');
@@ -42,17 +42,21 @@ describe('UserAuthenticatedHandler', () => {
           xAppToken: authorizationJwt,
         },
       };
-      const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt)
-        .set(appTokenAttribute, authorizationJwt);
 
-      // then
-      assert.equal(response.statusCode, httpStatus.ok);
-      sinon.assert.calledWith(spy, expectedTokenData);
+      request(app).get('/hello')
+        .set('authorization', authorizationJwt)
+        .set(appTokenAttribute, authorizationJwt)
+        .then((response) => {
+          assert.equal(response.statusCode, httpStatus.ok);
+          sinon.assert.calledWith(spy, expectedTokenData);
+        })
+        .catch((error) => {
+          throw error;
+        });
     });
   });
   describe('should return 200', () => {
-    it('when request has valid authorization', async () => {
+    it('when request has valid authorization', () => {
       // given
       const app = express();
 
@@ -60,16 +64,20 @@ describe('UserAuthenticatedHandler', () => {
       // when
       const authorizationJwt = jwtGenerator
         .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
-      const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt)
-        .set(appTokenAttribute, authorizationJwt);
 
-      // then
-      assert.equal(response.statusCode, httpStatus.ok);
+      request(app).get('/hello')
+        .set('authorization', authorizationJwt)
+        .set(appTokenAttribute, authorizationJwt)
+        .then((response) => {
+          assert.equal(response.statusCode, httpStatus.ok);
+        })
+        .catch((error) => {
+          throw error;
+        });
     });
   });
   describe('should return 401', () => {
-    it('when request has not app token', async () => {
+    it('when request has not app token', () => {
       // given
       const app = express();
 
@@ -77,14 +85,18 @@ describe('UserAuthenticatedHandler', () => {
       // when
       const authorizationJwt = jwtGenerator
         .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
-      const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt);
 
-      // then
-      assert.equal(response.statusCode, httpStatus.unauthorized);
+      request(app).get('/hello')
+        .set('authorization', authorizationJwt)
+        .then((response) => {
+          assert.equal(response.statusCode, httpStatus.unauthorized);
+        })
+        .catch((error) => {
+          throw error;
+        });
     });
 
-    it('when app token is invalid', async () => {
+    it('when app token is invalid', () => {
       // given
       const app = express();
 
@@ -92,11 +104,15 @@ describe('UserAuthenticatedHandler', () => {
       // when
       const authorizationJwt = jwtGenerator
         .generate(authorizationTokenData, `${process.env.JWT_SECRET_KEY}Z`);
-      const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt);
 
-      // then
-      assert.equal(response.statusCode, httpStatus.unauthorized);
+      request(app).get('/hello')
+        .set('authorization', authorizationJwt)
+        .then((response) => {
+          assert.equal(response.statusCode, httpStatus.unauthorized);
+        })
+        .catch((error) => {
+          throw error;
+        });
     });
   });
 });

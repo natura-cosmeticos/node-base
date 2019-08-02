@@ -18,12 +18,15 @@ describe('AuthenticatedHandler', () => {
       // given
       const app = express();
       const fakeCommand = new FakeCommand('success');
+      const authorizationJwt = jwtGenerator
+        .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
       const expectedTokenData = {
         authenticationData: {
           authorizationInfo: authorizationTokenData,
         },
         headers: {
-
+          authorization: authorizationJwt,
+          correlationId: 'abc',
         },
       };
       const spy = sinon.spy();
@@ -35,10 +38,9 @@ describe('AuthenticatedHandler', () => {
 
       app.get('/hello', adapt(AuthenticatedHandler, factory(fakeCommand)));
       // when
-      const authorizationJwt = jwtGenerator
-        .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
       const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt);
+        .set('authorization', authorizationJwt)
+        .set('correlation-id', 'abc');
 
       expectedTokenData.headers.authorization = authorizationJwt;
 
@@ -48,22 +50,27 @@ describe('AuthenticatedHandler', () => {
     });
   });
   describe('should return 200', () => {
-    it('when request has valid authorization', async () => {
+    it('when request has valid authorization', () => {
       // given
       const app = express();
 
       app.get('/hello', adapt(AuthenticatedHandler, factory(new FakeCommand('success'))));
+
       // when
       const authorizationJwt = jwtGenerator
         .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
-      const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt);
 
-      // then
-      assert.equal(response.statusCode, httpStatus.ok);
+      request(app).get('/hello')
+        .set('authorization', authorizationJwt)
+        .then((response) => {
+          assert.equal(response.statusCode, httpStatus.ok);
+        })
+        .catch((error) => {
+          throw error;
+        });
     });
 
-    it('when request has valid authorization and pass parameters queryString', async () => {
+    it('when request has valid authorization and pass parameters queryString', () => {
       // given
       const app = express();
 
@@ -71,11 +78,15 @@ describe('AuthenticatedHandler', () => {
       // when
       const authorizationJwt = jwtGenerator
         .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
-      const response = await request(app).get('/hello').query({ name: faker.name.firstName() })
-        .set('authorization', authorizationJwt);
 
-      // then
-      assert.equal(response.statusCode, httpStatus.ok);
+      request(app).get('/hello').query({ name: faker.name.firstName() })
+        .set('authorization', authorizationJwt)
+        .then((response) => {
+          assert.equal(response.statusCode, httpStatus.ok);
+        })
+        .catch((error) => {
+          throw error;
+        });
     });
   });
 });
