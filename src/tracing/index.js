@@ -1,5 +1,6 @@
 const initJaegerTracer = require('jaeger-client').initTracer;
 const Logger = require('@naturacosmeticos/clio-nodejs-logger');
+const AsyncLocalStorage = require('../utils/async-local-storage');
 
 const config = {
   reporter: {
@@ -30,4 +31,21 @@ module.exports = class JaegerTracer {
   }
 
   getTracer() { return this.tracer; }
+
+  error(spanName, message, parameters) {
+    const tracer = this.getTracer();
+
+    const rootSpan = AsyncLocalStorage.getValue('rootSpan');
+
+    const span = tracer.startSpan(spanName, { childOf: rootSpan });
+
+    span.error(message, {
+      ...parameters,
+    });
+
+    span.setTag('error', true);
+    span.setTag('sampling.priority', 1);
+
+    span.finish();
+  }
 };
