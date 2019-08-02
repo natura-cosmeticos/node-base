@@ -81,7 +81,7 @@ function tracerMiddleware() {
       hostPort: process.env.JAEGER_SAMPLE_HOST_PORT,
       type: process.env.JAEGER_SAMPLE_TYPE ? process.env.JAEGER_SAMPLE_TYPE : 'remote',
     },
-    serviceName: process.env.SERVICE_NAME,
+    serviceName: process.env.APP_NAME,
   };
 
   return middleware({ tracer: initJaegerTracer(config, opt) });
