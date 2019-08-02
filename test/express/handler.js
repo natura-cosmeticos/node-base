@@ -41,6 +41,24 @@ describe('HttpHandler', () => {
         });
     });
 
+    it('return a 200 when the command emit success and dont send correlation id header with response when none is passed', () => {
+      // given
+      class FakeHandler extends HttpHandler { }
+      const { httpStatus } = HttpHandler;
+      const app = express();
+
+      app.get('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.success))));
+      // when
+      request(app).get('/hello')
+        .then((response) => {
+          assert.equal(response.statusCode, httpStatus.ok);
+          assert.equal(response.headers['correlation-id'], undefined);
+        })
+        .catch((error) => {
+          throw error;
+        });
+    });
+
     it('return a 404 when the command emit notfound and send correlation id header with response', () => {
       // given
       class FakeHandler extends HttpHandler { }
