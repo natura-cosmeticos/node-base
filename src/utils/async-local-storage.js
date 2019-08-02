@@ -11,7 +11,7 @@ module.exports = class AsyncLocalStorage {
   static setCorrelationId(correlationId) { return asyncLocalStorage.set('correlationId', correlationId || uuidV4()); }
 
   static setActive() { asyncLocalStorage.enable(); }
-  
+
   static startScope() { asyncLocalStorage.scope(); }
 
   static setInactive() { asyncLocalStorage.disable(); }

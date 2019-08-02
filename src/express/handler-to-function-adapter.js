@@ -10,5 +10,6 @@ module.exports = (HandlerConstructor, CommandFactory) => (request, response) => 
   const command = new CommandFactory().create();
   const handler = new HandlerConstructor(request, response, command);
   AsyncLocalStorage.setActive();
+
   handler.handle();
 };

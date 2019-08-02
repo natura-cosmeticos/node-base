@@ -63,6 +63,7 @@ module.exports = class ExpressHandler {
   async handle() {
     try {
       const correlationId = this.getCorrelationId();
+
       this.setScope(correlationId);
 
       this.setupListeners(this.command);
