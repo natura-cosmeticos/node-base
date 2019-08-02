@@ -60,12 +60,13 @@ module.exports = class ExpressHandler {
     return httpStatusEnum;
   }
 
-  async setScope(correlationId) {
+  async setScope(correlationId, rootSpan) {
     try {
       await setActiveScope();
 
       AsyncLocalStorage.startScope();
       AsyncLocalStorage.setCorrelationId(correlationId);
+      AsyncLocalStorage.setValue('rootSpan', rootSpan);
     } catch (error) {
       console.warn('CorrelationId not propagated - async-local-storage'); // eslint-disable-line no-console
     }
@@ -78,8 +79,9 @@ module.exports = class ExpressHandler {
   async handle() {
     try {
       const correlationId = this.request ? this.request.headers['correlation-id'] : undefined;
+      const rootSpan = this.request.span;
 
-      await this.setScope(correlationId);
+      await this.setScope(correlationId, rootSpan);
       this.setupListeners(this.command);
 
       await this.command.execute(this.buildInput());
