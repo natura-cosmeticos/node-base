@@ -6,11 +6,6 @@ const AsyncLocalStorage = require('../utils/async-local-storage');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
 
-const setActiveScope = () => new Promise((resolve) => {
-  AsyncLocalStorage.setActive();
-  resolve();
-});
-
 /**
  * HTTP methods that can have body attribute
  */
@@ -56,15 +51,9 @@ module.exports = class ExpressHandler {
     return httpStatusEnum;
   }
 
-  async setScope(correlationId) {
-    try {
-      await setActiveScope();
-
-      AsyncLocalStorage.startScope();
-      AsyncLocalStorage.setCorrelationId(correlationId);
-    } catch (error) {
-      console.warn('CorrelationId not propagated - async-local-storage'); // eslint-disable-line no-console
-    }
+  setScope(correlationId) {
+    AsyncLocalStorage.startScope();
+    AsyncLocalStorage.setCorrelationId(correlationId);
   }
 
   /**
@@ -74,8 +63,8 @@ module.exports = class ExpressHandler {
   async handle() {
     try {
       const correlationId = this.getCorrelationId();
+      this.setScope(correlationId);
 
-      await this.setScope(correlationId);
       this.setupListeners(this.command);
 
       await this.command.execute(this.buildInput());
@@ -212,5 +201,7 @@ module.exports = class ExpressHandler {
     if (correlationId) {
       response.set('correlation-id', correlationId);
     }
+
+    AsyncLocalStorage.setInactive();
   }
 };

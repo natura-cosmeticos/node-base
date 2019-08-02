@@ -1,3 +1,5 @@
+const AsyncLocalStorage = require('../utils/async-local-storage');
+
 /**
  * Function to initializes and configures an Express app
  * @param {Class} HandlerConstructor - The HTTP handler to handle the HTTP interface
@@ -7,6 +9,6 @@
 module.exports = (HandlerConstructor, CommandFactory) => (request, response) => {
   const command = new CommandFactory().create();
   const handler = new HandlerConstructor(request, response, command);
-
+  AsyncLocalStorage.setActive();
   handler.handle();
 };
