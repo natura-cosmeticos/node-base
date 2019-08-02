@@ -70,17 +70,18 @@ const opt = {
 /**
  * @private
  */
-function tracerMiddleware(options) {
+function tracerMiddleware() {
   const config = {
     reporter: {
-      ...options.reporter,
+      agentHost: process.env.JAEGER_AGENT_HOST,
+      agentPort: process.env.JAEGER_AGENT_PORT,
+      collectorEndpoint: process.env.JAEGER_COLLECTOR,
     },
     sampler: {
-      param: 1,
-      type: 'const',
-      ...options.sampler,
+      hostPort: process.env.JAEGER_SAMPLE_HOST_PORT,
+      type: process.env.JAEGER_SAMPLE_TYPE ? process.env.JAEGER_SAMPLE_TYPE : 'remote',
     },
-    serviceName: options.serviceName,
+    serviceName: process.env.SERVICE_NAME,
   };
 
   return middleware({ tracer: initJaegerTracer(config, opt) });

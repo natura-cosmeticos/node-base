@@ -42,7 +42,7 @@ function expressToBodyParser() {
 function setupAppMiddlewares(app, options) {
   app.use(expressToBodyParser());
   app.use(expressContextMiddleware);
-  if (options.enableTracing) app.use(expressTracingMiddleware(options));
+  if (options.enableTracing) app.use(expressTracingMiddleware());
   app.use(expressLoggingMiddleware);
   app.use(expressCorsMiddleware());
   app.use(helmet({ dnsPrefetchControl: false }));
@@ -73,7 +73,10 @@ function startApp(app) {
 module.exports = function expressAppBuilder(options = {}) {
   const app = express();
 
-  setupAppMiddlewares(app, options);
+  setupAppMiddlewares(app, {
+    enableTracing: !!process.env.ENABLE_TRACING,
+    ...options,
+  });
 
   /* istanbul ignore if */
   if (options.developmentMode) new NodeInspector().start();
