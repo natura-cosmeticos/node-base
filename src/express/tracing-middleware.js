@@ -1,6 +1,6 @@
 const opentracing = require('opentracing');
 const url = require('url');
-const initJaegerTracer = require('jaeger-client').initTracer;
+const JaegerTracer = require('../tracing');
 
 function loggingRequest(span, req) {
   span.logEvent('request_received_headers', JSON.stringify(req.headers));
@@ -56,35 +56,11 @@ function middleware(options) {
   };
 }
 
-const opt = {
-  logger: {
-    error: function logError(msg) {
-      console.log('ERROR ', msg);
-    },
-    info: function logInfo(msg) {
-      console.log('INFO  ', msg);
-    },
-  },
-};
-
 /**
  * @private
  */
 function tracerMiddleware() {
-  const config = {
-    reporter: {
-      agentHost: process.env.JAEGER_AGENT_HOST,
-      agentPort: process.env.JAEGER_AGENT_PORT,
-      collectorEndpoint: process.env.JAEGER_COLLECTOR,
-    },
-    sampler: {
-      hostPort: process.env.JAEGER_SAMPLE_HOST_PORT,
-      type: process.env.JAEGER_SAMPLE_TYPE ? process.env.JAEGER_SAMPLE_TYPE : 'remote',
-    },
-    serviceName: process.env.APP_NAME,
-  };
-
-  return middleware({ tracer: initJaegerTracer(config, opt) });
+  return middleware({ tracer: (new JaegerTracer()).getTracer() });
 }
 
 module.exports = tracerMiddleware;
