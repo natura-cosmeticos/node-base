@@ -21,10 +21,10 @@ module.exports = class JaegerTracer {
     this.tracer = initJaegerTracer(config, {
       logger: {
         error: function logError(msg) {
-          Logger.current().error('Error during Jaeger tracing.', msg);
+          Logger.current().error(`Error during Jaeger tracing. ${msg}`);
         },
         info: function logInfo(msg) {
-          Logger.current().info('Additional information from Jaeger tracing.', msg);
+          Logger.current().info(`Additional information from Jaeger tracing. ${msg}`);
         },
       },
     });
