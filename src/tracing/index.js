@@ -1,4 +1,5 @@
 const initJaegerTracer = require('jaeger-client').initTracer;
+const Logger = require('@naturacosmeticos/clio-nodejs-logger');
 
 const config = {
   reporter: {
@@ -19,10 +20,10 @@ module.exports = class JaegerTracer {
     this.tracer = initJaegerTracer(config, {
       logger: {
         error: function logError(msg) {
-          console.log('ERROR ', msg);
+          Logger.current().error('Error during Jaeger tracing.', msg);
         },
         info: function logInfo(msg) {
-          console.log('INFO  ', msg);
+          Logger.current().info('Additional information from Jaeger tracing.', msg);
         },
       },
     });

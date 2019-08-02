@@ -2,6 +2,9 @@ const opentracing = require('opentracing');
 const url = require('url');
 const JaegerTracer = require('../tracing');
 
+/**
+ * @private
+ */
 function loggingRequest(span, req) {
   span.logEvent('request_received_headers', JSON.stringify(req.headers));
 
@@ -13,6 +16,9 @@ function loggingRequest(span, req) {
   Object.assign(req, { span });
 }
 
+/**
+ * @private
+ */
 function endEvent(span, req, res, pathname) {
   // finalize the span when the response is completed
   return () => {
@@ -32,6 +38,9 @@ function endEvent(span, req, res, pathname) {
   };
 }
 
+/**
+ * @private
+ */
 function middleware(options) {
   const { tracer } = options;
 
@@ -56,9 +65,6 @@ function middleware(options) {
   };
 }
 
-/**
- * @private
- */
 function tracerMiddleware() {
   return middleware({ tracer: (new JaegerTracer()).getTracer() });
 }
