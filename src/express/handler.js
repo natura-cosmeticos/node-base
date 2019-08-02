@@ -1,9 +1,14 @@
+/* eslint-disable max-lines, max-lines-per-function */
 const humps = require('humps');
 const _ = require('lodash');
+const serializeError = require('serialize-error');
 const httpStatusEnum = require('./http-status-enum');
 const AsyncLocalStorage = require('../utils/async-local-storage');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
+const JaegerTracer = require('../tracing');
+
+const tracer = new JaegerTracer();
 
 const setActiveScope = () => new Promise((resolve) => {
   AsyncLocalStorage.setActive();
@@ -79,6 +84,12 @@ module.exports = class ExpressHandler {
 
       await this.command.execute(this.buildInput());
     } catch (error) {
+      tracer.error('commandHandler', 'InternalServerError', {
+        command: this.command.constructor.name,
+        error: serializeError(error),
+        input: this.buildInput(),
+      });
+
       this.response.status(ExpressHandler.httpStatus.internalServerError);
       this.response.json(error.toString());
     }
