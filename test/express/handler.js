@@ -2,6 +2,7 @@ const { assert } = require('chai');
 const express = require('express');
 const request = require('supertest');
 const uuid = require('uuid/v4');
+const { isUUID } = require('validator');
 
 const HttpHandler = require('../../src/express/handler');
 const adapt = require('../../src/express/handler-to-function-adapter');
@@ -50,7 +51,7 @@ describe('HttpHandler', () => {
 
       // then
       assert.equal(response.statusCode, httpStatus.ok);
-      assert.equal(typeof response.headers['correlation-id'], 'string');
+      assert.equal(isUUID(response.headers['correlation-id']), true);
     });
 
     it('return a 404 when the command emit notfound and send correlation id header with response', async () => {
