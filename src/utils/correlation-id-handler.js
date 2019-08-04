@@ -1,5 +1,6 @@
-const uuidV4 = require('uuid/V4');
+const uuidV4 = require('uuid/v4');
 const http = require('http');
+
 const originalHttpCreateServer = http.createServer;
 const originalRequest = http.request;
 const asyncHooksStorage = require('./async-hooks-storage');
@@ -12,6 +13,7 @@ function wrappedListener(correlationIdHeader, listener) {
     asyncHooksStorage.newEntry('httpRequest');
     // Obtain correlation-id from the Request Headers
     let correlationId = req.headers[correlationIdHeader];
+
     // If there is no correlation-id header, create a new correlation-id using UUIDV4
     if (typeof req.headers[correlationIdHeader] === 'undefined') {
       correlationId = uuidV4();
@@ -30,11 +32,13 @@ function wrapHttpCreateServer(correlationIdHeader) {
     // Obtain wrapped listener that will last for the request lifecycle and keep
     // the correlation-id alive until the request is completely resolved or rejected
     const newListener = wrappedListener(correlationIdHeader, listener);
+
     // Process the request thru the wrapped listener
     return originalHttpCreateServer(newListener);
   };
 }
 
+// eslint-disable-next-line complexity
 function injectCorrelationId(options, correlationIdHeader) {
   // Check if there is a current async-hooks storage entry available
   if (asyncHooksStorage.currentEntry) {
@@ -51,7 +55,8 @@ function injectCorrelationId(options, correlationIdHeader) {
     }
     // Check if there is a correlation-id header available
     // in the current async-hook entry context
-    if (asyncHooksStorage.currentEntry.context && asyncHooksStorage.currentEntry.context.has(correlationIdHeader)) {
+    if (asyncHooksStorage.currentEntry.context
+      && asyncHooksStorage.currentEntry.context.has(correlationIdHeader)) {
       // Update the request options.headers property
       // to include the correlation-id header
       // eslint-disable-next-line no-param-reassign
@@ -64,6 +69,7 @@ function wrapHttpRequest(correlationIdHeader) {
   return function _wrappedHttpRequest(options, cb) {
     // Inject/overwrite the correlation-id header into the HTTP Request header
     injectCorrelationId(options, correlationIdHeader);
+
     // Process the request thru the original Request function
     return originalRequest(options, cb);
   };
@@ -84,5 +90,5 @@ module.exports = {
   activate: (correlationIdHeader = defaultCorrelationIdHeader) => {
     replaceGlobalHttpObjects(correlationIdHeader);
     asyncHooksStorage.enable();
-  }
+  },
 };

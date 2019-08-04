@@ -1,11 +1,11 @@
-const uuidV4 = require('uuid/V4');
+const uuidV4 = require('uuid/v4');
 const asyncHooks = require('async_hooks');
 
 // Main storage object
-let asyncHooksStorage = { entries: {} };
+const asyncHooksStorage = { entries: {} };
 
 // Async Hooks list
-let asyncHooksList = {};
+const asyncHooksList = {};
 
 // Async Hooks Entry class with automatic UUIDV4 ids
 class AsyncHooksEntry {
@@ -22,7 +22,7 @@ function existAsyncHooksEntry(asyncId) {
 }
 
 // Initialize a new Async Hook Resource
-function init(asyncId, type, triggerAsyncId, resource) {
+function init(asyncId, type, triggerAsyncId) {
   if (existAsyncHooksEntry(triggerAsyncId)) {
     // Attach the asyncId context with the parent context
     asyncHooksStorage.entries[asyncId] = asyncHooksStorage.entries[triggerAsyncId];
@@ -54,28 +54,33 @@ function destroy(asyncId) {
 }
 
 // Enable the callbacks for a given AsyncHook instance
-asyncHooksStorage.enable = () => asyncHooks.createHook({ init, before, after, destroy }).enable();
+asyncHooksStorage.enable = () => asyncHooks.createHook({
+  after, before, destroy, init,
+}).enable();
 
 // Create new Entry into the asyncHooksStorage and link with the currentEntry property
-asyncHooksStorage.newEntry = type => {
+asyncHooksStorage.newEntry = (type) => {
   asyncHooksStorage.currentEntry = new AsyncHooksEntry(type);
   asyncHooksStorage.entries[asyncHooks.executionAsyncId()] = asyncHooksStorage.currentEntry;
+
   return asyncHooksStorage.currentEntry;
 };
 
 // Get an asyncHookStorage entry or return undefined
-asyncHooksStorage.getEntry = key => {
-  return ((asyncHooksStorage.currentEntry && asyncHooksStorage.currentEntry.context) ? asyncHooksStorage.currentEntry.context.get(key) : undefined);
-}
+asyncHooksStorage.getEntry = key => (
+  (asyncHooksStorage.currentEntry && asyncHooksStorage.currentEntry.context)
+    ? asyncHooksStorage.currentEntry.context.get(key)
+    : undefined);
 
 // Set a new asyncHookStorage entry
 asyncHooksStorage.setEntry = (key, value) => {
   if (asyncHooksStorage.currentEntry && asyncHooksStorage.currentEntry.context) {
     asyncHooksStorage.currentEntry.context.set(key, value);
+
     return true;
-  } else {
-    return false;
   }
-}
+
+  return false;
+};
 
 module.exports = asyncHooksStorage;

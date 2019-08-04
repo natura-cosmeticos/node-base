@@ -179,37 +179,4 @@ describe('HttpHandler', () => {
       assert.deepEqual(response, whitelistedHeaders);
     });
   });
-
-  describe('get correlation id', () => {
-    it('returns correlation-id from the request headers', () => {
-      const expectedCorrelationId = uuid();
-      const requestHeaders = {
-        headers: {
-          'correlation-id': expectedCorrelationId,
-          'x-app-token': uuid(),
-        },
-      };
-
-      const handler = new HttpHandler(requestHeaders, {}, {});
-      const correlationId = handler.getCorrelationId();
-
-      assert.equal(correlationId, expectedCorrelationId);
-    });
-    it('returns undefined if headers doesnt exist', () => {
-      const handler = new HttpHandler({}, {}, {});
-      const correlationId = handler.getCorrelationId();
-
-      assert.equal(correlationId, undefined);
-    });
-    it('returns undefined if correlation-id from headers doesnt exist', () => {
-      const requestHeaders = {
-        headers: {},
-      };
-
-      const handler = new HttpHandler(requestHeaders, {}, {});
-      const correlationId = handler.getCorrelationId();
-
-      assert.equal(correlationId, undefined);
-    });
-  });
 });
