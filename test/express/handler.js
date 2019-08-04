@@ -2,6 +2,7 @@ const { assert } = require('chai');
 const express = require('express');
 const request = require('supertest');
 const uuid = require('uuid/v4');
+const { isUUID } = require('validator');
 
 const HttpHandler = require('../../src/express/handler');
 const adapt = require('../../src/express/handler-to-function-adapter');
@@ -36,6 +37,21 @@ describe('HttpHandler', () => {
       // then
       assert.equal(response.statusCode, httpStatus.ok);
       assert.equal(response.headers['correlation-id'], correlationId);
+    });
+
+    it('return a 200 when the command emit success and send correlation id with response even when none was passed', async () => {
+      // given
+      class FakeHandler extends HttpHandler { }
+      const { httpStatus } = HttpHandler;
+      const app = express();
+
+      app.get('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.success))));
+      // when
+      const response = await request(app).get('/hello');
+
+      // then
+      assert.equal(response.statusCode, httpStatus.ok);
+      assert.equal(isUUID(response.headers['correlation-id']), true);
     });
 
     it('return a 404 when the command emit notfound and send correlation id header with response', async () => {
@@ -177,39 +193,6 @@ describe('HttpHandler', () => {
       const response = handler.buildInput();
 
       assert.deepEqual(response, whitelistedHeaders);
-    });
-  });
-
-  describe('get correlation id', () => {
-    it('returns correlation-id from the request headers', () => {
-      const expectedCorrelationId = uuid();
-      const requestHeaders = {
-        headers: {
-          'correlation-id': expectedCorrelationId,
-          'x-app-token': uuid(),
-        },
-      };
-
-      const handler = new HttpHandler(requestHeaders, {}, {});
-      const correlationId = handler.getCorrelationId();
-
-      assert.equal(correlationId, expectedCorrelationId);
-    });
-    it('returns undefined if headers doesnt exist', () => {
-      const handler = new HttpHandler({}, {}, {});
-      const correlationId = handler.getCorrelationId();
-
-      assert.equal(correlationId, undefined);
-    });
-    it('returns undefined if correlation-id from headers doesnt exist', () => {
-      const requestHeaders = {
-        headers: {},
-      };
-
-      const handler = new HttpHandler(requestHeaders, {}, {});
-      const correlationId = handler.getCorrelationId();
-
-      assert.equal(correlationId, undefined);
     });
   });
 });
