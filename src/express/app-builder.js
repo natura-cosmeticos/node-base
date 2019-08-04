@@ -1,3 +1,4 @@
+require('../utils/correlation-id-handler').activate('correlation-id');
 const bodyParser = require('body-parser');
 const express = require('express');
 const helmet = require('helmet');

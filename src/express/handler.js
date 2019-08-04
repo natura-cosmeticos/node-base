@@ -2,14 +2,8 @@
 const humps = require('humps');
 const _ = require('lodash');
 const httpStatusEnum = require('./http-status-enum');
-const AsyncLocalStorage = require('../utils/async-local-storage');
 const defaultHeadersWhitelist = require('./headers-whitelist-enum');
 const baseEvents = require('../base-events');
-
-const setActiveScope = () => new Promise((resolve) => {
-  AsyncLocalStorage.setActive();
-  resolve();
-});
 
 /**
  * HTTP methods that can have body attribute
@@ -56,31 +50,16 @@ module.exports = class ExpressHandler {
     return httpStatusEnum;
   }
 
-  async setScope(correlationId) {
-    try {
-      await setActiveScope();
-
-      AsyncLocalStorage.startScope();
-      AsyncLocalStorage.setCorrelationId(correlationId);
-    } catch (error) {
-      console.warn('CorrelationId not propagated - async-local-storage'); // eslint-disable-line no-console
-    }
-  }
-
   /**
    * Invoke the command execute method, setting up the default listeners and
    * handling an exception if occurred
    */
   async handle() {
     try {
-      const correlationId = this.getCorrelationId();
-
-      await this.setScope(correlationId);
       this.setupListeners(this.command);
 
       await this.command.execute(this.buildInput());
     } catch (error) {
-      this.sendCorrelationIdHeader(this.response);
       this.response.status(ExpressHandler.httpStatus.internalServerError);
       this.response.json(error.toString());
     }
@@ -145,7 +124,6 @@ module.exports = class ExpressHandler {
    */
 
   onNotFound() {
-    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.notFound);
     this.response.json(null);
   }
@@ -156,7 +134,6 @@ module.exports = class ExpressHandler {
    * @param {Object} data - the data returned by the command instance
    */
   onSuccess(data) {
-    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.ok);
     this.response.json(data);
   }
@@ -166,7 +143,6 @@ module.exports = class ExpressHandler {
    * @param {Object} errors - the errors returned by the command instance
    */
   onValidationFailed(errors) {
-    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.unprocessableEntity);
     this.response.json(errors);
   }
@@ -175,7 +151,6 @@ module.exports = class ExpressHandler {
    * Default behavior when an event noContent occurs
    */
   onNoContent() {
-    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.noContent);
     this.response.json(null);
   }
@@ -184,7 +159,6 @@ module.exports = class ExpressHandler {
    * Default behavior when an event error occurs
    */
   onError(errors) {
-    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.internalServerError);
     this.response.json(errors);
   }
@@ -193,24 +167,7 @@ module.exports = class ExpressHandler {
    * Default behavior when an event badRequest occurs
    */
   onBadRequest(errors) {
-    this.sendCorrelationIdHeader(this.response);
     this.response.status(ExpressHandler.httpStatus.badRequest);
     this.response.json(errors);
-  }
-
-  getCorrelationId() {
-    if (this.request && this.request.headers && this.request.headers['correlation-id']) {
-      return this.request.headers['correlation-id'];
-    }
-
-    return undefined;
-  }
-
-  sendCorrelationIdHeader(response) {
-    const correlationId = this.getCorrelationId();
-
-    if (correlationId) {
-      response.set('correlation-id', correlationId);
-    }
   }
 };

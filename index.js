@@ -21,6 +21,8 @@ const testsHelpers = require('./src/tests/helpers');
 const TypeOrmConfigFactory = require('./src/orm/typeorm/typeorm-config-factory');
 const typeOrmLogger = require('./src/orm/typeorm/logger');
 const ArrayUtils = require('./src/utils/array');
+const CorrelationIdHandler = require('./src/utils/correlation-id-handler');
+const AsyncHooksStorage = require('./src/utils/async-hooks-storage');
 
 module.exports = {
   App: {
@@ -53,11 +55,13 @@ module.exports = {
   },
   Util: {
     ArrayUtils,
+    AsyncHooksStorage,
     AsyncLocalStorage,
     Bucket: {
       BucketFactory,
       PROVIDERS,
     },
+    CorrelationIdHandler,
     Module,
     NodeInspector,
   },
