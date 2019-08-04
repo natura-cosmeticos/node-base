@@ -38,6 +38,21 @@ describe('HttpHandler', () => {
       assert.equal(response.headers['correlation-id'], correlationId);
     });
 
+    it('return a 200 when the command emit success and send correlation id with response even when none was passed', async () => {
+      // given
+      class FakeHandler extends HttpHandler { }
+      const { httpStatus } = HttpHandler;
+      const app = express();
+
+      app.get('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.success))));
+      // when
+      const response = await request(app).get('/hello');
+
+      // then
+      assert.equal(response.statusCode, httpStatus.ok);
+      assert.equal(typeof response.headers['correlation-id'], 'string');
+    });
+
     it('return a 404 when the command emit notfound and send correlation id header with response', async () => {
       // given
       class FakeHandler extends HttpHandler { }
