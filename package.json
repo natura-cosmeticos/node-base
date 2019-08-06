@@ -90,6 +90,7 @@
     "inspector-proxy": "^1.2.1",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.15",
+    "object-sizeof": "^1.4.0",
     "snyk": "^1.207.1",
     "typeorm": "^0.2.6",
     "uuid": "^3.3.2",

@@ -1,4 +1,6 @@
+/* eslint-disable max-lines */
 const uuidV4 = require('uuid/v4');
+const sizeof = require('object-sizeof');
 const fs = require('fs');
 const asyncHooks = require('async_hooks');
 
@@ -18,7 +20,16 @@ let hasGraph = false;
 let graphPersistence = false;
 
 // Debug graph
-const graph = [];
+const graph = {};
+
+// Last graph entries count
+let lastGraphEntries = 0;
+
+// Last hooks entries count
+let lastHooksCount = 0;
+
+// Last storage size
+let lastStorageSizeKB = 0;
 
 // Async Hooks Entry class with automatic UUIDV4 ids
 class AsyncHooksEntry {
@@ -29,11 +40,12 @@ class AsyncHooksEntry {
   }
 }
 
-// eslint-disable-next-line
+// eslint-disable-next-line complexity, max-lines-per-function
 function syncLog(logStr, graphStr, asyncId, remove) {
   if (hasLog) {
     fs.writeSync(1, `${logStr}\n`);
   }
+
   if (hasGraph) {
     if (!graphPersistence && remove) {
       delete graph[asyncId];
@@ -59,7 +71,8 @@ function init(asyncId, type, triggerAsyncId) {
     // Attach the asyncId entry with the parent entry
     asyncHooksStorage.entries[asyncId] = asyncHooksStorage.entries[triggerAsyncId];
   }
-  syncLog(`init           ${asyncId}\t${triggerAsyncId}\t${type}`, `[${triggerAsyncId}] ${type} INIT `, asyncId, false);
+  asyncHooksStorage.currentEntryId = asyncId;
+  syncLog(`INIT\t${asyncId}\t${triggerAsyncId}\t${type}`, `[${triggerAsyncId}] ${type} | INIT`, asyncId, false);
 }
 
 // When an asynchronous operation is initiated or completes a callback is called to
@@ -69,7 +82,7 @@ function before(asyncId) {
     asyncHooksList[asyncId] = asyncHooksStorage.currentEntry;
     asyncHooksStorage.currentEntry = asyncHooksStorage.entries[asyncId];
   }
-  syncLog(`before         ${asyncId}`, 'BEFORE ', asyncId, false);
+  syncLog(`BEFORE\t${asyncId}`, '->BEFORE', asyncId, false);
 }
 
 // Called immediately after the callback specified in before is completed
@@ -77,7 +90,7 @@ function after(asyncId) {
   if (existAsyncHooksEntry(asyncId)) {
     asyncHooksStorage.currentEntry = asyncHooksList[asyncId];
   }
-  syncLog(`after          ${asyncId}`, 'AFTER ', asyncId, false);
+  syncLog(`AFTER\t${asyncId}`, '->AFTER', asyncId, false);
 }
 
 // Called after the resource corresponding to asyncId is destroyed
@@ -86,12 +99,12 @@ function destroy(asyncId) {
     delete asyncHooksStorage.entries[asyncId];
     delete asyncHooksList[asyncId];
   }
-  syncLog(`destroy        ${asyncId}`, 'DESTROY ', asyncId, true);
+  syncLog(`DESTROY\t${asyncId}}`, '->DESTROY', asyncId, true);
 }
 
 // Called when the resolve function passed to the Promise constructor is invoked
 function promiseResolve(asyncId) {
-  syncLog(`promiseResolve ${asyncId}`, 'PROMISERESOLVE ', asyncId, false);
+  syncLog(`PROMISERESOLVE\t${asyncId}`, '->PROMISERESOLVE', asyncId, false);
 }
 
 // Enable the callbacks for a given AsyncHook instance
@@ -131,11 +144,41 @@ asyncHooksStorage.setEntry = (key, value) => {
 // Get execution graph
 asyncHooksStorage.getGraph = () => graph;
 
+// Print stats
+asyncHooksStorage.showStats = () => {
+  const graphEntries = asyncHooksStorage.graphCount();
+  const hooksCount = asyncHooksStorage.hooksCount();
+  const hooksLast = asyncHooksStorage.hooksLast();
+  const storageSizeKB = Number(asyncHooksStorage.storageSize() / 1000);
+  const { heapTotal, heapUsed } = process.memoryUsage();
+
+  fs.writeSync(1, `\nAsyncID      : ${hooksLast}\nGraph entries: ${graphEntries}\t(${graphEntries - lastGraphEntries})\nHooks count  : ${hooksCount}\t(${hooksCount - lastHooksCount})\nHooks size   : ${storageSizeKB} KB\t(${storageSizeKB - lastStorageSizeKB})\nHeap total   : ${Number(heapTotal / 1000000)} MB\nHeap used    : ${Number(heapUsed / 1000000)} MB\n`);
+
+  lastGraphEntries = graphEntries;
+  lastHooksCount = hooksCount;
+  lastStorageSizeKB = storageSizeKB;
+};
+
 // Print graph
 asyncHooksStorage.showGraph = () => {
-  for (let counter = 0; counter < graph.length; counter += 1) {
-    if (graph[counter]) fs.writeSync(1, `[${counter}] ${graph[counter]}\n`);
+  const graphEntries = Object.entries(graph);
+
+  // eslint-disable-next-line
+  for (let entry of graphEntries) {
+    fs.writeSync(1, `[${entry[0]}] ${entry[1]}\n`);
   }
 };
+
+// Get graph entries count
+asyncHooksStorage.graphCount = () => Object.keys(graph).length;
+
+// Get storage size in bytes
+asyncHooksStorage.storageSize = () => sizeof(asyncHooksStorage);
+
+// Get hooks count
+asyncHooksStorage.hooksCount = () => Object.keys(asyncHooksList).length;
+
+// Get last asyncID
+asyncHooksStorage.hooksLast = () => asyncHooksStorage.currentEntryId;
 
 module.exports = asyncHooksStorage;
