@@ -1,5 +1,4 @@
 const Logger = require('@naturacosmeticos/clio-nodejs-logger');
-const AsyncLocalStorage = require('./src/utils/async-local-storage');
 const AppSettings = require('./src/app-settings');
 const BaseCommand = require('./src/commands/base-command');
 const baseEvents = require('./src/base-events');
@@ -56,7 +55,6 @@ module.exports = {
   Util: {
     ArrayUtils,
     AsyncHooksStorage,
-    AsyncLocalStorage,
     Bucket: {
       BucketFactory,
       PROVIDERS,

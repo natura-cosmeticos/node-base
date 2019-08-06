@@ -2,7 +2,7 @@
   "main": "index.js",
   "name": "@naturacosmeticos/node-base",
   "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "engines": {
     "node": ">= 8.1.0"
   },
@@ -76,7 +76,6 @@
   },
   "dependencies": {
     "@naturacosmeticos/clio-nodejs-logger": "^1.3.2",
-    "async-local-storage": "^2.1.0",
     "aws-sdk": "^2.503.0",
     "aws-serverless-express": "^3.2.0",
     "bluebird": "^3.5.2",
