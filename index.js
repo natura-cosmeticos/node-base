@@ -1,5 +1,4 @@
 const Logger = require('@naturacosmeticos/clio-nodejs-logger');
-const AsyncLocalStorage = require('./src/utils/async-local-storage');
 const AppSettings = require('./src/app-settings');
 const BaseCommand = require('./src/commands/base-command');
 const baseEvents = require('./src/base-events');
@@ -22,7 +21,6 @@ const TypeOrmConfigFactory = require('./src/orm/typeorm/typeorm-config-factory')
 const typeOrmLogger = require('./src/orm/typeorm/logger');
 const ArrayUtils = require('./src/utils/array');
 const CorrelationIdHandler = require('./src/utils/correlation-id-handler');
-const AsyncHooksStorage = require('./src/utils/async-hooks-storage');
 
 module.exports = {
   App: {
@@ -55,8 +53,6 @@ module.exports = {
   },
   Util: {
     ArrayUtils,
-    AsyncHooksStorage,
-    AsyncLocalStorage,
     Bucket: {
       BucketFactory,
       PROVIDERS,

@@ -3,7 +3,7 @@ const http = require('http');
 
 const originalHttpCreateServer = http.createServer;
 const originalRequest = http.request;
-const asyncHooksStorage = require('./async-hooks-storage');
+const asyncHooksStorage = require('@naturacosmeticos/async-hooks-storage');
 
 const defaultCorrelationIdHeader = 'correlation-id';
 
