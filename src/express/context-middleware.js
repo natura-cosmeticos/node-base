@@ -1,6 +1,7 @@
 const uuid = require('uuid/v4');
 const domain = require('domain');
 const Logger = require('@naturacosmeticos/clio-nodejs-logger');
+const AsyncHooksStorage = require('@naturacosmeticos/async-hooks-storage');
 
 const logAllPattern = '*';
 const logLevelDebug = 'debug';
@@ -9,7 +10,7 @@ const grayLogFormat = 'graylog';
 /** @private */
 function requestContext(req) {
   return {
-    correlationId: req.headers['x-correlation-id'] || null,
+    correlationId: AsyncHooksStorage.getEntry('correlation-id'),
     customerId: req.headers['x-customer-id'] || null,
     requestId: req.headers['request-id'] || uuid(),
     sessionId: req.headers['x-session-id'] || null,
