@@ -2,7 +2,7 @@
   "main": "index.js",
   "name": "@naturacosmeticos/node-base",
   "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "engines": {
     "node": ">= 8.1.0"
   },
