@@ -8,3 +8,12 @@ patch:
         patched: '2019-07-04T07:09:41.947Z'
     - '@naturacosmeticos/clio-nodejs-logger > lodash':
         patched: '2019-07-04T07:09:41.947Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T07:09:41.339Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T07:09:41.339Z'
+    - inspector-proxy > urllib > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T07:09:41.339Z'
+    - inspector-proxy > urllib > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T07:09:41.339Z'
