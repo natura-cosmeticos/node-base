@@ -92,7 +92,7 @@
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.15",
     "object-sizeof": "^1.4.0",
-    "snyk": "^1.230.5",
+    "snyk": "^1.290.1",
     "typeorm": "^0.2.6",
     "uuid": "^3.3.2",
     "validator": "^11.1.0",
