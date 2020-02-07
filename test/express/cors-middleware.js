@@ -47,7 +47,7 @@ describe('corsMiddleware', () => {
         .expect(204);
     });
 
-    it('should allow a GET request with the Origin header', async () => {
+    it('should allow a GET request with the Access-Control-Allow-Origin header', async () => {
       await request(buildMiddleware())
         .get('/test')
         .expect('Access-Control-Allow-Origin', '*')
