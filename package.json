@@ -1,11 +1,14 @@
 {
-  "main": "index.js",
+  "main": "dist/index.js",
   "name": "@naturacosmeticos/node-base",
   "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
-  "version": "2.0.2",
+  "version": "0.0.0-development",
   "engines": {
     "node": ">= 8.1.0"
   },
+  "files": [
+    "dist"
+  ],
   "contributors": [
     "Bruno Cartolari <cartola@vizir.com.br>",
     "Edison Cury Neto <edison.cury.neto@accenture.com>",
@@ -17,6 +20,7 @@
   "devDependencies": {
     "@naturacosmeticos/eslint-config-natura": "^2.0.1",
     "chai": "^4.2.0",
+    "cz-conventional-changelog": "^3.1.0",
     "esdoc": "^1.1.0",
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-node": "^1.0.5",
@@ -27,6 +31,7 @@
     "husky": "^4.2.1",
     "mocha": "^7.0.1",
     "nyc": "^15.0.0",
+    "semantic-release": "^17.0.2",
     "sinon": "^8.1.1",
     "supertest": "^4.0.2"
   },
@@ -41,7 +46,9 @@
     "transpile": "echo ok",
     "package": "bash package.sh",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "cm": "npx git-cz",
+    "build": "./build.sh"
   },
   "nyc": {
     "all": true,
@@ -101,5 +108,10 @@
   "homepage": "https://github.com/natura-cosmeticos/node-base#readme",
   "bugs": "https://github.com/natura-cosmeticos/node-base/issues",
   "license": "MIT",
-  "snyk": true
+  "snyk": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
