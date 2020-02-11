@@ -21,6 +21,13 @@ const TypeOrmConfigFactory = require('./src/orm/typeorm/typeorm-config-factory')
 const typeOrmLogger = require('./src/orm/typeorm/logger');
 const ArrayUtils = require('./src/utils/array');
 const CorrelationIdHandler = require('./src/utils/correlation-id-handler');
+const KoaAppBuilder = require('./src/koa/app-builder');
+const KoaCorsMiddleware = require('./src/koa/cors-middleware');
+const KoaLoggingMiddleware = require('./src/koa/logging-middleware');
+const koaAdapter = require('./src/koa/handler-to-function-adapter');
+const KoaAuthenticatedHandler = require('./src/koa/authenticated-handler');
+const KoaHandler = require('./src/koa/handler');
+const KoaUserAuthenticatedHandler = require('./src/koa/user-authenticated-handler');
 
 module.exports = {
   App: {
@@ -38,6 +45,15 @@ module.exports = {
     Handler: ExpressHandler,
     loggingMiddleware: expressLoggingMiddleware,
     UserAuthenticatedHandler: ExpressUserAuthenticatedHandler,
+  },
+  Koa: {
+    adapter: koaAdapter,
+    appBuilder: KoaAppBuilder,
+    AuthenticatedHandler: KoaAuthenticatedHandler,
+    corsMiddleware: KoaCorsMiddleware,
+    Handler: KoaHandler,
+    loggingMiddleware: KoaLoggingMiddleware,
+    UserAuthenticatedHandler: KoaUserAuthenticatedHandler
   },
   External: {
     TypeOrmConfigFactory,
