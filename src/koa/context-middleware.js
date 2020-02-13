@@ -9,13 +9,11 @@ const grayLogFormat = 'graylog';
 
 /** @private */
 function requestContext(ctx) {
-  const { req } = ctx;
-
   return {
     correlationId: AsyncHooksStorage.getEntry('correlation-id'),
-    customerId: req.headers['x-customer-id'] || null,
-    requestId: req.headers['request-id'] || uuid(),
-    sessionId: req.headers['x-session-id'] || null,
+    customerId: ctx.headers['x-customer-id'] || null,
+    requestId: ctx.headers['request-id'] || uuid(),
+    sessionId: ctx.headers['x-session-id'] || null,
   };
 }
 
@@ -23,9 +21,7 @@ function requestContext(ctx) {
 function createLogger(ctx) {
   const context = requestContext(ctx);
 
-  const { req } = ctx;
-
-  if ('x-debug-mode-on' in req.headers) {
+  if ('x-debug-mode-on' in ctx.headers) {
     return new Logger({
       context,
       logLevel: logLevelDebug,

@@ -18,24 +18,18 @@ const HTTP_METHODS_WITH_BODY = ['PATCH', 'POST', 'PUT'];
 module.exports = class KoaHandler {
   /**
     * Initialize a KoaHandler instance with the an specific domain command
-    * @param {Object} request - The Koa request https://koajs.com/#request
-    * @param {Object} response - The Koa response https://koajs.com/#response
+    * @param {Object} ctx - The Koa context https://koajs.com/#context
     * @param {Object} command - an Command instance
     */
-  constructor(request, response, command, headersWhitelist = defaultHeadersWhitelist) {
+  constructor(ctx, command, headersWhitelist = defaultHeadersWhitelist) {
     /**
-     * @param {Object} request - The Koa request https://koajs.com/#request
+     * @param {Object} ctx - The Koa context https://koajs.com/#context
      */
-    this.request = request;
-    /**
-     * @param {Object} response - The Koa response https://koajs.com/#response
-     */
-    this.response = response;
+    this.ctx = ctx;
     /**
      * @param {Object} command - a Command instance
      */
     this.command = command;
-
     /**
      * @private {Array} headersWhitelist - Headers Whitelist
      */
@@ -51,6 +45,15 @@ module.exports = class KoaHandler {
   }
 
   /**
+   * Parses the http status code
+   * @param {string | number} httpStatusCode - The http status code
+   */
+  static parseHttpStatus(httpStatusCode) {
+    // eslint-disable-next-line radix
+    return parseInt(httpStatusCode);
+  }
+
+  /**
    * Invoke the command execute method, setting up the default listeners and
    * handling an exception if occurred
    */
@@ -60,8 +63,8 @@ module.exports = class KoaHandler {
 
       await this.command.execute(this.buildInput());
     } catch (error) {
-      this.response.status(KoaHandler.httpStatus.internalServerError);
-      this.response.json(error.toString());
+      this.ctx.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.internalServerError);
+      this.ctx.body = error.toString();
     }
   }
 
@@ -93,12 +96,12 @@ module.exports = class KoaHandler {
    * @private
    */
   buildInput() {
-    const queryParams = this.getQueryParams(this.request.query);
-    const headers = this.getHeadersInWhitelist(this.request.headers);
-    const paramsSources = [queryParams, this.request.params];
+    const queryParams = this.getQueryParams(this.ctx.query);
+    const headers = this.getHeadersInWhitelist(this.ctx.headers);
+    const paramsSources = [queryParams, this.ctx.params];
 
-    if (HTTP_METHODS_WITH_BODY.includes(this.request.method)) {
-      paramsSources.unshift(this.request.body);
+    if (HTTP_METHODS_WITH_BODY.includes(this.ctx.method)) {
+      paramsSources.unshift(this.ctx.request.body);
     }
 
     if (headers) paramsSources.push({ headers });
@@ -124,18 +127,16 @@ module.exports = class KoaHandler {
    */
 
   onNotFound() {
-    this.response.status(KoaHandler.httpStatus.notFound);
-    this.response.json(null);
+    this.ctx.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.notFound);
   }
-
 
   /**
    * Default behavior when an event success occurs
    * @param {Object} data - the data returned by the command instance
    */
   onSuccess(data) {
-    this.response.status(KoaHandler.httpStatus.ok);
-    this.response.json(data);
+    this.ctx.response.body = data;
+    this.ctx.response.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.ok);
   }
 
   /**
@@ -143,31 +144,31 @@ module.exports = class KoaHandler {
    * @param {Object} errors - the errors returned by the command instance
    */
   onValidationFailed(errors) {
-    this.response.status(KoaHandler.httpStatus.unprocessableEntity);
-    this.response.json(errors);
+    this.ctx.body = errors;
+    this.ctx.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.unprocessableEntity);
   }
 
   /**
    * Default behavior when an event noContent occurs
    */
   onNoContent() {
-    this.response.status(KoaHandler.httpStatus.noContent);
-    this.response.json(null);
+    this.ctx.body = null;
+    this.ctx.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.noContent);
   }
 
   /**
    * Default behavior when an event error occurs
    */
   onError(errors) {
-    this.response.status(KoaHandler.httpStatus.internalServerError);
-    this.response.json(errors);
+    this.ctx.body = errors;
+    this.ctx.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.internalServerError);
   }
 
   /**
    * Default behavior when an event badRequest occurs
    */
   onBadRequest(errors) {
-    this.response.status(KoaHandler.httpStatus.badRequest);
-    this.response.json(errors);
+    this.ctx.body = errors;
+    this.ctx.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.badRequest);
   }
 };

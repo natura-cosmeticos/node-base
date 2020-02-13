@@ -4,7 +4,7 @@ const _ = require('lodash');
  * @private
  */
 const logRequestAttributes = Object.freeze([
-  'baseUrl',
+  'origin',
   'body',
   'method',
   'params',
@@ -15,35 +15,35 @@ const logRequestAttributes = Object.freeze([
 /**
  * @private
  */
-const logResponseAttributes = Object.freeze(['statusCode']);
+const logResponseAttributes = Object.freeze(['status']);
 
 /**
  * @private
  */
-function commonAttributes(req) {
+function commonAttributes(ctx) {
   return {
-    fullUrl: `${req.protocol}://${req.headers.host}${req.originalUrl}`,
-    headers: req.headers,
-    host: req.headers.host,
-    url: req.originalUrl,
+    fullUrl: ctx.href,
+    headers: ctx.headers,
+    host: ctx.headers.host,
+    url: ctx.origin,
   };
 }
 
 /**
  * @private
  */
-function logRequest(req, res) {
-  res.locals.logger.log(`Starting ${req.method} on ${req.path}`, {
-    ..._.pick(req, logRequestAttributes),
-    ...commonAttributes(req),
+function logRequest(ctx) {
+  ctx.state.logger.log(`Starting ${ctx.method} on ${ctx.path}`, {
+    ..._.pick(ctx, logRequestAttributes),
+    ...commonAttributes(ctx),
   });
 }
 
 /**
  * @private
  */
-function logResponse(rawBody, req, res) {
-  const contentType = res.get('content-type');
+function logResponse(rawBody, ctx) {
+  const contentType = ctx.request.type;
 
   let body = rawBody;
 
@@ -51,9 +51,10 @@ function logResponse(rawBody, req, res) {
   if (contentType && contentType.includes('application/json')) {
     body = JSON.parse(rawBody);
   }
-  res.locals.logger.log(`End request ${req.method} on ${req.path}`, {
-    ..._.pick(req, logResponseAttributes),
-    ...commonAttributes(req),
+
+  ctx.state.logger.log(`End request ${ctx.method} on ${ctx.path}`, {
+    ..._.pick(ctx.response, logResponseAttributes),
+    ...commonAttributes(ctx),
     body,
   });
 }
@@ -61,48 +62,38 @@ function logResponse(rawBody, req, res) {
 /**
  * @private
  */
-function responseEndInterceptor({ chunk, chunks }, end, req, res) {
-  /* istanbul ignore if */
-  if (chunk) {
-    chunks.push(Buffer.from(chunk));
-  }
-
+function responseEndInterceptor(chunks, ctx) {
   const body = Buffer.concat(chunks).toString();
 
-  logResponse(body, req, res);
-  end.call(res, body);
+  logResponse(body, ctx);
 }
 
 /**
  * @private
  */
-function setupResponseInterceptors(req, res) {
-  const { end, write } = res;
+async function setupResponseInterceptors(ctx, next) {
   const chunks = [];
 
-  /* istanbul ignore next */
-  res.write = (chunk) => {
-    chunks.push(chunk);
-    write.call(res, chunk);
-  };
+  await next();
 
-  res.end = (chunk) => {
-    const data = { chunk, chunks };
+  /**
+   * Only adds body chunk if it is present
+   */
+  if (ctx.response.body) {
+    chunks.push(ctx.response.body);
+  }
 
-    responseEndInterceptor(data, end, req, res);
-  };
+  responseEndInterceptor(chunks, ctx);
 }
 
 /**
  * Middleware for log the input and output from Express
- * @param {function} req - Express req function
- * @param {function} res - Express res function
- * @param {function} next - Express next function
+ * @param {function} ctx - Koa ctx function
+ * @param {function} next - Koa next function
  */
-function loggingMiddleware(req, res, next) {
-  logRequest(req, res);
-  setupResponseInterceptors(req, res);
-  next();
+async function loggingMiddleware(ctx, next) {
+  logRequest(ctx);
+  await setupResponseInterceptors(ctx, next);
 }
 
 module.exports = loggingMiddleware;

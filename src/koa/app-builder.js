@@ -1,6 +1,7 @@
 require('../utils/correlation-id-handler').activate('correlation-id');
-const bodyParser = require('body-parser');
-const koa = require('koa');
+const bodyParser = require('koa-bodyparser');
+const Router = require('koa-router');
+const Koa = require('koa');
 const helmet = require('koa-helmet');
 const serverless = require('aws-serverless-koa');
 const awsServerlessKoaMiddleware = require('aws-serverless-koa/middleware');
@@ -20,10 +21,11 @@ const KOA_PORT = process.env.KOA_PORT || 3000;
  */
 function koaToBodyParser() {
   const bodyParserOptions = {
-    limit: '10mb',
+    jsonLimit: '10mb',
+    textLimit: '10mb',
   };
 
-  return bodyParser.json(bodyParserOptions);
+  return bodyParser(bodyParserOptions);
 }
 
 /**
@@ -60,7 +62,9 @@ function startApp(app) {
  * to be the Lambda entrypoint
  */
 module.exports = function expressAppBuilder(options = {}) {
-  const app = koa();
+  const app = new Koa();
+
+  const router = new Router();
 
   setupAppMiddlewares(app, options);
 
@@ -68,8 +72,9 @@ module.exports = function expressAppBuilder(options = {}) {
   if (options.developmentMode) new NodeInspector().start();
 
   return {
-    expressApp: app,
     handler: serverless(app),
+    koaApp: app,
+    router,
     start() {
       /* istanbul ignore next */
       return startApp(app);

@@ -1,20 +1,19 @@
 const AuthorizationProvider = require('../providers/authorization');
-const Handler = require('./handler');
+const KoaHandler = require('./handler');
 const AuthenticationCommand = require('../commands/authentication-command');
 const { unauthorized } = require('../base-events');
 
-module.exports = class AuthenticatedHandler extends Handler {
+module.exports = class AuthenticatedHandler extends KoaHandler {
   /**
-   * @param {*} request - The koa request object
-   * @param {*} response - The koaresponde object
+   * @param {*} ctx - A Koa context
    * @param {*} command - A command instance
    * @param {*} headerAttributes - An array of possible headers
    */
-  constructor(request, response, command, headerAttributes = []) {
-    const authorizationProvider = new AuthorizationProvider(request.headers, headerAttributes);
+  constructor(ctx, command, headerAttributes = []) {
+    const authorizationProvider = new AuthorizationProvider(ctx.headers, headerAttributes);
     const authenticationCommand = new AuthenticationCommand(command, authorizationProvider);
 
-    super(request, response, authenticationCommand);
+    super(ctx, authenticationCommand);
   }
 
   setupListeners(command) {
@@ -23,6 +22,7 @@ module.exports = class AuthenticatedHandler extends Handler {
   }
 
   onInvalidAuthorization(error) {
-    this.response.status(Handler.httpStatus.unauthorized).send(error);
+    this.ctx.response.body = error;
+    this.ctx.response.status = KoaHandler.parseHttpStatus(KoaHandler.httpStatus.unauthorized);
   }
 };

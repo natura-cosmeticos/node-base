@@ -15,7 +15,9 @@
     "Fabrício Campos <fabricio@vizir.com.br>",
     "João Paulo Nobrega <joao.paulo.nobrega@avanade.com>",
     "Handrus Stephan Nogueira <handrus@gmail.com>",
-    "Murilo Portescheller <murilo.portescheller@avanade.com>"
+    "Murilo Portescheller <murilo.portescheller@avanade.com>",
+    "Matheus Robert Lichtnow <matheus@vizir.com.br>",
+    "Vagner Saraiva <saraiva@vizir.com.br>"
   ],
   "devDependencies": {
     "@naturacosmeticos/eslint-config-natura": "^2.0.1",
@@ -84,7 +86,7 @@
     }
   },
   "dependencies": {
-    "@koa/cors": "^2.2.3",
+    "@koa/cors": "^3.0.0",
     "@naturacosmeticos/async-hooks-storage": "^1.0.0",
     "@naturacosmeticos/clio-nodejs-logger": "^2.0.2",
     "aws-sdk": "^2.613.0",
@@ -104,6 +106,7 @@
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-helmet": "^5.2.0",
+    "koa-router": "^8.0.7",
     "lodash": "^4.17.15",
     "object-sizeof": "^1.5.2",
     "snyk": "^1.290.2",
@@ -120,5 +123,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "mocha": {
+    "spec": "./test"
   }
 }
