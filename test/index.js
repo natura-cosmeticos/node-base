@@ -11,16 +11,16 @@ describe('API', () => {
     assert.typeOf(App.baseEvents, 'object');
   });
 
-  it('verify Express module contract', () => {
-    const { Express } = NodeBase;
+  it('verify Koa module contract', () => {
+    const { Koa } = NodeBase;
 
-    assert.typeOf(Express.adapter, 'function');
-    assert.typeOf(Express.appBuilder, 'function');
-    assert.typeOf(Express.AuthenticatedHandler, 'function');
-    assert.typeOf(Express.corsMiddleware, 'function');
-    assert.typeOf(Express.Handler, 'function');
-    assert.typeOf(Express.loggingMiddleware, 'function');
-    assert.typeOf(Express.UserAuthenticatedHandler, 'function');
+    assert.typeOf(Koa.adapter, 'function');
+    assert.typeOf(Koa.appBuilder, 'function');
+    assert.typeOf(Koa.AuthenticatedHandler, 'function');
+    assert.typeOf(Koa.corsMiddleware, 'function');
+    assert.typeOf(Koa.Handler, 'function');
+    assert.typeOf(Koa.loggingMiddleware, 'function');
+    assert.typeOf(Koa.UserAuthenticatedHandler, 'function');
   });
 
   it('verify External module contract', () => {

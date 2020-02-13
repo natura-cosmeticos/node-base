@@ -18,7 +18,7 @@ The Node Base offers an easier way to implement the coding practices recommended
 * Tests helpers to improve productivity
 * Abstraction to use code practices recommended
   * Base Command to create events based commands
-  * Express Handler to create the interface between your domain and the Express
+  * Koa Handler to create the interface between your domain and the Koa
   * Environment variables from AWS SSM
 * Debug mode for development and tests
 

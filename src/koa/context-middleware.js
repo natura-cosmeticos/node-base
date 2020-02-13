@@ -34,7 +34,7 @@ function createLogger(ctx) {
 }
 
 /**
- * Middleware for log the input and output from Express
+ * Middleware for log the input and output from Koa
  * @param {object} ctx - Koa context object
  * @param {function} next - Koa next function
  */

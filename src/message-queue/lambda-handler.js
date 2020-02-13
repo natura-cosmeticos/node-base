@@ -3,7 +3,7 @@
  */
 class LambdaHandler {
   /**
-    * Initialize a ExpressHandler instance with the an specific domain command
+    * Initialize a KoaHandler instance with the an specific domain command
     * For more information about the arguments see https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html
     * @param {Object} event - The AWS Lambda event arguments
     * @param {Object} context - The AWS Lambda context object
@@ -11,11 +11,11 @@ class LambdaHandler {
     */
   constructor(event, context, command) {
     /**
-     * @param {Object} request - The AWS Lambda event arguments
+     * @param {Object} event - The AWS Lambda event arguments
      */
     this.event = event;
     /**
-     * @param {Object} request - The AWS Lambda context object
+     * @param {Object} context - The AWS Lambda context object
      */
     this.context = context;
     /**
