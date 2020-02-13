@@ -87,7 +87,7 @@ async function setupResponseInterceptors(ctx, next) {
 }
 
 /**
- * Middleware for log the input and output from Express
+ * Middleware for log the input and output from Koa
  * @param {function} ctx - Koa ctx function
  * @param {function} next - Koa next function
  */

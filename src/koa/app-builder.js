@@ -57,11 +57,11 @@ function startApp(app) {
 /**
  * Function to initializes and configures a Koa app
  * @param {object} options - accepts mode and developmentMode params
- * @return {object} a object with the expressApp,
+ * @return {object} a object with the koaApp,
  * start method to start the koa and the handler function
  * to be the Lambda entrypoint
  */
-module.exports = function expressAppBuilder(options = {}) {
+module.exports = function koaAppBuilder(options = {}) {
   const app = new Koa();
 
   const router = new Router();
