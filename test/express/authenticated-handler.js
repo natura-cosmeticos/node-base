@@ -3,8 +3,6 @@ const express = require('express');
 const faker = require('faker');
 const request = require('supertest');
 const sinon = require('sinon');
-const uuid = require('uuid/v4');
-const { isUUID } = require('validator');
 
 const AuthenticatedHandler = require('../../src/express/authenticated-handler');
 const httpStatus = require('../../src/express/http-status-enum');
@@ -53,19 +51,16 @@ describe('AuthenticatedHandler', () => {
     it('when request has valid authorization', async () => {
       // given
       const app = express();
-      const correlationId = uuid();
 
       app.get('/hello', adapt(AuthenticatedHandler, factory(new FakeCommand('success'))));
       // when
       const authorizationJwt = jwtGenerator
         .generate(authorizationTokenData, process.env.JWT_SECRET_KEY);
       const response = await request(app).get('/hello')
-        .set('authorization', authorizationJwt)
-        .set('correlation-id', correlationId);
+        .set('authorization', authorizationJwt);
 
       // then
       assert.equal(response.statusCode, httpStatus.ok);
-      assert.equal(response.header['correlation-id'], correlationId);
     });
 
     it('when request has valid authorization and pass parameters queryString', async () => {
@@ -81,7 +76,6 @@ describe('AuthenticatedHandler', () => {
 
       // then
       assert.equal(response.statusCode, httpStatus.ok);
-      assert.equal(isUUID(response.header['correlation-id']), true);
     });
   });
 });
