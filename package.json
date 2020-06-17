@@ -103,7 +103,7 @@
     "snyk": "^1.316.1",
     "typeorm": "^0.2.22",
     "uuid": "^3.4.0",
-    "validator": "^12.2.0",
+    "validator": "^13.0.0",
     "yargs": "^15.3.0"
   },
   "homepage": "https://github.com/natura-cosmeticos/node-base#readme",
