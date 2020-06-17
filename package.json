@@ -2,7 +2,7 @@
   "main": "dist/index.js",
   "name": "@naturacosmeticos/node-base",
   "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
-  "version": "0.0.0-development",
+  "version": "3.1.0",
   "engines": {
     "node": "^12"
   },
