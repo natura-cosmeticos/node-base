@@ -2,7 +2,6 @@ const { assert } = require('chai');
 const express = require('express');
 const request = require('supertest');
 const uuid = require('uuid/v4');
-const { isUUID } = require('validator');
 
 const HttpHandler = require('../../src/express/handler');
 const adapt = require('../../src/express/handler-to-function-adapter');
@@ -23,23 +22,7 @@ describe('HttpHandler', () => {
       assert.equal(httpStatus.badRequest, 400);
     });
 
-    it('return a 200 when the command emit success and send correlation id header with response', async () => {
-      // given
-      class FakeHandler extends HttpHandler { }
-      const { httpStatus } = HttpHandler;
-      const app = express();
-      const correlationId = uuid();
-
-      app.get('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.success))));
-      // when
-      const response = await request(app).get('/hello').set('correlation-id', correlationId);
-
-      // then
-      assert.equal(response.statusCode, httpStatus.ok);
-      assert.equal(response.headers['correlation-id'], correlationId);
-    });
-
-    it('return a 200 when the command emit success and send correlation id with response even when none was passed', async () => {
+    it('return a 200 when the command emit success', async () => {
       // given
       class FakeHandler extends HttpHandler { }
       const { httpStatus } = HttpHandler;
@@ -51,10 +34,23 @@ describe('HttpHandler', () => {
 
       // then
       assert.equal(response.statusCode, httpStatus.ok);
-      assert.equal(isUUID(response.headers['correlation-id']), true);
     });
 
-    it('return a 404 when the command emit notfound and send correlation id header with response', async () => {
+    it('return a 200 when the command emit success', async () => {
+      // given
+      class FakeHandler extends HttpHandler { }
+      const { httpStatus } = HttpHandler;
+      const app = express();
+
+      app.get('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.success))));
+      // when
+      const response = await request(app).get('/hello');
+
+      // then
+      assert.equal(response.statusCode, httpStatus.ok);
+    });
+
+    it('return a 404 when the command emit notfound', async () => {
       // given
       class FakeHandler extends HttpHandler { }
 
@@ -62,19 +58,17 @@ describe('HttpHandler', () => {
 
       // when
       const app = express();
-      const correlationId = uuid();
 
       app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.notFound))));
 
       // when
-      const response = await request(app).post('/hello').set('correlation-id', correlationId);
+      const response = await request(app).post('/hello');
 
       // then
       assert.equal(response.statusCode, httpStatus.notFound);
-      assert.equal(response.headers['correlation-id'], correlationId);
     });
 
-    it('return a 422 when the command emit validationFailed and send correlation id header with response', async () => {
+    it('return a 422 when the command emit validationFailed', async () => {
       // given
       class FakeHandler extends HttpHandler { }
 
@@ -82,19 +76,17 @@ describe('HttpHandler', () => {
 
       // when
       const app = express();
-      const correlationId = uuid();
 
       app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.validationFailed))));
 
       // when
-      const response = await request(app).post('/hello').set('correlation-id', correlationId);
+      const response = await request(app).post('/hello');
 
       // then
       assert.equal(response.statusCode, httpStatus.unprocessableEntity);
-      assert.equal(response.headers['correlation-id'], correlationId);
     });
 
-    it('return a 204 when the command emit noContent and send correlation id header with response', async () => {
+    it('return a 204 when the command emit noContent', async () => {
       // given
       class FakeHandler extends HttpHandler { }
 
@@ -102,19 +94,17 @@ describe('HttpHandler', () => {
 
       // when
       const app = express();
-      const correlationId = uuid();
 
       app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.noContent))));
 
       // when
-      const response = await request(app).post('/hello').set('correlation-id', correlationId);
+      const response = await request(app).post('/hello');
 
       // then
       assert.equal(response.statusCode, httpStatus.noContent);
-      assert.equal(response.headers['correlation-id'], correlationId);
     });
 
-    it('return a 500 when the command emit error and send correlation id header with response', async () => {
+    it('return a 500 when the command emit error', async () => {
       // given
       class FakeHandler extends HttpHandler { }
 
@@ -122,19 +112,17 @@ describe('HttpHandler', () => {
 
       // when
       const app = express();
-      const correlationId = uuid();
 
       app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.error))));
 
       // when
-      const response = await request(app).post('/hello').set('correlation-id', correlationId);
+      const response = await request(app).post('/hello');
 
       // then
       assert.equal(response.statusCode, httpStatus.internalServerError);
-      assert.equal(response.headers['correlation-id'], correlationId);
     });
 
-    it('return a 400 when the command emit error and send correlation id header with response', async () => {
+    it('return a 400 when the command emit error', async () => {
       // given
       class FakeHandler extends HttpHandler { }
 
@@ -142,16 +130,14 @@ describe('HttpHandler', () => {
 
       // when
       const app = express();
-      const correlationId = uuid();
 
       app.post('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.badRequest))));
 
       // when
-      const response = await request(app).post('/hello').set('correlation-id', correlationId);
+      const response = await request(app).post('/hello');
 
       // then
       assert.equal(response.statusCode, httpStatus.badRequest);
-      assert.equal(response.headers['correlation-id'], correlationId);
     });
   });
 
@@ -160,16 +146,14 @@ describe('HttpHandler', () => {
       // given
       const { httpStatus } = HttpHandler;
       const app = express();
-      const correlationId = uuid();
 
       app.get('/hello', adapt(HttpHandler, factory(null)));
 
       // when
-      const response = await request(app).get('/hello').set('correlation-id', correlationId);
+      const response = await request(app).get('/hello');
 
       // then
       assert.equal(response.statusCode, httpStatus.internalServerError);
-      assert.equal(response.headers['correlation-id'], correlationId);
     });
   });
   describe('headers whitelist in buildInput', () => {
@@ -177,7 +161,6 @@ describe('HttpHandler', () => {
       const requestHeaders = {
         headers: {
           'another-token': uuid(),
-          'correlation-id': uuid(),
           'x-app-token': uuid(),
         },
         params: {},
@@ -186,7 +169,6 @@ describe('HttpHandler', () => {
       const handler = new HttpHandler(requestHeaders, {}, {});
       const whitelistedHeaders = {
         headers: {
-          correlationId: requestHeaders.headers['correlation-id'],
           xAppToken: requestHeaders.headers['x-app-token'],
         },
       };
