@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "@naturacosmeticos/async-hooks-storage": "^1.0.0",
-    "@naturacosmeticos/clio-nodejs-logger": "git+https://git@github.com/adrielerodr/clio-nodejs-logger.git",
+    "@naturacosmeticos/clio-nodejs-logger": "ˆ3.0.0",
     "aws-sdk": "^2.613.0",
     "aws-serverless-express": "^3.3.6",
     "bluebird": "^3.7.2",
