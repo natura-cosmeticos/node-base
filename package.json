@@ -94,7 +94,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
-    "highlight.js": "9.18.1",
+    "highlight.js": "10.1.1",
     "humps": "^2.0.1",
     "inspector-proxy": "^1.2.1",
     "jsonwebtoken": "^8.5.1",
@@ -102,7 +102,7 @@
     "object-sizeof": "^1.5.2",
     "snyk": "^1.316.1",
     "typeorm": "^0.2.22",
-    "uuid": "^3.4.0",
+    "uuid": "^8.0.0",
     "validator": "^13.0.0",
     "yargs": "^15.3.0"
   },
