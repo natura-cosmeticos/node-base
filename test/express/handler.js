@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 const express = require('express');
 const request = require('supertest');
-const uuid = require('uuid/v4');
+const { v4: uuid } = require('uuid');
 
 const HttpHandler = require('../../src/express/handler');
 const adapt = require('../../src/express/handler-to-function-adapter');
@@ -20,20 +20,6 @@ describe('HttpHandler', () => {
       assert.equal(httpStatus.unprocessableEntity, 422);
       assert.equal(httpStatus.internalServerError, 500);
       assert.equal(httpStatus.badRequest, 400);
-    });
-
-    it('return a 200 when the command emit success', async () => {
-      // given
-      class FakeHandler extends HttpHandler { }
-      const { httpStatus } = HttpHandler;
-      const app = express();
-
-      app.get('/hello', adapt(FakeHandler, factory(new FakeCommand(baseEvents.success))));
-      // when
-      const response = await request(app).get('/hello');
-
-      // then
-      assert.equal(response.statusCode, httpStatus.ok);
     });
 
     it('return a 200 when the command emit success', async () => {

@@ -1,4 +1,4 @@
-const uuidV4 = require('uuid/v4');
+const { v4: uuidV4 } = require('uuid');
 const http = require('http');
 
 const originalHttpCreateServer = http.createServer;

@@ -1,4 +1,4 @@
-const uuid = require('uuid/v4');
+const { v4: uuid } = require('uuid');
 const domain = require('domain');
 const Logger = require('@naturacosmeticos/clio-nodejs-logger');
 const AsyncHooksStorage = require('@naturacosmeticos/async-hooks-storage');

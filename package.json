@@ -26,7 +26,8 @@
     "esdoc-node": "1.0.5",
     "esdoc-standard-plugin": "1.0.0",
     "eslint": "6.8.0",
-    "eslint-plugin-import": "2.21.2",
+    "eslint-import-resolver-webpack": "^0.12.2",
+    "eslint-plugin-import": "^2.21.2",
     "faker": "4.1.0",
     "husky": "4.2.5",
     "mocha": "7.2.0",
@@ -84,7 +85,7 @@
   },
   "dependencies": {
     "@naturacosmeticos/async-hooks-storage": "^1.0.0",
-    "@naturacosmeticos/clio-nodejs-logger": "ˆ3.0.0",
+    "@naturacosmeticos/clio-nodejs-logger": "^3.0.0",
     "aws-sdk": "^2.613.0",
     "aws-serverless-express": "^3.3.6",
     "bluebird": "^3.7.2",
