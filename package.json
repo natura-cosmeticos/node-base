@@ -94,7 +94,7 @@
     "commander": "^4.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "helmet": "^3.21.2",
+    "helmet": "^4.0.0",
     "highlight.js": "10.1.1",
     "humps": "^2.0.1",
     "inspector-proxy": "^1.2.1",
