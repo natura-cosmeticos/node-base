@@ -4,7 +4,7 @@
   "author": "Natura Cosméticos <TDDAArquitetura@natura.net>",
   "version": "3.1.2",
   "engines": {
-    "node": "^12"
+    "node": "^14.0.0"
   },
   "files": [
     "dist"
