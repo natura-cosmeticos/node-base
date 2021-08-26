@@ -27,9 +27,9 @@ function expressToLambdaHandler(app) {
 /**
  * @private
  */
-function expressToBodyParser() {
+function expressToBodyParser(bodyParserLimit) {
   const bodyParserOptions = {
-    limit: '10mb',
+    limit: bodyParserLimit || '10mb',
   };
 
   return bodyParser.json(bodyParserOptions);
@@ -39,7 +39,7 @@ function expressToBodyParser() {
  * @private
  */
 function setupAppMiddlewares(app, options) {
-  app.use(expressToBodyParser());
+  app.use(expressToBodyParser(options.bodyParserLimit));
   app.use(expressContextMiddleware);
   app.use(expressLoggingMiddleware);
   app.use(expressCorsMiddleware());
