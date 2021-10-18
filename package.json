@@ -91,7 +91,7 @@
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "cls-hooked": "^4.2.2",
-    "commander": "^4.1.1",
+    "commander": "^8.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
