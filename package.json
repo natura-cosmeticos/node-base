@@ -105,7 +105,7 @@
     "typeorm": "^0.2.22",
     "uuid": "^8.0.0",
     "validator": "^13.0.0",
-    "yargs": "^15.3.0"
+    "yargs": "^17.0.0"
   },
   "homepage": "https://github.com/natura-cosmeticos/node-base#readme",
   "bugs": "https://github.com/natura-cosmeticos/node-base/issues",
