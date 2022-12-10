@@ -93,7 +93,7 @@
     "cls-hooked": "^4.2.2",
     "commander": "^4.1.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^3.21.2",
     "highlight.js": "10.1.1",
     "humps": "^2.0.1",
