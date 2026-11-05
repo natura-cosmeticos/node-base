@@ -4680,9 +4680,7 @@ inquirer@^7.0.0:
     through "^2.3.6"
 
 inspector-proxy@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/inspector-proxy/-/inspector-proxy-1.2.1.tgz#870d2f419150178b5c3765b2852ae7289be54079"
-  integrity sha512-/4X2XWYM2huvpQzSMuM3SLykvhpsS7LOnV5wKPNaOdXUBi6Vg1Aor5M4BBLnQ1Q7OdrgbbiQ3Ld8N3OFeW7voQ==
+  version "1.2.3"
   dependencies:
     cfork "^1.6.1"
     debug "^3.0.1"
