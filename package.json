@@ -98,7 +98,7 @@
     "highlight.js": "10.1.1",
     "humps": "^2.0.1",
     "inspector-proxy": "^1.2.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.15",
     "object-sizeof": "^1.5.2",
     "snyk": "^1.316.1",
