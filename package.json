@@ -20,7 +20,7 @@
   "devDependencies": {
     "@naturacosmeticos/eslint-config-natura": "2.0.1",
     "chai": "4.2.0",
-    "cz-conventional-changelog": "3.2.0",
+    "cz-conventional-changelog": "3.3.0",
     "esdoc": "1.1.0",
     "esdoc-ecmascript-proposal-plugin": "1.0.0",
     "esdoc-node": "1.0.5",
